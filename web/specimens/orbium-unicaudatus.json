@@ -1,0 +1,23 @@
+{
+  "schema": "genesis.specimen/v1",
+  "id": "specimen-000-orbium-unicaudatus",
+  "name": "Orbium unicaudatus",
+  "provenance": {
+    "author": "Bert Wang-Chak Chan",
+    "catalogue_code": "O2u",
+    "source": "https://github.com/Chakazul/Lenia/blob/master/Python/animals.json"
+  },
+  "simulator": "lenia/classic-v1",
+  "parameters": {
+    "radius": 13,
+    "time_resolution": 10,
+    "growth_center": 0.15,
+    "growth_width": 0.015,
+    "kernel": "bump4",
+    "kernel_peaks": [1.0]
+  },
+  "initial_state": {
+    "encoding": "lenia-rle-v1",
+    "cells": "7.MD6.qL$6.pKqEqFURpApBRAqQ$5.VqTrSsBrOpXpWpTpWpUpCrQ$4.CQrQsTsWsApITNPpGqGvL$3.IpIpWrOsGsBqXpJ4.LsFrL$A.DpKpSpJpDqOqUqSqE5.ExD$qL.pBpTT2.qCrGrVrWqM5.sTpP$.pGpWpD3.qUsMtItQtJ6.tL$.uFqGH3.pXtOuR2vFsK5.sM$.tUqL4.GuNwAwVxBwNpC4.qXpA$2.uH5.vBxGyEyMyHtW4.qIpL$2.wV5.tIyG3yOxQqW2.FqHpJ$2.tUS4.rM2yOyJyOyHtVpPMpFqNV$2.HsR4.pUxAyOxLxDxEuVrMqBqGqKJ$3.sLpE3.pEuNxHwRwGvUuLsHrCqTpR$3.TrMS2.pFsLvDvPvEuPtNsGrGqIP$4.pRqRpNpFpTrNtGtVtStGsMrNqNpF$5.pMqKqLqRrIsCsLsIrTrFqJpHE$6.RpSqJqPqVqWqRqKpRXE$8.OpBpIpJpFTK!"
+  }
+}

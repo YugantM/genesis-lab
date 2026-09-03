@@ -1,0 +1,30 @@
+{
+  "schema": "genesis.specimen/v1",
+  "id": "catalog-og2g",
+  "name": "Gyrorbium gyrans",
+  "provenance": {
+    "author": "Bert Wang-Chak Chan",
+    "catalogue_code": "OG2g",
+    "source": "https://raw.githubusercontent.com/Chakazul/Lenia/adfc542939266de7f4bb7ebb552e8499701ee107/Python/animals.json",
+    "source_commit": "adfc542939266de7f4bb7ebb552e8499701ee107"
+  },
+  "simulator": "lenia/classic-v1",
+  "parameters": {
+    "radius": 13,
+    "time_resolution": 10,
+    "growth_center": 0.156,
+    "growth_width": 0.0224,
+    "kernel": "bump4",
+    "kernel_peaks": [
+      1.0
+    ]
+  },
+  "initial_state": {
+    "encoding": "lenia-rle-v1",
+    "cells": "10.EL2QLE$7.TpU2qHqCpXpUpNpFL$4.JrVtTuKuPuKtLrXqTqHqCpPpDG$3.qWtDqRpKqEsMuXvBtGrApXpUpSpIO$2.rQrN4.pAuAvRtTrIpUpIpKpFO$.pSsM6.tJwFuNsPsFrVpPpDL$.uFB6.tJ2yO2yLyOyDsKL$pDuC6.pFxW3yOwIwD2xPqH$rNtV5.EsMxCyIyOwXtJsMtJwFuX$sHuSV3.EpDvOwFxEwQsRqR2qHsFvWE$rQvJsWpPQpKpSqCvEvBuCpD3.BpDtGrQ$pXuKvMuPtLsWsCrIuCtBrS6.qWrQ$EsKvEwXyBwLtVrVsCrDqH6.pXrG$.qHtVxJyOwQrQpNqJpPV6.qJqE$.JsUxMyOrX10.pFqRJ$2.rQxPwIpI9.pKqJT$2.qJxEuPpKB7.qCpP$2.EvOvMpPO5.TrGqH$3.sCyOqEpIOEBOqHqEsRtG$4.xMsMqJqCpXqJqRpIqOuCtBsF$5.xPrAqTqMpSE.rSsMrLqRqHV.TpS$6.vErDE2.VpPB$7.pIrNqHpKQ!"
+  },
+  "benchmark": {
+    "index": 1,
+    "role": "parental-species"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "genesis.species-manifest/v1",
+  "source": "https://raw.githubusercontent.com/Chakazul/Lenia/adfc542939266de7f4bb7ebb552e8499701ee107/Python/animals.json",
+  "source_commit": "adfc542939266de7f4bb7ebb552e8499701ee107",
+  "compatibility": {
+    "simulator": "lenia/classic-v1",
+    "channels": 1,
+    "kernels": 1,
+    "kernel": "bump4",
+    "growth": "gaussian",
+    "radius": 13,
+    "time_resolution": 10
+  },
+  "entries": [
+    {
+      "code": "O2u",
+      "name": "Orbium unicaudatus",
+      "specimen_id": "catalog-o2u",
+      "path": "catalog/orbium-unicaudatus.json"
+    },
+    {
+      "code": "OG2g",
+      "name": "Gyrorbium gyrans",
+      "specimen_id": "catalog-og2g",
+      "path": "catalog/gyrorbium-gyrans.json"
+    },
+    {
+      "code": "O4i",
+      "name": "Synorbium ignis",
+      "specimen_id": "catalog-o4i",
+      "path": "catalog/synorbium-ignis.json"
+    },
+    {
+      "code": "S1s",
+      "name": "Scutium solidus",
+      "specimen_id": "catalog-s1s",
+      "path": "catalog/scutium-solidus.json"
+    },
+    {
+      "code": "P4cl",
+      "name": "Paraptera cavus labens",
+      "specimen_id": "catalog-p4cl",
+      "path": "catalog/paraptera-cavus-labens.json"
+    },
+    {
+      "code": "H3s",
+      "name": "Helicium solidus",
+      "specimen_id": "catalog-h3s",
+      "path": "catalog/helicium-solidus.json"
+    },
+    {
+      "code": "H3cp",
+      "name": "Helicium cavus pedes",
+      "specimen_id": "catalog-h3cp",
+      "path": "catalog/helicium-cavus-pedes.json"
+    },
+    {
+      "code": "C0v",
+      "name": "Circium ventilans",
+      "specimen_id": "catalog-c0v",
+      "path": "catalog/circium-ventilans.json"
+    }
+  ]
+}

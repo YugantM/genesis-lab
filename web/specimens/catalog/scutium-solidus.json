@@ -1,0 +1,30 @@
+{
+  "schema": "genesis.specimen/v1",
+  "id": "catalog-s1s",
+  "name": "Scutium solidus",
+  "provenance": {
+    "author": "Bert Wang-Chak Chan",
+    "catalogue_code": "S1s",
+    "source": "https://raw.githubusercontent.com/Chakazul/Lenia/adfc542939266de7f4bb7ebb552e8499701ee107/Python/animals.json",
+    "source_commit": "adfc542939266de7f4bb7ebb552e8499701ee107"
+  },
+  "simulator": "lenia/classic-v1",
+  "parameters": {
+    "radius": 13,
+    "time_resolution": 10,
+    "growth_center": 0.29,
+    "growth_width": 0.045,
+    "kernel": "bump4",
+    "kernel_peaks": [
+      1.0
+    ]
+  },
+  "initial_state": {
+    "encoding": "lenia-rle-v1",
+    "cells": "5.pGQ$6.sUsDqRR$4.VpXrJwKvNtXrW$2.ApVrGrWsIwKyOyDwTuNO$2.qArOrIqIpPpTxH2yOyIvKqG$rVpIrNrJpH4.xP3yOvFqWA$sKvNsKqE5.pI4yOuHqPC$sNxBuMpD5.JuN3yOwXsUpN$sGxFyOT5.pCtIyF3yOuKqUH$rPwXyOxT5.qKtSxS3yOvIrQT$pQwK2yOtWXJXqHsGuWxW3yOvPsApC$.vQ3yOuVsLsGsXuMwOyK3yOvHrVpC$.rKyK3yOxEwBwCwXyE3yOxQuMrJU$.WvC5yOyM5yOwFtJqOL$2.rVwO9yOwWuMsApOC$2.pLtBwK6yOyJwQuTsQqLP$3.qHsWvEwUxTyCxRwWvRuGsNqSpA$3.HqBrUtHuGuPuLtVsXrSqIXB$4.DpDqEqW2rIqWqGpJN$6.ENTUPHA!"
+  },
+  "benchmark": {
+    "index": 3,
+    "role": "parental-species"
+  }
+}

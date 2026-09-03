@@ -1,0 +1,30 @@
+{
+  "schema": "genesis.specimen/v1",
+  "id": "catalog-o4i",
+  "name": "Synorbium ignis",
+  "provenance": {
+    "author": "Bert Wang-Chak Chan",
+    "catalogue_code": "O4i",
+    "source": "https://raw.githubusercontent.com/Chakazul/Lenia/adfc542939266de7f4bb7ebb552e8499701ee107/Python/animals.json",
+    "source_commit": "adfc542939266de7f4bb7ebb552e8499701ee107"
+  },
+  "simulator": "lenia/classic-v1",
+  "parameters": {
+    "radius": 13,
+    "time_resolution": 10,
+    "growth_center": 0.152,
+    "growth_width": 0.0156,
+    "kernel": "bump4",
+    "kernel_peaks": [
+      1.0
+    ]
+  },
+  "initial_state": {
+    "encoding": "lenia-rle-v1",
+    "cells": "22.FJRrG$20.BLpApFpGpIsT$17.pGXAKpFpOpHpDpPqDvF$16.pFrJrGUXpNS3.DqCxO$16.TtIvAsGpNpA6.pHyA$16.KuMwVxWsAQ7.sMqN$16.JqVxRyOuCpKQ7.xJ$13.BEKTpIxFxJuArFqPpS6.sHqP$12.HW2pHpKpNpJuJtPsSsNsApV5.pJtD$12.pFpOpAQIB2.tBtVuGuHuAP4.pMtBL$4.CI5.PpPO6.qLuQvVwJwSwVtE3.rBsNpA$6.L3.GpNV8.uDxBxXyL3yOuBsDsOrXpE$5.KqLrD.PpKpQ10.xT5yOyBvAtDrJpC$5.PrFsPsHpXqBU10.tE2yOuTtUvGwDuSsPqVV$5.OqRsOtFrHpOG11.yOyLtQrOsItStGrTqIP$4.pFqBqDrDsDsGQ12.uUyIuTsIsFsPsErDpSJ$3.pBpXpHNVqOsEsQI11.qQwCvItKsNsCrJqLpG$3.pXpB3.pXsOvPwApJ10.pHtGtQsRrVrGqMpPM$2.FqAC2.KqLsIxNyOyKpL9.pQ2rTrEqNqCpLO$qT.MpV3.pGrMtIxF3yO8.FqEqOqApLpCQF$.tDKqB3.RsFvSxTyG2yOvX7.pIpTWI$2.vLqN4.sLwByMxWwT2yOrN5.TpON$2.sFwI4.VvEyJyOwIwLyBvJpL3.PpNN$3.xC5.qAxRyOxMwJxCwGsNpQXpHpNS$3.qFtR5.rOxSyBwXwQvVtTrQqPqCW$4.vIF5.tAwJwNwBvBtOrWqNpE$4.CtN5.qNuAvIuWtTsGqPpEB$5.qCsEV2.QqPsWtVtIrVqHXC$6.pGrMqRqHqQrNsEsCrBpRO$7.BpMqJqNqOqHpOTF$10.AEC!"
+  },
+  "benchmark": {
+    "index": 2,
+    "role": "parental-species"
+  }
+}

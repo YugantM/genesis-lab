@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "genesis-001-validation",
+      "title": "How was Genesis 001 validated?",
+      "queries": [
+        {
+          "id": "held-out-functional-recovery",
+          "source": {
+            "label": "Local MLX experiment records",
+            "files": [
+              { "label": "runs/genesis-001-validation.json" },
+              { "label": "runs/robust-selection.json" },
+              { "label": "web/specimens/genesis-001.json" }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Functional recovery",
+                "definition": "Localized survival with final mass between 40 and 130, a final/pre-injury mass ratio between 0.75 and 1.25, post-injury motion of at least one cell, and a post/pre motion ratio of at least 0.25.",
+                "calculationSummary": "Count passing trials within each genotype and injury level, then divide by 100.",
+                "formula": "Recovered trials ÷ trials"
+              }
+            ],
+            "filters": [
+              "Held-out phases: 220, 260, 340, 380, 420",
+              "Rotations: 0°, 90°, 180°, 270°",
+              "Initial-state noise seeds: 0–4",
+              "Post-injury horizon: 300 steps"
+            ],
+            "caveats": [
+              "The candidate was selected using separate search conditions, but this is computational evidence rather than a proof of general biological regeneration.",
+              "The observed advantage is sharply bounded: Genesis 001 recovered at 5% centered damage but not at 7.5% or 10%."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "source",
+                "showInReceipt": true,
+                "title": "Search and selection",
+                "detail": "A seeded 1,024-candidate parameter search produced 243 preliminary passers; 2,916 multi-condition trials selected candidate 942."
+              },
+              {
+                "kind": "transformation",
+                "showInReceipt": true,
+                "title": "Locked held-out validation",
+                "detail": "Six hundred damaged trials crossed genotype, injury level, unseen phase, rotation, and noise seed exactly once."
+              },
+              {
+                "kind": "check",
+                "showInReceipt": true,
+                "title": "Independent reconciliation",
+                "detail": "All 600 condition keys were unique, aggregates exactly matched the raw rows, maximum lesion calibration error was 0.000016 percentage points, and minimum undamaged control mass retention was 99.32%."
+              }
+            ]
+          },
+          "reportingPeriod": "Validation run created September 3, 2026",
+          "columns": ["genotype", "target_removed_fraction", "trials", "recovered", "recovery_rate"],
+          "rows": [
+            { "genotype": "canonical", "target_removed_fraction": 0.05, "trials": 100, "recovered": 0, "recovery_rate": 0 },
+            { "genotype": "canonical", "target_removed_fraction": 0.075, "trials": 100, "recovered": 0, "recovery_rate": 0 },
+            { "genotype": "canonical", "target_removed_fraction": 0.1, "trials": 100, "recovered": 0, "recovery_rate": 0 },
+            { "genotype": "genesis-001", "target_removed_fraction": 0.05, "trials": 100, "recovered": 100, "recovery_rate": 1 },
+            { "genotype": "genesis-001", "target_removed_fraction": 0.075, "trials": 100, "recovered": 0, "recovery_rate": 0 },
+            { "genotype": "genesis-001", "target_removed_fraction": 0.1, "trials": 100, "recovered": 0, "recovery_rate": 0 }
+          ],
+          "methods": [
+            {
+              "language": "calculation",
+              "code": "Acceptance: Genesis 001 recovery ≥ 90% and canonical recovery ≤ 10% at 5% centered damage; every undamaged control retains ≥ 95% mass.\nObserved: 100%, 0%, and 99.32%, respectively.\nDecision: accepted."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

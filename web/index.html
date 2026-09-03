@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#06100d" />
+    <title>Genesis Zoo — artificial life, locally evolved</title>
+    <meta name="description" content="A living, evidence-backed artificial-life observatory running locally on Apple Silicon." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="#top" aria-label="Genesis Zoo home">GENESIS <i></i> ZOO</a>
+      <div class="status"><span></span> ecosystem online · local universe</div>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Autonomous artificial-life observatory / Berlin</p>
+          <h1>Not a zoo.<br /><em>A living world.</em></h1>
+        </div>
+        <div class="hero-side">
+          <p>Nine artificial lineages have left their glass boxes. They now share energy, space and consequences—reproducing, mutating and sometimes disappearing.</p>
+          <dl class="hero-stats">
+            <div><dt>founding lineages</dt><dd>09</dd></div>
+            <div><dt>validated trials</dt><dd>2,328</dd></div>
+            <div><dt>local discoveries</dt><dd>01</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="ecosystem-section" aria-labelledby="ecosystem-title">
+        <div class="section-head ecosystem-heading">
+          <div>
+            <p class="eyebrow">Experimental ecology / live</p>
+            <h2 id="ecosystem-title">The common world</h2>
+          </div>
+          <div class="ecosystem-actions">
+            <button id="ecoPause" type="button">Pause time</button>
+            <button id="ecoBloom" type="button">Nutrient bloom</button>
+            <button id="ecoShock" class="danger" type="button">Climate shock</button>
+            <button id="ecoReset" type="button">Restart epoch</button>
+          </div>
+        </div>
+
+        <div class="ecosystem-stage">
+          <div class="world-wrap">
+            <canvas id="ecosystem" width="1200" height="720" aria-label="A live artificial ecosystem containing evolving lineages"></canvas>
+            <div class="world-hud" aria-hidden="true">
+              <span><i></i> LIVE BIOSPHERE</span>
+              <span id="ecoClock">EPOCH 01 · 00:00</span>
+            </div>
+            <div class="world-legend" aria-hidden="true">
+              <span>matter</span><span>energy</span><span>kinship</span>
+            </div>
+            <p class="world-instruction">Select a lifeform to follow its lineage</p>
+          </div>
+
+          <aside class="ecosystem-sidebar" aria-label="Live ecosystem telemetry">
+            <div class="eco-vitals">
+              <p class="mini-title">World state</p>
+              <dl>
+                <div><dt>living</dt><dd id="ecoPopulation">18</dd></div>
+                <div><dt>births</dt><dd id="ecoBirths">00</dd></div>
+                <div><dt>deaths</dt><dd id="ecoDeaths">00</dd></div>
+                <div><dt>lineages</dt><dd id="ecoLineages">09</dd></div>
+                <div><dt>available energy</dt><dd id="ecoEnergy">100%</dd></div>
+              </dl>
+            </div>
+            <div class="eco-subject">
+              <p class="mini-title">Following</p>
+              <div class="subject-mark" id="ecoSubjectMark">G1</div>
+              <h3 id="ecoSubjectName">Genesis / founder</h3>
+              <p id="ecoSubjectMeta">Generation 0 · no parent</p>
+              <div class="trait"><span>velocity</span><i><b id="traitSpeed"></b></i></div>
+              <div class="trait"><span>efficiency</span><i><b id="traitEfficiency"></b></i></div>
+              <div class="trait"><span>fertility</span><i><b id="traitFertility"></b></i></div>
+            </div>
+            <div class="eco-events">
+              <p class="mini-title">Field notes</p>
+              <ol id="ecoEventLog" aria-live="polite"></ol>
+            </div>
+          </aside>
+        </div>
+        <div class="lineage-ribbon" id="lineageRibbon" aria-label="Living lineage population"></div>
+        <p class="ecosystem-note"><strong>Exploratory layer.</strong> Organism-level ecology and inheritance run here; validated Lenia survival evidence remains isolated in the laboratory below.</p>
+      </section>
+
+      <section class="zoo-section" aria-labelledby="zoo-title">
+        <div class="section-head">
+          <div><p class="eyebrow">Controlled evidence</p><h2 id="zoo-title">The isolation laboratory</h2></div>
+          <div class="zoo-actions">
+            <button id="pauseAll" type="button">Pause</button>
+            <button id="resetAll" type="button">Reset population</button>
+            <button id="stressAll" class="primary" type="button">5% extinction pulse</button>
+          </div>
+        </div>
+        <div class="zoo-shell">
+          <canvas id="zoo" width="768" height="768" aria-label="Nine live cellular automata habitats"></canvas>
+          <div id="habitatGrid" class="habitat-grid" aria-label="Choose a habitat"></div>
+          <div class="scanline" aria-hidden="true"></div>
+          <div id="eventMessage" class="event-message" aria-live="polite"></div>
+        </div>
+        <p class="zoo-caption"><span id="generation">GEN 000000</span><span>Native physics · no cross-species interference · exact 5% injury</span><span>MLX evidence / WebGL observatory</span></p>
+      </section>
+      <section class="inspector" aria-live="polite">
+        <div class="identity">
+          <p class="eyebrow" id="selectedKind">Local descendant</p>
+          <h2 id="selectedName">Genesis 001</h2>
+          <p id="selectedSummary">The first organism discovered here: an Orbium descendant with a narrow but reproducible central-injury advantage.</p>
+          <button id="stressSelected" class="text-action" type="button">Injure this creature →</button>
+        </div>
+        <div class="evidence">
+          <p class="mini-title">5% injury recovery</p>
+          <div class="bar-row"><span>parent</span><div><i id="parentBar"></i></div><strong id="parentRate">67%</strong></div>
+          <div class="bar-row"><span>transfer</span><div><i id="transferBar"></i></div><strong id="transferRate">100%</strong></div>
+          <p id="classification" class="finding">Beneficial · +33 percentage points</p>
+        </div>
+        <div class="genome">
+          <p class="mini-title">Identity record</p>
+          <dl>
+            <div><dt>catalogue code</dt><dd id="selectedCode">GEN–001</dd></div>
+            <div><dt>growth μ</dt><dd id="selectedMu">0.1463</dd></div>
+            <div><dt>growth σ</dt><dd id="selectedSigma">0.0169</dd></div>
+            <div><dt>lineage</dt><dd id="selectedLineage">O2u → #942</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="discoveries" aria-labelledby="discoveries-title">
+        <div class="section-head"><div><p class="eyebrow">Research ledger</p><h2 id="discoveries-title">What the zoo has taught us</h2></div></div>
+        <article class="discovery feature">
+          <span class="number">001</span>
+          <div><p class="eyebrow">Threshold event</p><h3>Five percent changes everything.</h3></div>
+          <p>A two-parameter Orbium mutation survived every held-out 5% central injury. At 7.5%, every trial failed. Robustness appeared as a narrow threshold—not a gradual superpower.</p>
+        </article>
+        <article class="discovery">
+          <span class="number">002</span>
+          <div><p class="eyebrow">Species barrier</p><h3>Useful rules do not travel cleanly.</h3></div>
+          <p>The same relative mutation helped two species, barely changed one, and erased viability in five. Regeneration cannot simply be copied; it must be found inside each species’ own viable world.</p>
+        </article>
+      </section>
+    </main>
+    <footer><span>GENESIS RESEARCH CHARTER 001</span><span>Every claim keeps its genome, seed and trial record</span><span>M4 PRO / METAL</span></footer>
+    <script src="ecosystem.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

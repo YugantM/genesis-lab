@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "orbium-damage-threshold",
+      "title": "Small trailing wounds survive; other tested wounds are lethal",
+      "queries": [
+        {
+          "id": "damage-sweep-v1",
+          "summary": "A matched-control MLX experiment tested five target damage fractions at center, leading, and trailing locations.",
+          "source": {
+            "label": "Genesis damage sweep",
+            "files": [
+              {"label":"runs/damage-sweep.json"},
+              {"label":"runs/damage-sweep.csv"}
+            ],
+            "metricDefinitions": [
+              {
+                "name":"Survival",
+                "definition":"Survival requires final mass of at least 1.0 after 300 post-damage steps.",
+                "calculationSummary":"15 calibrated injuries plus one undamaged control."
+              }
+            ],
+            "filters": ["Specimen: Orbium unicaudatus", "Damage targets: 5%, 10%, 15%, 20%, 25%", "Locations: center, leading, trailing"],
+            "caveats": ["The run uses one deterministic phase and has no replicate-level uncertainty yet."],
+            "evidenceFlow": [
+              {"kind":"calculation","title":"Calibration","detail":"Each disk radius was selected in 0.05-cell increments to minimize error from the requested removed-mass fraction."},
+              {"kind":"validation","title":"Matched control","detail":"The undamaged control retained 99.1% of pre-intervention mass over the same 300-step window."},
+              {"kind":"result","title":"Observed boundary","detail":"Trailing wounds at approximately 4.6% and 10.0% survived; all center and leading wounds, and every location at 15% or higher, became extinct."}
+            ]
+          },
+          "columns": ["target_removed_fraction","actual_removed_fraction","location","final_mass","survived","extinction_step"],
+          "rows": [
+            {"target_removed_fraction":0.05,"actual_removed_fraction":0.0520,"location":"center","final_mass":0,"survived":false,"extinction_step":40},
+            {"target_removed_fraction":0.05,"actual_removed_fraction":0.0462,"location":"leading","final_mass":0,"survived":false,"extinction_step":50},
+            {"target_removed_fraction":0.05,"actual_removed_fraction":0.0458,"location":"trailing","final_mass":71.2167,"survived":true,"extinction_step":null},
+            {"target_removed_fraction":0.10,"actual_removed_fraction":0.0926,"location":"center","final_mass":0,"survived":false,"extinction_step":30},
+            {"target_removed_fraction":0.10,"actual_removed_fraction":0.1039,"location":"leading","final_mass":0,"survived":false,"extinction_step":50},
+            {"target_removed_fraction":0.10,"actual_removed_fraction":0.0999,"location":"trailing","final_mass":70.8668,"survived":true,"extinction_step":null},
+            {"target_removed_fraction":0.15,"actual_removed_fraction":0.1493,"location":"center","final_mass":0,"survived":false,"extinction_step":20},
+            {"target_removed_fraction":0.15,"actual_removed_fraction":0.1591,"location":"leading","final_mass":0,"survived":false,"extinction_step":20},
+            {"target_removed_fraction":0.15,"actual_removed_fraction":0.1507,"location":"trailing","final_mass":0,"survived":false,"extinction_step":20},
+            {"target_removed_fraction":0.20,"actual_removed_fraction":0.2074,"location":"center","final_mass":0,"survived":false,"extinction_step":10},
+            {"target_removed_fraction":0.20,"actual_removed_fraction":0.1962,"location":"leading","final_mass":0,"survived":false,"extinction_step":20},
+            {"target_removed_fraction":0.20,"actual_removed_fraction":0.2111,"location":"trailing","final_mass":0,"survived":false,"extinction_step":20},
+            {"target_removed_fraction":0.25,"actual_removed_fraction":0.2473,"location":"center","final_mass":0,"survived":false,"extinction_step":10},
+            {"target_removed_fraction":0.25,"actual_removed_fraction":0.2464,"location":"leading","final_mass":0,"survived":false,"extinction_step":10},
+            {"target_removed_fraction":0.25,"actual_removed_fraction":0.2475,"location":"trailing","final_mass":0,"survived":false,"extinction_step":10}
+          ],
+          "preview": {"kind":"aggregate","note":"Complete condition-level output from the deterministic calibration sweep.","totalRows":15}
+        }
+      ]
+    }
+  ]
+}

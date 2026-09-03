@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "orbium-replicated-threshold",
+      "title": "The damage boundary persists across phase and rotation",
+      "queries": [
+        {
+          "id": "replicated-damage-sweep-v1",
+          "summary": "Three hundred calibrated injuries tested five damage levels, three anatomical locations, five phases, and four rotations, with 20 matched controls.",
+          "source": {
+            "label": "Genesis replicated damage sweep",
+            "files": [
+              {"label":"runs/replicated-damage-sweep.json"},
+              {"label":"runs/replicated-damage-sweep.csv"}
+            ],
+            "metricDefinitions": [
+              {
+                "name":"Survival rate",
+                "definition":"Survival rate counts trials with final mass of at least 1.0 after 300 post-damage steps and divides by 20 invariance trials per condition.",
+                "calculationSummary":"Five phases and four rotations for each damage-location pair."
+              }
+            ],
+            "filters": ["Phases: 260, 280, 300, 320, 340", "Orientations: 0°, 90°, 180°, 270°", "Damage targets: 5%, 10%, 15%, 20%, 25%", "Locations: center, leading, trailing"],
+            "caveats": ["These are deterministic invariance trials, not statistically independent organisms or evolutionary replicates."],
+            "evidenceFlow": [
+              {"kind":"calculation","title":"Calibration accuracy","detail":"Mean absolute error between target and actual removed mass was 0.45 percentage points; the maximum was 1.94 points."},
+              {"kind":"validation","title":"Control stability","detail":"Undamaged controls retained 99.0% to 100.1% of pre-intervention mass."},
+              {"kind":"validation","title":"Phase and rotation consistency","detail":"All five phases and all four rotations produced the same condition-level survival boundary."},
+              {"kind":"result","title":"Observed boundary","detail":"Only trailing wounds at 5% and 10% survived; every center and leading wound and all wounds at 15% or greater became extinct."}
+            ]
+          },
+          "columns": ["damage","location","trials","survivors","survival_rate"],
+          "rows": [
+            {"damage":"5%","location":"center","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"5%","location":"leading","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"5%","location":"trailing","trials":20,"survivors":20,"survival_rate":1.0},
+            {"damage":"10%","location":"center","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"10%","location":"leading","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"10%","location":"trailing","trials":20,"survivors":20,"survival_rate":1.0},
+            {"damage":"15%","location":"center","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"15%","location":"leading","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"15%","location":"trailing","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"20%","location":"center","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"20%","location":"leading","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"20%","location":"trailing","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"25%","location":"center","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"25%","location":"leading","trials":20,"survivors":0,"survival_rate":0.0},
+            {"damage":"25%","location":"trailing","trials":20,"survivors":0,"survival_rate":0.0}
+          ],
+          "preview": {"kind":"aggregate","note":"Complete aggregate result at the damage-by-location grain.","totalRows":15}
+        }
+      ]
+    }
+  ]
+}

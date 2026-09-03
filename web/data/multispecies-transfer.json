@@ -1,0 +1,612 @@
+{
+  "schema": "genesis.multispecies-transfer/v1",
+  "created_at": "2026-09-03T13:27:09.270257+00:00",
+  "question": "Does the relative Genesis 001 parameter shift improve injury recovery across distinct classic Lenia species?",
+  "protocol": {
+    "species_count": 8,
+    "phases": [
+      240,
+      300,
+      360
+    ],
+    "orientations_degrees": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "noise_seeds": [
+      0,
+      1,
+      2
+    ],
+    "initial_state_noise_sigma": 0.002,
+    "lesions": [
+      "core",
+      "leading",
+      "trailing"
+    ],
+    "target_removed_fraction": 0.05,
+    "post_steps": 300,
+    "trials_per_species_genotype": 108,
+    "transfer": {
+      "growth_center_delta": -0.0036677062511444036,
+      "growth_width_scale": 1.1260208984216056
+    },
+    "functional_recovery": "paired-control mass and occupied-area retention; locomotion retention required only for moving controls",
+    "transferability_gate": "beneficial by >=10 percentage points in at least half of species and harmful in at most one"
+  },
+  "summary": {
+    "trial_count": 1728,
+    "beneficial_species": 2,
+    "neutral_species": 1,
+    "harmful_species": 0,
+    "transfer_nonviable_species": 5,
+    "excluded_parent_unstable_species": 0,
+    "transferable": false
+  },
+  "species_comparison": [
+    {
+      "species_code": "O2u",
+      "species_name": "Orbium unicaudatus",
+      "parent_recovery_rate": 0.6666666666666666,
+      "genesis_transfer_recovery_rate": 1.0,
+      "parent_control_valid_rate": 1.0,
+      "genesis_transfer_control_valid_rate": 1.0,
+      "difference": 0.33333333333333337,
+      "classification": "beneficial"
+    },
+    {
+      "species_code": "OG2g",
+      "species_name": "Gyrorbium gyrans",
+      "parent_recovery_rate": 0.75,
+      "genesis_transfer_recovery_rate": 0.0,
+      "parent_control_valid_rate": 1.0,
+      "genesis_transfer_control_valid_rate": 0.0,
+      "difference": -0.75,
+      "classification": "transfer-nonviable"
+    },
+    {
+      "species_code": "O4i",
+      "species_name": "Synorbium ignis",
+      "parent_recovery_rate": 0.6574074074074074,
+      "genesis_transfer_recovery_rate": 0.0,
+      "parent_control_valid_rate": 1.0,
+      "genesis_transfer_control_valid_rate": 0.0,
+      "difference": -0.6574074074074074,
+      "classification": "transfer-nonviable"
+    },
+    {
+      "species_code": "S1s",
+      "species_name": "Scutium solidus",
+      "parent_recovery_rate": 0.3333333333333333,
+      "genesis_transfer_recovery_rate": 0.0,
+      "parent_control_valid_rate": 1.0,
+      "genesis_transfer_control_valid_rate": 0.0,
+      "difference": -0.3333333333333333,
+      "classification": "transfer-nonviable"
+    },
+    {
+      "species_code": "P4cl",
+      "species_name": "Paraptera cavus labens",
+      "parent_recovery_rate": 0.6666666666666666,
+      "genesis_transfer_recovery_rate": 0.7129629629629629,
+      "parent_control_valid_rate": 1.0,
+      "genesis_transfer_control_valid_rate": 1.0,
+      "difference": 0.04629629629629628,
+      "classification": "neutral"
+    },
+    {
+      "species_code": "H3s",
+      "species_name": "Helicium solidus",
+      "parent_recovery_rate": 0.5555555555555556,
+      "genesis_transfer_recovery_rate": 0.0,
+      "parent_control_valid_rate": 1.0,
+      "genesis_transfer_control_valid_rate": 0.0,
+      "difference": -0.5555555555555556,
+      "classification": "transfer-nonviable"
+    },
+    {
+      "species_code": "H3cp",
+      "species_name": "Helicium cavus pedes",
+      "parent_recovery_rate": 0.5740740740740741,
+      "genesis_transfer_recovery_rate": 0.0,
+      "parent_control_valid_rate": 1.0,
+      "genesis_transfer_control_valid_rate": 0.0,
+      "difference": -0.5740740740740741,
+      "classification": "transfer-nonviable"
+    },
+    {
+      "species_code": "C0v",
+      "species_name": "Circium ventilans",
+      "parent_recovery_rate": 0.8888888888888888,
+      "genesis_transfer_recovery_rate": 1.0,
+      "parent_control_valid_rate": 1.0,
+      "genesis_transfer_control_valid_rate": 1.0,
+      "difference": 0.11111111111111116,
+      "classification": "beneficial"
+    }
+  ],
+  "aggregate": [
+    {
+      "species_code": "O2u",
+      "species_name": "Orbium unicaudatus",
+      "genotype": "parent",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "O2u",
+      "species_name": "Orbium unicaudatus",
+      "genotype": "parent",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "O2u",
+      "species_name": "Orbium unicaudatus",
+      "genotype": "parent",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "O2u",
+      "species_name": "Orbium unicaudatus",
+      "genotype": "genesis-transfer",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "O2u",
+      "species_name": "Orbium unicaudatus",
+      "genotype": "genesis-transfer",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "O2u",
+      "species_name": "Orbium unicaudatus",
+      "genotype": "genesis-transfer",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "OG2g",
+      "species_name": "Gyrorbium gyrans",
+      "genotype": "parent",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 14,
+      "recovery_rate": 0.3888888888888889
+    },
+    {
+      "species_code": "OG2g",
+      "species_name": "Gyrorbium gyrans",
+      "genotype": "parent",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 31,
+      "recovery_rate": 0.8611111111111112
+    },
+    {
+      "species_code": "OG2g",
+      "species_name": "Gyrorbium gyrans",
+      "genotype": "parent",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "OG2g",
+      "species_name": "Gyrorbium gyrans",
+      "genotype": "genesis-transfer",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "OG2g",
+      "species_name": "Gyrorbium gyrans",
+      "genotype": "genesis-transfer",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "OG2g",
+      "species_name": "Gyrorbium gyrans",
+      "genotype": "genesis-transfer",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "O4i",
+      "species_name": "Synorbium ignis",
+      "genotype": "parent",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "O4i",
+      "species_name": "Synorbium ignis",
+      "genotype": "parent",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 35,
+      "recovery_rate": 0.9722222222222222
+    },
+    {
+      "species_code": "O4i",
+      "species_name": "Synorbium ignis",
+      "genotype": "parent",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "O4i",
+      "species_name": "Synorbium ignis",
+      "genotype": "genesis-transfer",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "O4i",
+      "species_name": "Synorbium ignis",
+      "genotype": "genesis-transfer",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "O4i",
+      "species_name": "Synorbium ignis",
+      "genotype": "genesis-transfer",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "S1s",
+      "species_name": "Scutium solidus",
+      "genotype": "parent",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "S1s",
+      "species_name": "Scutium solidus",
+      "genotype": "parent",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "S1s",
+      "species_name": "Scutium solidus",
+      "genotype": "parent",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "S1s",
+      "species_name": "Scutium solidus",
+      "genotype": "genesis-transfer",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "S1s",
+      "species_name": "Scutium solidus",
+      "genotype": "genesis-transfer",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "S1s",
+      "species_name": "Scutium solidus",
+      "genotype": "genesis-transfer",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "P4cl",
+      "species_name": "Paraptera cavus labens",
+      "genotype": "parent",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "P4cl",
+      "species_name": "Paraptera cavus labens",
+      "genotype": "parent",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "P4cl",
+      "species_name": "Paraptera cavus labens",
+      "genotype": "parent",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "P4cl",
+      "species_name": "Paraptera cavus labens",
+      "genotype": "genesis-transfer",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 13,
+      "recovery_rate": 0.3611111111111111
+    },
+    {
+      "species_code": "P4cl",
+      "species_name": "Paraptera cavus labens",
+      "genotype": "genesis-transfer",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 28,
+      "recovery_rate": 0.7777777777777778
+    },
+    {
+      "species_code": "P4cl",
+      "species_name": "Paraptera cavus labens",
+      "genotype": "genesis-transfer",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "H3s",
+      "species_name": "Helicium solidus",
+      "genotype": "parent",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "H3s",
+      "species_name": "Helicium solidus",
+      "genotype": "parent",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 12,
+      "recovery_rate": 0.3333333333333333
+    },
+    {
+      "species_code": "H3s",
+      "species_name": "Helicium solidus",
+      "genotype": "parent",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 12,
+      "recovery_rate": 0.3333333333333333
+    },
+    {
+      "species_code": "H3s",
+      "species_name": "Helicium solidus",
+      "genotype": "genesis-transfer",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "H3s",
+      "species_name": "Helicium solidus",
+      "genotype": "genesis-transfer",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "H3s",
+      "species_name": "Helicium solidus",
+      "genotype": "genesis-transfer",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "H3cp",
+      "species_name": "Helicium cavus pedes",
+      "genotype": "parent",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 9,
+      "recovery_rate": 0.25
+    },
+    {
+      "species_code": "H3cp",
+      "species_name": "Helicium cavus pedes",
+      "genotype": "parent",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 31,
+      "recovery_rate": 0.8611111111111112
+    },
+    {
+      "species_code": "H3cp",
+      "species_name": "Helicium cavus pedes",
+      "genotype": "parent",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 22,
+      "recovery_rate": 0.6111111111111112
+    },
+    {
+      "species_code": "H3cp",
+      "species_name": "Helicium cavus pedes",
+      "genotype": "genesis-transfer",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "H3cp",
+      "species_name": "Helicium cavus pedes",
+      "genotype": "genesis-transfer",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "H3cp",
+      "species_name": "Helicium cavus pedes",
+      "genotype": "genesis-transfer",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 0,
+      "recovered": 0,
+      "recovery_rate": 0.0
+    },
+    {
+      "species_code": "C0v",
+      "species_name": "Circium ventilans",
+      "genotype": "parent",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 24,
+      "recovery_rate": 0.6666666666666666
+    },
+    {
+      "species_code": "C0v",
+      "species_name": "Circium ventilans",
+      "genotype": "parent",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "C0v",
+      "species_name": "Circium ventilans",
+      "genotype": "parent",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "C0v",
+      "species_name": "Circium ventilans",
+      "genotype": "genesis-transfer",
+      "lesion": "core",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "C0v",
+      "species_name": "Circium ventilans",
+      "genotype": "genesis-transfer",
+      "lesion": "leading",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    },
+    {
+      "species_code": "C0v",
+      "species_name": "Circium ventilans",
+      "genotype": "genesis-transfer",
+      "lesion": "trailing",
+      "trials": 36,
+      "valid_controls": 36,
+      "recovered": 36,
+      "recovery_rate": 1.0
+    }
+  ]
+}

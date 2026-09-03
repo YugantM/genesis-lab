@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "genesis-001-held-out-recovery",
+  "queryId": "held_out_functional_recovery",
+  "title": "Genesis 001 clears the 5% injury threshold—and no further",
+  "chart": {
+    "type": "bar",
+    "x": "removedMass",
+    "y": "recoveryRate",
+    "series": "genotype",
+    "xLabel": "Target mass removed",
+    "yLabel": "Functional recovery rate (%)"
+  },
+  "rows": [
+    { "removedMass": "5.0%", "genotype": "Canonical Orbium", "recoveryRate": 0 },
+    { "removedMass": "7.5%", "genotype": "Canonical Orbium", "recoveryRate": 0 },
+    { "removedMass": "10.0%", "genotype": "Canonical Orbium", "recoveryRate": 0 },
+    { "removedMass": "5.0%", "genotype": "Genesis 001", "recoveryRate": 100 },
+    { "removedMass": "7.5%", "genotype": "Genesis 001", "recoveryRate": 0 },
+    { "removedMass": "10.0%", "genotype": "Genesis 001", "recoveryRate": 0 }
+  ],
+  "source": {
+    "label": "Locked held-out MLX validation",
+    "files": [
+      { "label": "runs/genesis-001-validation.json" }
+    ],
+    "metricDefinitions": [
+      {
+        "label": "Functional recovery",
+        "definition": "The organism remains localized, finishes with 40–130 mass units, retains 75–125% of its pre-injury mass, moves at least one cell after injury, and preserves at least 25% of pre-injury motion.",
+        "calculationSummary": "Recovered trials divided by 100 trials for each genotype and damage level.",
+        "formula": "Recovered trials ÷ 100 × 100"
+      }
+    ],
+    "caveats": [
+      "Each point summarizes 100 trials across five unseen phases, four rotations, and five noise seeds.",
+      "This establishes robustness only for this simulator, genome, centered-disk lesion protocol, and 300-step observation window."
+    ]
+  },
+  "theme": "codex-classic"
+}

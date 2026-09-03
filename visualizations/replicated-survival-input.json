@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "orbium-replicated-survival",
+  "queryId": "replicated_damage_sweep_v1",
+  "title": "Trailing tissue is the only tested damage-tolerant region",
+  "description": "Survival across five phases and four rotations; 20 invariance trials per condition",
+  "chart": {
+    "type": "line",
+    "x": "damage",
+    "y": "survivalRate",
+    "series": "location",
+    "xLabel": "Target mass removed",
+    "yLabel": "Survival rate"
+  },
+  "rows": [
+    {"damage":"5%","location":"Center","survivalRate":0.0},
+    {"damage":"10%","location":"Center","survivalRate":0.0},
+    {"damage":"15%","location":"Center","survivalRate":0.0},
+    {"damage":"20%","location":"Center","survivalRate":0.0},
+    {"damage":"25%","location":"Center","survivalRate":0.0},
+    {"damage":"5%","location":"Leading","survivalRate":0.0},
+    {"damage":"10%","location":"Leading","survivalRate":0.0},
+    {"damage":"15%","location":"Leading","survivalRate":0.0},
+    {"damage":"20%","location":"Leading","survivalRate":0.0},
+    {"damage":"25%","location":"Leading","survivalRate":0.0},
+    {"damage":"5%","location":"Trailing","survivalRate":1.0},
+    {"damage":"10%","location":"Trailing","survivalRate":1.0},
+    {"damage":"15%","location":"Trailing","survivalRate":0.0},
+    {"damage":"20%","location":"Trailing","survivalRate":0.0},
+    {"damage":"25%","location":"Trailing","survivalRate":0.0}
+  ],
+  "source": {
+    "label": "Genesis replicated damage sweep",
+    "files": [
+      {"label":"runs/replicated-damage-sweep.json"},
+      {"label":"runs/replicated-damage-sweep.csv"}
+    ],
+    "metricDefinitions": [
+      {
+        "name":"Survival rate",
+        "definition":"Survival rate is the fraction of 20 phase-by-rotation invariance trials retaining mass of at least 1.0 after 300 post-damage steps.",
+        "calculationSummary":"Five phases × four rotations per damage-location condition."
+      }
+    ],
+    "filters": ["Specimen: Orbium unicaudatus", "Simulator: Lenia classic v1", "Post-damage window: 300 steps"],
+    "caveats": ["Rotations and phases test invariance but are not independent biological or evolutionary replicates.", "Mean absolute removed-mass calibration error was 0.45 percentage points; maximum error was 1.94 points."],
+    "evidenceFlow": [
+      {"kind":"validation","title":"Controls","detail":"All 20 undamaged controls retained between 99.0% and 100.1% of baseline mass."},
+      {"kind":"validation","title":"Invariance","detail":"Each phase produced 8 survivors and each orientation produced 10 survivors, matching the aggregate survival boundary."}
+    ]
+  },
+  "theme": "codex-classic"
+}

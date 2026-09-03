@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "orbium-damage-survival",
+  "queryId": "damage_sweep_v1",
+  "title": "Orbium survives only small trailing wounds",
+  "description": "Survival 300 steps after mass-calibrated damage",
+  "chart": {
+    "type": "line",
+    "x": "damage",
+    "y": "survival",
+    "series": "location",
+    "xLabel": "Target mass removed",
+    "yLabel": "Survival (1 = alive, 0 = extinct)"
+  },
+  "rows": [
+    {"damage":"5%","location":"Center","survival":0},
+    {"damage":"10%","location":"Center","survival":0},
+    {"damage":"15%","location":"Center","survival":0},
+    {"damage":"20%","location":"Center","survival":0},
+    {"damage":"25%","location":"Center","survival":0},
+    {"damage":"5%","location":"Leading","survival":0},
+    {"damage":"10%","location":"Leading","survival":0},
+    {"damage":"15%","location":"Leading","survival":0},
+    {"damage":"20%","location":"Leading","survival":0},
+    {"damage":"25%","location":"Leading","survival":0},
+    {"damage":"5%","location":"Trailing","survival":1},
+    {"damage":"10%","location":"Trailing","survival":1},
+    {"damage":"15%","location":"Trailing","survival":0},
+    {"damage":"20%","location":"Trailing","survival":0},
+    {"damage":"25%","location":"Trailing","survival":0}
+  ],
+  "source": {
+    "label": "Genesis damage sweep",
+    "files": [
+      {"label":"runs/damage-sweep.csv"},
+      {"label":"runs/damage-sweep.json"}
+    ],
+    "metricDefinitions": [
+      {
+        "name":"Survival",
+        "definition":"A specimen survives when its mass remains at least 1.0 after 300 post-damage simulation steps.",
+        "calculationSummary":"Binary threshold applied independently to each damage-location condition."
+      }
+    ],
+    "filters": ["Specimen: Orbium unicaudatus", "Simulator: Lenia classic v1", "Intervention phase: step 300"],
+    "caveats": ["One deterministic specimen phase was tested; this is a calibration result, not a replicated population estimate."]
+  },
+  "theme": "codex-classic"
+}
