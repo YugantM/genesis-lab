@@ -3,6 +3,8 @@
 An open laboratory for discovering robust, self-organising systems on Apple
 Silicon.
 
+**Live observatory:** <https://yugantm.github.io/genesis-lab/>
+
 Genesis begins with a continuous cellular universe inspired by Lenia. The
 research core runs batched simulations in MLX; the Genesis Zoo is a
 dependency-free WebGL observatory where nine validated species live side by
