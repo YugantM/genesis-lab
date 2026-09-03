@@ -69,6 +69,14 @@ python3 -m genesis.import_species
 python3 -m genesis.multispecies_benchmark
 ```
 
+Run the real two-channel ecology experiment and its separately held-out
+validation:
+
+```bash
+python3 -m genesis.coupled_ecology
+python3 -m genesis.validate_ecology
+```
+
 The benchmark removes exactly 5% of organism mass at core, leading, and
 trailing anatomical anchors. Every injured trial is compared with an undamaged
 control sharing species, parameters, phase, rotation, and noise seed.
@@ -89,6 +97,8 @@ selection, and MAP-Elites under identical held-out damage protocols.
 - `genesis/metrics.py` — deterministic behavioural measurements
 - `genesis/benchmark.py` — hardware sanity check and throughput benchmark
 - `genesis/multispecies_benchmark.py` — normalized cross-species injury test
+- `genesis/coupled_ecology.py` — real two-channel Lenia competition experiment
+- `genesis/validate_ecology.py` — held-out ecological candidate validation
 - `tests/` — invariants for the scientific core
 - `web/` — nine-habitat WebGL artificial-life observatory
 - `docs/research-charter.md` — hypothesis, controls, and research gates

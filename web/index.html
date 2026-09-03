@@ -23,7 +23,7 @@
           <p>Nine artificial lineages have left their glass boxes. They now share energy, space and consequences—reproducing, mutating and sometimes disappearing.</p>
           <dl class="hero-stats">
             <div><dt>founding lineages</dt><dd>09</dd></div>
-            <div><dt>validated trials</dt><dd>2,328</dd></div>
+            <div><dt>controlled trials</dt><dd>4,920</dd></div>
             <div><dt>local discoveries</dt><dd>01</dd></div>
           </dl>
         </div>
@@ -86,6 +86,61 @@
         <p class="ecosystem-note"><strong>Exploratory layer.</strong> Organism-level ecology and inheritance run here; validated Lenia survival evidence remains isolated in the laboratory below.</p>
       </section>
 
+      <section class="coupling-section" aria-labelledby="coupling-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Experiment 003 / actual Lenia coupling</p>
+            <h2 id="coupling-title">When bodies meet</h2>
+          </div>
+          <div class="coupling-switch" role="group" aria-label="Competition strength">
+            <button type="button" data-coupling="0.25">Low pressure</button>
+            <button type="button" data-coupling="0.5">Medium</button>
+            <button type="button" data-coupling="1" aria-pressed="true">High pressure</button>
+          </div>
+        </div>
+
+        <div class="coupling-overview">
+          <div class="coupling-headline">
+            <p class="mini-title">Both organisms persisted</p>
+            <strong id="couplingRate">45%</strong>
+            <p id="couplingOutcome">194 of 432 matched encounters at high competition.</p>
+          </div>
+          <div class="geometry-panel">
+            <p class="mini-title">Distance changes the outcome</p>
+            <div class="geometry-row"><span>near</span><i><b id="nearBar"></b></i><strong id="nearRate">85%</strong></div>
+            <div class="geometry-row"><span>contact</span><i><b id="contactBar"></b></i><strong id="contactRate">42%</strong></div>
+            <div class="geometry-row"><span>overlap</span><i><b id="overlapBar"></b></i><strong id="overlapRate">08%</strong></div>
+          </div>
+          <div class="validation-panel">
+            <p class="mini-title">Held-out candidate decision</p>
+            <span class="validation-badge">Not promoted</span>
+            <p><strong id="genesisEcoRate">89.7%</strong> Genesis <i>vs</i> <strong id="parentEcoRate">87.7%</strong> parent</p>
+            <small id="validationReason">+2.0 points · below the locked +5 point gate · p=0.0625</small>
+          </div>
+        </div>
+
+        <div class="coupling-board">
+          <div>
+            <p class="mini-title">Pairwise coexistence · select a cell</p>
+            <div id="couplingMatrix" class="coupling-matrix" aria-label="Pairwise Lenia coexistence matrix"></div>
+          </div>
+          <aside class="pair-inspector" aria-live="polite">
+            <p class="mini-title">Selected encounter</p>
+            <span id="pairCodes" class="pair-codes">GEN001 × S1s</span>
+            <h3 id="pairNames">Genesis 001<br />with Scutium solidus</h3>
+            <strong id="pairRate">83%</strong>
+            <p>coexistence across 12 phase-matched trials</p>
+            <dl>
+              <div><dt>coexistence</dt><dd id="pairCoexist">10</dd></div>
+              <div><dt>dominance</dt><dd id="pairDominance">0</dd></div>
+              <div><dt>mutual collapse</dt><dd id="pairCollapse">2</dd></div>
+              <div><dt>median similarity</dt><dd id="pairSimilarity">0.89</dd></div>
+            </dl>
+          </aside>
+        </div>
+        <p class="ecosystem-note"><strong>Rule.</strong> Each channel keeps its native continuous Lenia dynamics. The only shared term is symmetric local pressure from the other organism; every result is measured against an identical isolated control.</p>
+      </section>
+
       <section class="zoo-section" aria-labelledby="zoo-title">
         <div class="section-head">
           <div><p class="eyebrow">Controlled evidence</p><h2 id="zoo-title">The isolation laboratory</h2></div>
@@ -138,10 +193,21 @@
           <div><p class="eyebrow">Species barrier</p><h3>Useful rules do not travel cleanly.</h3></div>
           <p>The same relative mutation helped two species, barely changed one, and erased viability in five. Regeneration cannot simply be copied; it must be found inside each species’ own viable world.</p>
         </article>
+        <article class="discovery feature">
+          <span class="number">003</span>
+          <div><p class="eyebrow">Ecological threshold</p><h3>Proximity became the predator.</h3></div>
+          <p>Under the strongest symmetric pressure, coexistence fell from 84.7% when organisms began near one another to 8.3% when their bodies overlapped. A separate held-out run reproduced the same direction: 86.8% versus 25.7%.</p>
+        </article>
+        <article class="discovery restraint">
+          <span class="number">004</span>
+          <div><p class="eyebrow">Failed promotion</p><h3>The promising advantage got smaller.</h3></div>
+          <p>Genesis 001 appeared 7.5 points better than its parent during discovery. In 252 unseen matched contexts the difference contracted to 2.0 points and missed the precommitted gate. It remains an observation, not a promoted finding.</p>
+        </article>
       </section>
     </main>
     <footer><span>GENESIS RESEARCH CHARTER 001</span><span>Every claim keeps its genome, seed and trial record</span><span>M4 PRO / METAL</span></footer>
     <script src="ecosystem.js"></script>
+    <script src="coupling.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
