@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#06100d" />
     <title>Genesis Zoo — artificial life, locally evolved</title>
     <meta name="description" content="A living, evidence-backed artificial-life observatory running locally on Apple Silicon." />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <header>
@@ -138,6 +138,24 @@
             </dl>
           </aside>
         </div>
+        <div class="evolution-result">
+          <div>
+            <p class="eyebrow">Evolution run 001 / 2,048 paired genomes</p>
+            <h3>A partial rescue.<br><em>No promotion.</em></h3>
+          </div>
+          <div class="evolution-bars">
+            <p class="mini-title">Unseen hard encounters</p>
+            <div><span>parents</span><i><b style="width:0%"></b></i><strong id="evoParentRate">0 / 8</strong></div>
+            <div><span>candidate 275</span><i><b id="evoCandidateBar" style="width:25%"></b></i><strong id="evoCandidateRate">2 / 8</strong></div>
+            <small>Both organisms retained 90–103% of parental mass in isolation.</small>
+          </div>
+          <dl class="evolution-stats">
+            <div><dt>searched</dt><dd id="evoSearched">2,048</dd></div>
+            <div><dt>identity-safe</dt><dd id="evoViable">77</dd></div>
+            <div><dt>training</dt><dd id="evoTraining">1 / 4</dd></div>
+            <div><dt>decision</dt><dd class="failed">failed gate</dd></div>
+          </dl>
+        </div>
         <p class="ecosystem-note"><strong>Rule.</strong> Each channel keeps its native continuous Lenia dynamics. The only shared term is symmetric local pressure from the other organism; every result is measured against an identical isolated control.</p>
       </section>
 
@@ -203,11 +221,16 @@
           <div><p class="eyebrow">Failed promotion</p><h3>The promising advantage got smaller.</h3></div>
           <p>Genesis 001 appeared 7.5 points better than its parent during discovery. In 252 unseen matched contexts the difference contracted to 2.0 points and missed the precommitted gate. It remains an observation, not a promoted finding.</p>
         </article>
+        <article class="discovery restraint">
+          <span class="number">005</span>
+          <div><p class="eyebrow">Evolution run 001</p><h3>Coexistence was not four numbers away.</h3></div>
+          <p>Of 2,048 paired growth-rule mutations, 77 preserved both parental identities. The best honest candidate rescued 2 of 8 unseen hard encounters from a zero baseline, but passed only 1 of 4 training contexts. Local improvement appeared; robust co-adaptation did not.</p>
+        </article>
       </section>
     </main>
     <footer><span>GENESIS RESEARCH CHARTER 001</span><span>Every claim keeps its genome, seed and trial record</span><span>M4 PRO / METAL</span></footer>
-    <script src="ecosystem.js"></script>
-    <script src="coupling.js"></script>
-    <script src="app.js"></script>
+    <script src="ecosystem.js?v=4"></script>
+    <script src="coupling.js?v=4"></script>
+    <script src="app.js?v=4"></script>
   </body>
 </html>

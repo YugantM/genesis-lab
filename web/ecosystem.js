@@ -26,6 +26,7 @@
   let last = performance.now();
   let uiAccumulator = 0;
   let shock = null;
+  let ecosystemVisible = true;
 
   function random() {
     seed |= 0;
@@ -494,11 +495,21 @@
   function frame(now) {
     const dt = Math.min(.04, (now - last) / 1000 || .016);
     last = now;
-    if (!paused) update(dt);
-    render();
-    uiAccumulator += dt;
-    if (uiAccumulator > .25) { updateUI(); uiAccumulator = 0; }
+    if (ecosystemVisible) {
+      if (!paused) update(dt);
+      render();
+      uiAccumulator += dt;
+      if (uiAccumulator > .25) { updateUI(); uiAccumulator = 0; }
+    }
     requestAnimationFrame(frame);
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      ecosystemVisible = entries[0].isIntersecting;
+      if (ecosystemVisible) render();
+    }, { rootMargin: '160px' });
+    observer.observe(canvas);
   }
 
   window.genesisEcosystem = {

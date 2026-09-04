@@ -10,6 +10,7 @@
   };
   let discovery;
   let validation;
+  let evolution;
   let strength = 1;
   let selected = ['GEN001', 'S1s'];
 
@@ -105,6 +106,19 @@
     document.querySelector('#validationReason').textContent = `+${delta} points · below the locked +5 point gate · p=${result.two_sided_exact_sign_p.toFixed(4)}`;
   }
 
+  function renderEvolution() {
+    const summary = evolution.summary;
+    const training = summary.selected_training;
+    const held = summary.held_out_candidate;
+    const baseline = summary.held_out_baseline;
+    document.querySelector('#evoSearched').textContent = evolution.protocol.candidate_count.toLocaleString();
+    document.querySelector('#evoViable').textContent = summary.solo_viable_candidates;
+    document.querySelector('#evoTraining').textContent = `${training.coexistence_trials} / ${training.trials}`;
+    document.querySelector('#evoParentRate').textContent = `${baseline.coexistence_trials} / ${baseline.trials}`;
+    document.querySelector('#evoCandidateRate').textContent = `${held.coexistence_trials} / ${held.trials}`;
+    document.querySelector('#evoCandidateBar').style.width = percent(held.coexistence_rate);
+  }
+
   document.querySelectorAll('[data-coupling]').forEach(button => {
     button.onclick = () => {
       strength = Number(button.dataset.coupling);
@@ -122,11 +136,17 @@
       if (!response.ok) throw new Error('Coupling validation unavailable');
       return response.json();
     }),
-  ]).then(([discoveryRecord, validationRecord]) => {
+    fetch('data/coexistence-evolution.json').then(response => {
+      if (!response.ok) throw new Error('Evolution run unavailable');
+      return response.json();
+    }),
+  ]).then(([discoveryRecord, validationRecord, evolutionRecord]) => {
     discovery = discoveryRecord;
     validation = validationRecord;
+    evolution = evolutionRecord;
     renderOverview();
     renderValidation();
+    renderEvolution();
     renderMatrix();
     window.genesisCoupling = {
       getState: () => ({ strength, selected, trialCount: discovery.summary.trial_count, validated: validation.comparison.validated }),

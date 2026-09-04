@@ -33,6 +33,10 @@ extension of the validated Lenia evidence. That boundary is shown in the UI:
 claims from the ecology layer must be reproduced in the MLX laboratory before
 they enter the research ledger.
 
+The browser renderer advances the nine WebGL habitats incrementally and
+suspends both simulations while their canvases are off-screen. This keeps the
+observatory responsive without changing the recorded MLX experiments.
+
 Run the calibrated Specimen Zero experiment with an undamaged control:
 
 ```bash
@@ -77,6 +81,12 @@ python3 -m genesis.coupled_ecology
 python3 -m genesis.validate_ecology
 ```
 
+Run the first paired co-evolution search against the hardest reproducible pair:
+
+```bash
+python3 -m genesis.evolve_coexistence --candidates 2048
+```
+
 The benchmark removes exactly 5% of organism mass at core, leading, and
 trailing anatomical anchors. Every injured trial is compared with an undamaged
 control sharing species, parameters, phase, rotation, and noise seed.
@@ -99,6 +109,7 @@ selection, and MAP-Elites under identical held-out damage protocols.
 - `genesis/multispecies_benchmark.py` — normalized cross-species injury test
 - `genesis/coupled_ecology.py` — real two-channel Lenia competition experiment
 - `genesis/validate_ecology.py` — held-out ecological candidate validation
+- `genesis/evolve_coexistence.py` — paired growth-rule search with promotion gate
 - `tests/` — invariants for the scientific core
 - `web/` — nine-habitat WebGL artificial-life observatory
 - `docs/research-charter.md` — hypothesis, controls, and research gates

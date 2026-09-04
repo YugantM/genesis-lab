@@ -91,6 +91,8 @@ let benchmark = {};
 let selected = 0;
 let lastFrame = 0;
 let noticeTimer;
+let updateCursor = 0;
+let labVisible = true;
 
 function cellValue(code) {
   if (code === '.' || code === 'b') return 0;
@@ -140,26 +142,35 @@ function upload(data) {
   }
   front = 0;
   generation = 0;
+  updateCursor = 0;
 }
-function step() {
+function stepHabitat(index) {
+  const source = textures[front];
+  const target = textures[1-front];
+  // Preserve the eight habitats not being advanced this frame. Updating two
+  // tiles at a time avoids the former nine-habitat shader burst.
+  gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, source, 0);
+  gl.bindTexture(gl.TEXTURE_2D, target);
+  gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0, 0, 0, 0, ATLAS, ATLAS);
   gl.useProgram(updateProgram);
   bindQuad(updateProgram);
-  gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, textures[1-front], 0);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, target, 0);
   gl.activeTexture(gl.TEXTURE0);
-  gl.bindTexture(gl.TEXTURE_2D, textures[front]);
+  gl.bindTexture(gl.TEXTURE_2D, source);
   gl.uniform1i(gl.getUniformLocation(updateProgram, 'state'), 0);
-  records.forEach((record, index) => {
-    const tile = physicalTile(index);
-    gl.viewport(tile.x, tile.y, TILE, TILE);
-    gl.uniform1f(gl.getUniformLocation(updateProgram, 'mu'), record.parameters.growth_center);
-    gl.uniform1f(gl.getUniformLocation(updateProgram, 'sigma'), record.parameters.growth_width);
-    gl.uniform2i(gl.getUniformLocation(updateProgram, 'origin'), tile.x, tile.y);
-    gl.drawArrays(gl.TRIANGLES, 0, 6);
-  });
+  const record = records[index];
+  const tile = physicalTile(index);
+  gl.viewport(tile.x, tile.y, TILE, TILE);
+  gl.uniform1f(gl.getUniformLocation(updateProgram, 'mu'), record.parameters.growth_center);
+  gl.uniform1f(gl.getUniformLocation(updateProgram, 'sigma'), record.parameters.growth_width);
+  gl.uniform2i(gl.getUniformLocation(updateProgram, 'origin'), tile.x, tile.y);
+  gl.drawArrays(gl.TRIANGLES, 0, 6);
   front = 1 - front;
-  generation++;
+  updateCursor = (updateCursor + 1) % COUNT;
+  if (updateCursor === 0) generation++;
 }
+function step() { for (let index = 0; index < COUNT; index++) stepHabitat(index); }
 function draw() {
   gl.useProgram(displayProgram);
   bindQuad(displayProgram);
@@ -297,13 +308,24 @@ function reset() {
   upload(initialAtlas()); measure(); showEvent('Population restored from genomic records');
 }
 function loop(now) {
-  if (now - lastFrame > 32) {
-    if (!paused) step();
+  if (labVisible && now - lastFrame > 32) {
+    if (!paused) {
+      stepHabitat(updateCursor);
+      stepHabitat(updateCursor);
+    }
     draw();
-    if (generation % 60 === 0) measure();
+    if (updateCursor === 0 && generation % 20 === 0) measure();
     lastFrame = now;
   }
   requestAnimationFrame(loop);
+}
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    labVisible = entries[0].isIntersecting;
+    if (labVisible && records.length) draw();
+  }, { rootMargin: '160px' });
+  observer.observe(document.querySelector('.zoo-shell'));
 }
 
 document.querySelector('#pauseAll').onclick = event => {
