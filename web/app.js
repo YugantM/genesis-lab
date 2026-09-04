@@ -93,6 +93,7 @@ let lastFrame = 0;
 let noticeTimer;
 let updateCursor = 0;
 let labVisible = true;
+let serverMode = false;
 
 function cellValue(code) {
   if (code === '.' || code === 'b') return 0;
@@ -308,7 +309,7 @@ function reset() {
   upload(initialAtlas()); measure(); showEvent('Population restored from genomic records');
 }
 function loop(now) {
-  if (labVisible && now - lastFrame > 32) {
+  if (!serverMode && labVisible && now - lastFrame > 32) {
     if (!paused) {
       stepHabitat(updateCursor);
       stepHabitat(updateCursor);
@@ -322,11 +323,19 @@ function loop(now) {
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
-    labVisible = entries[0].isIntersecting;
+    labVisible = !serverMode && entries[0].isIntersecting;
     if (labVisible && records.length) draw();
   }, { rootMargin: '160px' });
   observer.observe(document.querySelector('.zoo-shell'));
 }
+
+window.genesisZooClient = {
+  enterServerMode: () => {
+    serverMode = true;
+    labVisible = false;
+  },
+  getSelected: () => selected,
+};
 
 document.querySelector('#pauseAll').onclick = event => {
   paused = !paused;

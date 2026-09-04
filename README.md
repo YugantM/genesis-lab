@@ -15,10 +15,14 @@ side and can be inspected or injured without leaving the page.
 ```bash
 cd genesis-lab
 python3 -m genesis.benchmark
-python3 -m http.server 8000 -d web
+python3 -m genesis.dashboard_server
 ```
 
-Then open <http://localhost:8000>. The first instrument is a shared ecosystem:
+Then open <http://127.0.0.1:8765>. The local server batches all nine Lenia
+worlds through MLX on the Apple GPU and streams a single rendered atlas to the
+browser. Static hosting still uses the automatic WebGL fallback.
+
+The first instrument is a shared ecosystem:
 nine founding lineages seek renewable energy, compete for space, reproduce,
 inherit mutated traits, and occasionally split into new lineages. Select a
 lifeform to inspect it, create a nutrient bloom, or apply a climate shock.
@@ -87,6 +91,13 @@ Run the first paired co-evolution search against the hardest reproducible pair:
 python3 -m genesis.evolve_coexistence --candidates 2048
 ```
 
+Keep both bodies fixed and evolve pressure sensitivity, costly boundary
+response, and memory of recent contact:
+
+```bash
+python3 -m genesis.evolve_interactions --candidates 1024
+```
+
 The benchmark removes exactly 5% of organism mass at core, leading, and
 trailing anatomical anchors. Every injured trial is compared with an undamaged
 control sharing species, parameters, phase, rotation, and noise seed.
@@ -110,6 +121,9 @@ selection, and MAP-Elites under identical held-out damage protocols.
 - `genesis/coupled_ecology.py` — real two-channel Lenia competition experiment
 - `genesis/validate_ecology.py` — held-out ecological candidate validation
 - `genesis/evolve_coexistence.py` — paired growth-rule search with promotion gate
+- `genesis/interaction_ecology.py` — evolvable inter-species boundary dynamics
+- `genesis/evolve_interactions.py` — held-out interaction-genome search
+- `genesis/dashboard_server.py` — local MLX simulation and streamed PNG renderer
 - `tests/` — invariants for the scientific core
 - `web/` — nine-habitat WebGL artificial-life observatory
 - `docs/research-charter.md` — hypothesis, controls, and research gates

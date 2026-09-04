@@ -1,0 +1,718 @@
+{
+  "schema": "genesis.interaction-evolution/v1",
+  "created_at": "2026-09-04T13:52:58.806020+00:00",
+  "question": "Can evolvable pressure sensitivity, costly boundary response, and contact memory rescue robust coexistence without changing either body?",
+  "protocol": {
+    "candidate_count": 1024,
+    "target_pair": [
+      "O4i",
+      "P4cl"
+    ],
+    "body_parameters": "fixed parental values",
+    "mutable_traits": [
+      "pressure_sensitivity",
+      "boundary_response",
+      "signal_memory"
+    ],
+    "trait_bounds": {
+      "pressure_sensitivity": [
+        0.72,
+        1.28
+      ],
+      "boundary_response": [
+        0.0,
+        0.65
+      ],
+      "signal_memory": [
+        0.0,
+        0.95
+      ]
+    },
+    "boundary_maintenance_cost": 0.035,
+    "training_phase": 240,
+    "training_contexts": [
+      {
+        "geometry": "contact",
+        "orientation_degrees": 0,
+        "noise_seed": 30
+      },
+      {
+        "geometry": "contact",
+        "orientation_degrees": 90,
+        "noise_seed": 31
+      },
+      {
+        "geometry": "overlap",
+        "orientation_degrees": 0,
+        "noise_seed": 30
+      },
+      {
+        "geometry": "overlap",
+        "orientation_degrees": 90,
+        "noise_seed": 31
+      }
+    ],
+    "held_out_phase": 300,
+    "held_out_contexts": [
+      {
+        "geometry": "contact",
+        "orientation_degrees": 180,
+        "noise_seed": 40
+      },
+      {
+        "geometry": "contact",
+        "orientation_degrees": 180,
+        "noise_seed": 41
+      },
+      {
+        "geometry": "contact",
+        "orientation_degrees": 270,
+        "noise_seed": 40
+      },
+      {
+        "geometry": "contact",
+        "orientation_degrees": 270,
+        "noise_seed": 41
+      },
+      {
+        "geometry": "overlap",
+        "orientation_degrees": 180,
+        "noise_seed": 40
+      },
+      {
+        "geometry": "overlap",
+        "orientation_degrees": 180,
+        "noise_seed": 41
+      },
+      {
+        "geometry": "overlap",
+        "orientation_degrees": 270,
+        "noise_seed": 40
+      },
+      {
+        "geometry": "overlap",
+        "orientation_degrees": 270,
+        "noise_seed": 41
+      }
+    ],
+    "matched_noise": "all candidates receive identical perturbations within each context",
+    "identity_gate": "every isolated context retains 0.75\u20131.25x parental mass and occupied area with >=0.5 aligned similarity",
+    "promotion_gate": "training >=75%, held-out >=50%, held-out improvement >=25 points, identity safe"
+  },
+  "summary": {
+    "identity_safe_candidates": 1024,
+    "training_baseline": {
+      "candidate": 0,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0,
+          "boundary_response": 0.0,
+          "signal_memory": 0.0
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.0,
+          "boundary_response": 0.0,
+          "signal_memory": 0.0
+        }
+      },
+      "trait_distance": 0.0,
+      "identity_safe": true,
+      "coexistence_trials": 0,
+      "trials": 4,
+      "coexistence_rate": 0.0,
+      "median_minimum_similarity": 0.0
+    },
+    "selected_training": {
+      "candidate": 717,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.8896746039390564,
+          "boundary_response": 0.12102021276950836,
+          "signal_memory": 0.6141611337661743
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.022633671760559,
+          "boundary_response": 0.3562529683113098,
+          "signal_memory": 0.39136913418769836
+        }
+      },
+      "trait_distance": 2.464798927307129,
+      "identity_safe": true,
+      "coexistence_trials": 2,
+      "trials": 4,
+      "coexistence_rate": 0.5,
+      "median_minimum_similarity": 0.6331200003623962
+    },
+    "held_out_baseline": {
+      "candidate": 0,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0,
+          "boundary_response": 0.0,
+          "signal_memory": 0.0
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.0,
+          "boundary_response": 0.0,
+          "signal_memory": 0.0
+        }
+      },
+      "trait_distance": 0.0,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 8,
+      "coexistence_rate": 0.125,
+      "median_minimum_similarity": 0.24884524941444397
+    },
+    "held_out_candidate": {
+      "candidate": 717,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.8896746039390564,
+          "boundary_response": 0.12102021276950836,
+          "signal_memory": 0.6141611337661743
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.022633671760559,
+          "boundary_response": 0.3562529683113098,
+          "signal_memory": 0.39136913418769836
+        }
+      },
+      "trait_distance": 2.464798927307129,
+      "identity_safe": true,
+      "coexistence_trials": 3,
+      "trials": 8,
+      "coexistence_rate": 0.375,
+      "median_minimum_similarity": 0.6507073640823364
+    },
+    "held_out_improvement": 0.25,
+    "promoted": false
+  },
+  "top_candidates": [
+    {
+      "candidate": 717,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.8896746039390564,
+          "boundary_response": 0.12102021276950836,
+          "signal_memory": 0.6141611337661743
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.022633671760559,
+          "boundary_response": 0.3562529683113098,
+          "signal_memory": 0.39136913418769836
+        }
+      },
+      "trait_distance": 2.464798927307129,
+      "identity_safe": true,
+      "coexistence_trials": 2,
+      "trials": 4,
+      "coexistence_rate": 0.5,
+      "median_minimum_similarity": 0.6331200003623962
+    },
+    {
+      "candidate": 31,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.067775845527649,
+          "boundary_response": 0.3896261155605316,
+          "signal_memory": 0.3801082968711853
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.2799999713897705,
+          "boundary_response": 0.21430036425590515,
+          "signal_memory": 0.7603878974914551
+        }
+      },
+      "trait_distance": 3.3049004077911377,
+      "identity_safe": true,
+      "coexistence_trials": 2,
+      "trials": 4,
+      "coexistence_rate": 0.5,
+      "median_minimum_similarity": 0.2708311975002289
+    },
+    {
+      "candidate": 552,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0415030717849731,
+          "boundary_response": 0.3755956292152405,
+          "signal_memory": 0.6792858242988586
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.128783941268921,
+          "boundary_response": 0.4077824652194977,
+          "signal_memory": 0.15628115832805634
+        }
+      },
+      "trait_distance": 2.9443960189819336,
+      "identity_safe": true,
+      "coexistence_trials": 2,
+      "trials": 4,
+      "coexistence_rate": 0.5,
+      "median_minimum_similarity": 0.27074742317199707
+    },
+    {
+      "candidate": 725,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0542140007019043,
+          "boundary_response": 0.28978970646858215,
+          "signal_memory": 0.659188985824585
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.2799999713897705,
+          "boundary_response": 0.2915807068347931,
+          "signal_memory": 0.2503319978713989
+        }
+      },
+      "trait_distance": 2.9981236457824707,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.6449878513813019
+    },
+    {
+      "candidate": 924,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.7303872108459473,
+          "boundary_response": 0.5995528697967529,
+          "signal_memory": 0.13326284289360046
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.9374803900718689,
+          "boundary_response": 0.16306422650814056,
+          "signal_memory": 0.6350091695785522
+        }
+      },
+      "trait_distance": 3.435150146484375,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.6333885788917542
+    },
+    {
+      "candidate": 398,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.8667781949043274,
+          "boundary_response": 0.064036063849926,
+          "signal_memory": 0.17766623198986053
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.0583488941192627,
+          "boundary_response": 0.13005247712135315,
+          "signal_memory": 0.6639838814735413
+        }
+      },
+      "trait_distance": 2.028608560562134,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.6303885579109192
+    },
+    {
+      "candidate": 388,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.9698314666748047,
+          "boundary_response": 0.22524626553058624,
+          "signal_memory": 0.8055065274238586
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.1441521644592285,
+          "boundary_response": 0.36800503730773926,
+          "signal_memory": 0.5408089756965637
+        }
+      },
+      "trait_distance": 3.115943193435669,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.6282686293125153
+    },
+    {
+      "candidate": 310,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0048248767852783,
+          "boundary_response": 0.24821220338344574,
+          "signal_memory": 0.6382911801338196
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.9307697415351868,
+          "boundary_response": 0.21475937962532043,
+          "signal_memory": 0.27025729417800903
+        }
+      },
+      "trait_distance": 2.216904401779175,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.6248358488082886
+    },
+    {
+      "candidate": 782,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.9473341107368469,
+          "boundary_response": 0.20605981349945068,
+          "signal_memory": 0.5932897925376892
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.8675040006637573,
+          "boundary_response": 0.1238228976726532,
+          "signal_memory": 0.17741715908050537
+        }
+      },
+      "trait_distance": 2.0286612510681152,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.6192806363105774
+    },
+    {
+      "candidate": 646,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.9400307536125183,
+          "boundary_response": 0.1894756704568863,
+          "signal_memory": 0.8998990058898926
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.8375883102416992,
+          "boundary_response": 0.19470791518688202,
+          "signal_memory": 0.6066620945930481
+        }
+      },
+      "trait_distance": 3.1166417598724365,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.6095317602157593
+    },
+    {
+      "candidate": 873,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0138729810714722,
+          "boundary_response": 0.25519290566444397,
+          "signal_memory": 0.7367391586303711
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.12637197971344,
+          "boundary_response": 0.3043670952320099,
+          "signal_memory": 0.0797082930803299
+        }
+      },
+      "trait_distance": 2.566643238067627,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.6051957607269287
+    },
+    {
+      "candidate": 340,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.9469544291496277,
+          "boundary_response": 0.17409543693065643,
+          "signal_memory": 0.5211674571037292
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.1051042079925537,
+          "boundary_response": 0.29389488697052,
+          "signal_memory": 0.5440893173217773
+        }
+      },
+      "trait_distance": 2.4405274391174316,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5998398959636688
+    },
+    {
+      "candidate": 256,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.8861945271492004,
+          "boundary_response": 0.12291096150875092,
+          "signal_memory": 0.13454174995422363
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.9871981739997864,
+          "boundary_response": 0.29118600487709045,
+          "signal_memory": 0.7866635322570801
+        }
+      },
+      "trait_distance": 2.468106746673584,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5946269035339355
+    },
+    {
+      "candidate": 757,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0101433992385864,
+          "boundary_response": 0.23402412235736847,
+          "signal_memory": 0.926842451095581
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.8342483639717102,
+          "boundary_response": 0.06787484884262085,
+          "signal_memory": 0.2617376744747162
+        }
+      },
+      "trait_distance": 2.7972025871276855,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.586392879486084
+    },
+    {
+      "candidate": 589,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0322695970535278,
+          "boundary_response": 0.2779974639415741,
+          "signal_memory": 0.547187864780426
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.2047098875045776,
+          "boundary_response": 0.18664978444576263,
+          "signal_memory": 0.895404040813446
+        }
+      },
+      "trait_distance": 3.2177376747131348,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5829724669456482
+    },
+    {
+      "candidate": 19,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.9989564418792725,
+          "boundary_response": 0.39516380429267883,
+          "signal_memory": 0.007358478847891092
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.9240379333496094,
+          "boundary_response": 0.3731399178504944,
+          "signal_memory": 0.38835781812667847
+        }
+      },
+      "trait_distance": 2.427884340286255,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5806678831577301
+    },
+    {
+      "candidate": 289,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.1203511953353882,
+          "boundary_response": 0.3306769132614136,
+          "signal_memory": 0.7419048547744751
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.2713992595672607,
+          "boundary_response": 0.2754170298576355,
+          "signal_memory": 0.48560693860054016
+        }
+      },
+      "trait_distance": 3.364558458328247,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5805825293064117
+    },
+    {
+      "candidate": 953,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.9840245842933655,
+          "boundary_response": 0.23650595545768738,
+          "signal_memory": 0.13269032537937164
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.7895385026931763,
+          "boundary_response": 0.2375052571296692,
+          "signal_memory": 0.45554590225219727
+        }
+      },
+      "trait_distance": 2.223681926727295,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5786524415016174
+    },
+    {
+      "candidate": 687,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.9890211224555969,
+          "boundary_response": 0.2161344736814499,
+          "signal_memory": 0.5062711834907532
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.0748629570007324,
+          "boundary_response": 0.17275747656822205,
+          "signal_memory": 0.6802971959114075
+        }
+      },
+      "trait_distance": 2.4378368854522705,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5783978700637817
+    },
+    {
+      "candidate": 927,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.9620106816291809,
+          "boundary_response": 0.20463129878044128,
+          "signal_memory": 0.19521838426589966
+        },
+        "P4cl": {
+          "pressure_sensitivity": 0.9635130763053894,
+          "boundary_response": 0.21170450747013092,
+          "signal_memory": 0.189598947763443
+        }
+      },
+      "trait_distance": 1.3994016647338867,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5775933861732483
+    },
+    {
+      "candidate": 210,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0334980487823486,
+          "boundary_response": 0.26645395159721375,
+          "signal_memory": 0.5234884023666382
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.1210185289382935,
+          "boundary_response": 0.4625607430934906,
+          "signal_memory": 0.5137520432472229
+        }
+      },
+      "trait_distance": 2.921928644180298,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5726865231990814
+    },
+    {
+      "candidate": 641,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.068663477897644,
+          "boundary_response": 0.3535149097442627,
+          "signal_memory": 0.45928287506103516
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.1123782396316528,
+          "boundary_response": 0.35770195722579956,
+          "signal_memory": 0.8302897214889526
+        }
+      },
+      "trait_distance": 3.217338800430298,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5709873735904694
+    },
+    {
+      "candidate": 752,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.8759693503379822,
+          "boundary_response": 0.1549425572156906,
+          "signal_memory": 0.7526912093162537
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.2799999713897705,
+          "boundary_response": 0.3062008023262024,
+          "signal_memory": 0.6398730278015137
+        }
+      },
+      "trait_distance": 3.4128527641296387,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5627709627151489
+    },
+    {
+      "candidate": 427,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 0.8236405849456787,
+          "boundary_response": 0.08966870605945587,
+          "signal_memory": 0.4061775207519531
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.0884463787078857,
+          "boundary_response": 0.3150308132171631,
+          "signal_memory": 0.09665123373270035
+        }
+      },
+      "trait_distance": 2.0800461769104004,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5609853863716125
+    },
+    {
+      "candidate": 27,
+      "interaction_genes": {
+        "O4i": {
+          "pressure_sensitivity": 1.0488481521606445,
+          "boundary_response": 0.3010348379611969,
+          "signal_memory": 0.5568721294403076
+        },
+        "P4cl": {
+          "pressure_sensitivity": 1.166428565979004,
+          "boundary_response": 0.15998081862926483,
+          "signal_memory": 0.540067732334137
+        }
+      },
+      "trait_distance": 2.6068670749664307,
+      "identity_safe": true,
+      "coexistence_trials": 1,
+      "trials": 4,
+      "coexistence_rate": 0.25,
+      "median_minimum_similarity": 0.5578079521656036
+    }
+  ]
+}

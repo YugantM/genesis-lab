@@ -11,6 +11,7 @@
   let discovery;
   let validation;
   let evolution;
+  let interaction;
   let strength = 1;
   let selected = ['GEN001', 'S1s'];
 
@@ -119,6 +120,21 @@
     document.querySelector('#evoCandidateBar').style.width = percent(held.coexistence_rate);
   }
 
+  function renderInteraction() {
+    const summary = interaction.summary;
+    const training = summary.selected_training;
+    const held = summary.held_out_candidate;
+    const baseline = summary.held_out_baseline;
+    document.querySelector('#interactionSearched').textContent = interaction.protocol.candidate_count.toLocaleString();
+    document.querySelector('#interactionViable').textContent = summary.identity_safe_candidates.toLocaleString();
+    document.querySelector('#interactionTraining').textContent = `${training.coexistence_trials} / ${training.trials}`;
+    document.querySelector('#interactionCandidateLabel').textContent = `candidate ${training.candidate}`;
+    document.querySelector('#interactionParentRate').textContent = `${baseline.coexistence_trials} / ${baseline.trials}`;
+    document.querySelector('#interactionCandidateRate').textContent = `${held.coexistence_trials} / ${held.trials}`;
+    document.querySelector('#interactionParentBar').style.width = percent(baseline.coexistence_rate);
+    document.querySelector('#interactionCandidateBar').style.width = percent(held.coexistence_rate);
+  }
+
   document.querySelectorAll('[data-coupling]').forEach(button => {
     button.onclick = () => {
       strength = Number(button.dataset.coupling);
@@ -140,13 +156,19 @@
       if (!response.ok) throw new Error('Evolution run unavailable');
       return response.json();
     }),
-  ]).then(([discoveryRecord, validationRecord, evolutionRecord]) => {
+    fetch('data/interaction-evolution.json').then(response => {
+      if (!response.ok) throw new Error('Interaction evolution run unavailable');
+      return response.json();
+    }),
+  ]).then(([discoveryRecord, validationRecord, evolutionRecord, interactionRecord]) => {
     discovery = discoveryRecord;
     validation = validationRecord;
     evolution = evolutionRecord;
+    interaction = interactionRecord;
     renderOverview();
     renderValidation();
     renderEvolution();
+    renderInteraction();
     renderMatrix();
     window.genesisCoupling = {
       getState: () => ({ strength, selected, trialCount: discovery.summary.trial_count, validated: validation.comparison.validated }),
