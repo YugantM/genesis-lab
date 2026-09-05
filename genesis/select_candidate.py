@@ -1,19 +1,32 @@
-"""Select robust mutants across multiple training phases and perturbations."""
+"""Select magnitude-robust mutants across independent noisy initial conditions."""
 
 from __future__ import annotations
 
 import argparse
 import json
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-import mlx.core as mx
 import numpy as np
 
 from .core import GenesisWorld
 from .genome import load_specimen
-from .metrics import center_of_mass, mass, occupied_fraction, toroidal_displacement
-from .robust_search import calibrated_damage
+from .metrics import (
+    aligned_similarity,
+    center_of_mass,
+    mass,
+    occupied_fraction,
+    toroidal_displacement,
+    functional_recovery,
+    functional_score,
+)
+from .robust_search import TRAIN_DAMAGE_LEVELS, calibrated_damage, make_world
+
+
+PHASES = (180, 300, 420)
+INITIAL_CONDITION_SEEDS = (101, 211, 307, 401)
+NOISE_SIGMA = 0.012
 
 
 def main() -> None:
@@ -22,139 +35,263 @@ def main() -> None:
     parser.add_argument("--search", default="runs/robust-search.json")
     parser.add_argument("--out", default="runs/robust-selection.json")
     parser.add_argument("--post-steps", type=int, default=300)
+    parser.add_argument("--candidate-limit", type=int, default=100)
     args = parser.parse_args()
 
     specimen = load_specimen(args.specimen)
     search = json.loads(Path(args.search).read_text())
-    candidates = search["top_candidates"]
-    phases = (260, 300, 340)
-    orientations = (0, 90)
-    noise_seeds = (31, 47)
-    base_initial = GenesisWorld.from_specimen(specimen).numpy()[0]
+    candidates = search["top_candidates"][: args.candidate_limit]
+    if not candidates:
+        raise RuntimeError("robust search produced no viable candidates")
+    initial = GenesisWorld.from_specimen(specimen).numpy()[0]
+    active = initial > 0
 
-    states, mus, sigmas, labels = [], [], [], []
+    starting_states = []
+    labels = []
+    centers = []
+    widths = []
     for candidate_index, candidate in enumerate(candidates):
-        for angle in orientations:
-            rotated = np.rot90(base_initial, angle // 90).copy()
-            active = rotated > 0
-            for noise_seed in noise_seeds:
-                rng = np.random.default_rng(noise_seed)
-                perturbed = rotated.copy()
-                perturbed[active] = np.clip(
-                    perturbed[active] + rng.normal(0, 0.002, active.sum()), 0, 1
-                )
-                states.append(perturbed)
-                mus.append(candidate["growth_center"])
-                sigmas.append(candidate["growth_width"])
-                labels.append((candidate_index, angle, noise_seed))
+        for seed in INITIAL_CONDITION_SEEDS:
+            rng = np.random.default_rng(88000 + seed)
+            perturbed = initial.copy()
+            perturbed[active] = np.clip(
+                perturbed[active] + rng.normal(0, NOISE_SIGMA, int(active.sum())),
+                0,
+                1,
+            )
+            starting_states.append(perturbed)
+            labels.append((candidate_index, seed))
+            centers.append(candidate["growth_center"])
+            widths.append(candidate["growth_width"])
 
     template = GenesisWorld.from_specimen(specimen)
-    config = type(template.config)(**{**template.config.__dict__, "batch": len(states)})
-    calibration = GenesisWorld(config)
-    calibration.state = mx.array(np.stack(states))
-    calibration.set_growth_parameters(mus, sigmas)
-    mx.eval(calibration.state)
-    requested = set(phases) | {phase - 50 for phase in phases}
+    calibration = make_world(
+        template,
+        np.stack(starting_states),
+        np.asarray(centers, np.float32),
+        np.asarray(widths, np.float32),
+    )
+    requested = set(PHASES) | {phase - 50 for phase in PHASES}
     snapshots = {}
-    for step in range(1, max(phases) + 1):
+    for step in range(1, max(PHASES) + 1):
         calibration.step()
         if step in requested:
             snapshots[step] = calibration.numpy().copy()
 
-    injured_states, trial_candidate, trial_pre_mass, trial_pre_motion = [], [], [], []
-    trial_mu, trial_sigma = [], []
-    for batch_index, (candidate_index, _, _) in enumerate(labels):
+    base_cases = []
+    for batch_index, (candidate_index, seed) in enumerate(labels):
         candidate = candidates[candidate_index]
-        for phase in phases:
+        for phase in PHASES:
             state = snapshots[phase][batch_index]
-            centre = center_of_mass(state[None, :, :])[0]
-            early_centre = center_of_mass(snapshots[phase - 50][batch_index : batch_index + 1])[0]
-            pre_motion = float(np.linalg.norm(toroidal_displacement(early_centre, centre, config.size)))
-            damaged, _, _ = calibrated_damage(state, centre, 0.05)
-            injured_states.append(damaged)
-            trial_candidate.append(candidate_index)
-            trial_pre_mass.append(float(state.sum()))
-            trial_pre_motion.append(pre_motion)
-            trial_mu.append(candidate["growth_center"])
-            trial_sigma.append(candidate["growth_width"])
+            centre = center_of_mass(state[None])[0]
+            early = center_of_mass(
+                snapshots[phase - 50][batch_index : batch_index + 1]
+            )[0]
+            base_cases.append(
+                {
+                    "candidate_index": candidate_index,
+                    "initial_condition_seed": seed,
+                    "phase": phase,
+                    "state": state,
+                    "center": centre,
+                    "pre_mass": float(state.sum()),
+                    "pre_motion": float(
+                        np.linalg.norm(
+                            toroidal_displacement(early, centre, template.config.size)
+                        )
+                    ),
+                    "growth_center": candidate["growth_center"],
+                    "growth_width": candidate["growth_width"],
+                }
+            )
 
-    injured_config = type(template.config)(
-        **{**template.config.__dict__, "batch": len(injured_states)}
+    base_centers = np.asarray(
+        [base["growth_center"] for base in base_cases], np.float32
     )
-    worlds = GenesisWorld(injured_config)
-    worlds.state = mx.array(np.stack(injured_states))
-    worlds.set_growth_parameters(trial_mu, trial_sigma)
-    mx.eval(worlds.state)
-    worlds.step(args.post_steps - 50)
-    post_early = center_of_mass(worlds.numpy())
-    worlds.step(50)
-    final = worlds.numpy()
-    final_mass = mass(final)
-    final_occupied = occupied_fraction(final)
-    post_motion = np.linalg.norm(
-        toroidal_displacement(post_early, center_of_mass(final), worlds.config.size), axis=1
+    base_widths = np.asarray(
+        [base["growth_width"] for base in base_cases], np.float32
     )
-    pre_mass_array = np.asarray(trial_pre_mass)
-    pre_motion_array = np.asarray(trial_pre_motion)
-    mass_ratio = np.divide(final_mass, pre_mass_array, out=np.zeros_like(final_mass), where=pre_mass_array > 0)
-    motion_ratio = np.divide(post_motion, pre_motion_array, out=np.zeros_like(post_motion), where=pre_motion_array > 0)
-    recovered = (
-        (pre_mass_array >= 40)
-        & (pre_mass_array <= 130)
-        & (pre_motion_array >= 1)
-        & (final_mass >= 40)
-        & (final_mass <= 130)
-        & (final_occupied <= 0.03)
-        & (mass_ratio >= 0.75)
-        & (mass_ratio <= 1.25)
-        & (post_motion >= 1)
-        & (motion_ratio >= 0.25)
+    controls = make_world(
+        template,
+        np.stack([base["state"] for base in base_cases]),
+        base_centers,
+        base_widths,
+    )
+    controls.step(args.post_steps - 50)
+    control_early = center_of_mass(controls.numpy())
+    controls.step(50)
+    control_final = controls.numpy()
+    control_mass = mass(control_final)
+    control_occupied = occupied_fraction(control_final)
+    control_motion = np.linalg.norm(
+        toroidal_displacement(
+            control_early, center_of_mass(control_final), template.config.size
+        ),
+        axis=1,
     )
 
+    injured_states = []
+    trial_base = []
+    trial_damage = []
+    for base_index, base in enumerate(base_cases):
+        for damage in TRAIN_DAMAGE_LEVELS:
+            injured, _, actual = calibrated_damage(
+                base["state"], base["center"], damage
+            )
+            injured_states.append(injured)
+            trial_base.append(base_index)
+            trial_damage.append((damage, actual))
+    trial_base_array = np.asarray(trial_base)
+    injured = make_world(
+        template,
+        np.stack(injured_states),
+        base_centers[trial_base_array],
+        base_widths[trial_base_array],
+    )
+    injured.step(args.post_steps - 50)
+    injured_early = center_of_mass(injured.numpy())
+    injured.step(50)
+    injured_final = injured.numpy()
+    injured_mass = mass(injured_final)
+    injured_occupied = occupied_fraction(injured_final)
+    injured_motion = np.linalg.norm(
+        toroidal_displacement(
+            injured_early, center_of_mass(injured_final), template.config.size
+        ),
+        axis=1,
+    )
+
+    rows = []
+    for index, base_index in enumerate(trial_base):
+        base = base_cases[base_index]
+        valid_control = bool(
+            40 <= control_mass[base_index] <= 130
+            and 40 <= base["pre_mass"] <= 130
+            and base["pre_motion"] >= 1
+            and control_occupied[base_index] <= 0.03
+            and control_motion[base_index] >= 1
+        )
+        mass_ratio = float(injured_mass[index] / max(control_mass[base_index], 1e-12))
+        motion_ratio = float(
+            injured_motion[index] / max(control_motion[base_index], 1e-12)
+        )
+        similarity = aligned_similarity(injured_final[index], control_final[base_index])
+        recovered = functional_recovery(
+            control_valid=valid_control, mass_ratio=mass_ratio,
+            motion_ratio=motion_ratio, occupied=float(injured_occupied[index]),
+        )
+        rows.append(
+            {
+                "candidate_index": base["candidate_index"],
+                "candidate": candidates[base["candidate_index"]]["candidate"],
+                "initial_condition_seed": base["initial_condition_seed"],
+                "phase": base["phase"],
+                "target_removed_fraction": trial_damage[index][0],
+                "actual_removed_fraction": trial_damage[index][1],
+                "control_valid": valid_control,
+                "mass_ratio_to_control": mass_ratio,
+                "motion_ratio_to_control": motion_ratio,
+                "aligned_similarity_to_control": similarity,
+                "functionally_recovered": recovered,
+                "recovery_score": functional_score(mass_ratio, motion_ratio, valid_control and injured_occupied[index] <= 0.03),
+            }
+        )
+
+    by_candidate: dict[int, list[dict]] = defaultdict(list)
+    for row in rows:
+        by_candidate[row["candidate_index"]].append(row)
     summaries = []
-    trial_candidate_array = np.asarray(trial_candidate)
     for index, candidate in enumerate(candidates):
-        selector = trial_candidate_array == index
-        passed = int(recovered[selector].sum())
-        total = int(selector.sum())
+        group = by_candidate[index]
+        seed_breakdown = []
+        for seed in INITIAL_CONDITION_SEEDS:
+            seed_rows = [row for row in group if row["initial_condition_seed"] == seed]
+            seed_breakdown.append(
+                {
+                    "initial_condition_seed": seed,
+                    "valid_trials": sum(row["control_valid"] for row in seed_rows),
+                    "trials": len(seed_rows),
+                    "recovered": sum(row["functionally_recovered"] for row in seed_rows),
+                    "recovery_rate": sum(
+                        row["functionally_recovered"] for row in seed_rows
+                    )
+                    / len(seed_rows),
+                    "mean_recovery_score": float(
+                        np.mean([row["recovery_score"] for row in seed_rows])
+                    ),
+                }
+            )
         summaries.append(
             {
                 **candidate,
-                "multi_condition_passed": passed,
-                "multi_condition_trials": total,
-                "multi_condition_recovery_rate": passed / total,
-                "median_mass_ratio": float(np.median(mass_ratio[selector])),
-                "median_motion_ratio": float(np.median(motion_ratio[selector])),
+                "independent_initial_conditions": len(INITIAL_CONDITION_SEEDS),
+                "trials": len(group),
+                "valid_trials": sum(row["control_valid"] for row in group),
+                "recovered": sum(row["functionally_recovered"] for row in group),
+                "mean_seed_recovery_rate": float(
+                    np.mean([row["recovery_rate"] for row in seed_breakdown])
+                ),
+                "mean_seed_recovery_score": float(
+                    np.mean([row["mean_recovery_score"] for row in seed_breakdown])
+                ),
+                "seed_breakdown": seed_breakdown,
+                "damage_breakdown": [
+                    {
+                        "target_removed_fraction": damage,
+                        "recovered": sum(
+                            row["functionally_recovered"]
+                            for row in group
+                            if row["target_removed_fraction"] == damage
+                        ),
+                        "trials": sum(
+                            row["target_removed_fraction"] == damage for row in group
+                        ),
+                    }
+                    for damage in TRAIN_DAMAGE_LEVELS
+                ],
             }
         )
     summaries.sort(
         key=lambda row: (
-            row["multi_condition_recovery_rate"],
-            -abs(row["median_mass_ratio"] - 1),
-            -abs(row["median_motion_ratio"] - 1),
-            row["score"],
+            row["valid_trials"] == row["trials"],
+            row["mean_seed_recovery_score"],
+            row["mean_seed_recovery_rate"],
+            -row["parameter_distance"],
         ),
         reverse=True,
     )
     selected = summaries[0]
     record = {
-        "schema": "genesis.robust-selection/v1",
+        "schema": "genesis.robust-selection/v2",
         "created_at": datetime.now(timezone.utc).isoformat(),
         "source_search": args.search,
         "random_seed": search["random_seed"],
         "protocol": {
             "candidate_count": len(candidates),
-            "phases": list(phases),
-            "orientations": list(orientations),
-            "noise_seeds": list(noise_seeds),
-            "trials_per_candidate": len(phases) * len(orientations) * len(noise_seeds),
-            "target_damage": 0.05,
+            "phases": list(PHASES),
+            "initial_condition_seeds": list(INITIAL_CONDITION_SEEDS),
+            "initial_state_noise_sigma": NOISE_SIGMA,
+            "rotations_as_replicates": False,
+            "training_damage_levels": list(TRAIN_DAMAGE_LEVELS),
+            "post_steps": args.post_steps,
+            "independent_unit": "initial_condition_seed",
+            "trials_per_candidate": len(PHASES)
+            * len(INITIAL_CONDITION_SEEDS)
+            * len(TRAIN_DAMAGE_LEVELS),
         },
         "selected_candidate": selected,
         "top_candidates": summaries[:25],
+        "selected_condition_results": [
+            {key: value for key, value in row.items() if key != "candidate_index"}
+            for row in rows
+            if row["candidate_index"] == candidates.index(
+                next(item for item in candidates if item["candidate"] == selected["candidate"])
+            )
+        ],
     }
-    Path(args.out).write_text(json.dumps(record, indent=2) + "\n")
-    print(f"Evaluated {len(injured_states)} perturbed damage trials")
+    destination = Path(args.out)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(json.dumps(record, indent=2) + "\n")
     print(json.dumps(selected, indent=2))
 
 

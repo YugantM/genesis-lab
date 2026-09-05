@@ -1,0 +1,1782 @@
+{
+  "protocol_sha256": "26a7ab3ae240c8416a07d759ac7d64d7abcadba22f3e2d88fe9a59e19853a375",
+  "independent_search_seeds_per_method_per_species": 20,
+  "summary": [
+    {
+      "species": "O2u",
+      "method": "performance",
+      "mean_seed_recovery": 0.28,
+      "ci95": [
+        0.23000000000000004,
+        0.33999999999999997
+      ],
+      "seed_rates": [
+        0.4,
+        0.2,
+        0.3,
+        0.2,
+        0.5,
+        0.5,
+        0.3,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.1,
+        0.5,
+        0.2,
+        0.3,
+        0.2,
+        0.5,
+        0.2,
+        0.2
+      ],
+      "control_validity": 1.0,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.3
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.35
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 1.0
+        }
+      ]
+    },
+    {
+      "species": "O2u",
+      "method": "direct-regeneration",
+      "mean_seed_recovery": 0.39999999999999997,
+      "ci95": [
+        0.32499999999999996,
+        0.475
+      ],
+      "seed_rates": [
+        0.0,
+        0.5,
+        0.5,
+        0.3,
+        0.6,
+        0.6,
+        0.4,
+        0.5,
+        0.1,
+        0.5,
+        0.2,
+        0.2,
+        0.5,
+        0.5,
+        0.3,
+        0.3,
+        0.6,
+        0.5,
+        0.3,
+        0.6
+      ],
+      "control_validity": 1.0,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.9
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.25
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.8
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.95
+        }
+      ]
+    },
+    {
+      "species": "O2u",
+      "method": "map-elites",
+      "mean_seed_recovery": 0.31500000000000006,
+      "ci95": [
+        0.25,
+        0.38
+      ],
+      "seed_rates": [
+        0.3,
+        0.5,
+        0.4,
+        0.5,
+        0.2,
+        0.2,
+        0.5,
+        0.0,
+        0.2,
+        0.2,
+        0.2,
+        0.5,
+        0.2,
+        0.5,
+        0.5,
+        0.5,
+        0.2,
+        0.3,
+        0.2,
+        0.2
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.75
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.35
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.7
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.95
+        }
+      ]
+    },
+    {
+      "species": "OG2g",
+      "method": "performance",
+      "mean_seed_recovery": 0.18500000000000005,
+      "ci95": [
+        0.13000000000000003,
+        0.24000000000000005
+      ],
+      "seed_rates": [
+        0.3,
+        0.5,
+        0.2,
+        0.2,
+        0.2,
+        0.4,
+        0.0,
+        0.2,
+        0.2,
+        0.3,
+        0.0,
+        0.2,
+        0.1,
+        0.0,
+        0.2,
+        0.1,
+        0.2,
+        0.2,
+        0.0,
+        0.2
+      ],
+      "control_validity": 0.8,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.7
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.8
+        }
+      ]
+    },
+    {
+      "species": "OG2g",
+      "method": "direct-regeneration",
+      "mean_seed_recovery": 0.33999999999999997,
+      "ci95": [
+        0.27,
+        0.41
+      ],
+      "seed_rates": [
+        0.4,
+        0.3,
+        0.7,
+        0.5,
+        0.3,
+        0.2,
+        0.2,
+        0.5,
+        0.5,
+        0.2,
+        0.4,
+        0.4,
+        0.2,
+        0.0,
+        0.2,
+        0.3,
+        0.2,
+        0.3,
+        0.5,
+        0.5
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.25
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.95
+        }
+      ]
+    },
+    {
+      "species": "OG2g",
+      "method": "map-elites",
+      "mean_seed_recovery": 0.27999999999999997,
+      "ci95": [
+        0.195,
+        0.37
+      ],
+      "seed_rates": [
+        0.2,
+        0.3,
+        0.0,
+        0.6,
+        0.3,
+        0.1,
+        0.4,
+        0.4,
+        0.0,
+        0.1,
+        0.2,
+        0.2,
+        0.3,
+        0.6,
+        0.0,
+        0.6,
+        0.3,
+        0.2,
+        0.6,
+        0.2
+      ],
+      "control_validity": 0.85,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.7
+        }
+      ]
+    },
+    {
+      "species": "O4i",
+      "method": "performance",
+      "mean_seed_recovery": 0.2,
+      "ci95": [
+        0.1,
+        0.30999999999999994
+      ],
+      "seed_rates": [
+        0.0,
+        0.0,
+        0.6,
+        0.3,
+        0.0,
+        0.0,
+        0.7,
+        0.0,
+        0.0,
+        0.3,
+        0.6,
+        0.2,
+        0.0,
+        0.0,
+        0.3,
+        0.6,
+        0.1,
+        0.0,
+        0.0,
+        0.3
+      ],
+      "control_validity": 0.55,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.45
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.25
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.45
+        }
+      ]
+    },
+    {
+      "species": "O4i",
+      "method": "direct-regeneration",
+      "mean_seed_recovery": 0.41500000000000004,
+      "ci95": [
+        0.33499999999999996,
+        0.49000000000000005
+      ],
+      "seed_rates": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        0.2,
+        0.4,
+        0.5,
+        0.3,
+        0.6,
+        0.3,
+        0.3,
+        0.3,
+        0.6,
+        0.3,
+        0.0,
+        0.5,
+        0.5,
+        0.6,
+        0.4,
+        0.5
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.9
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.5
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.6
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.5
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.95
+        }
+      ]
+    },
+    {
+      "species": "O4i",
+      "method": "map-elites",
+      "mean_seed_recovery": 0.31,
+      "ci95": [
+        0.20500000000000002,
+        0.4151249999999982
+      ],
+      "seed_rates": [
+        0.1,
+        0.3,
+        0.6,
+        0.1,
+        0.4,
+        0.2,
+        0.0,
+        0.3,
+        0.0,
+        0.3,
+        0.6,
+        0.4,
+        0.1,
+        0.7,
+        0.0,
+        0.6,
+        0.7,
+        0.0,
+        0.4,
+        0.4
+      ],
+      "control_validity": 0.8,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.25
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.45
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.45
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.65
+        }
+      ]
+    },
+    {
+      "species": "S1s",
+      "method": "performance",
+      "mean_seed_recovery": 0.26,
+      "ci95": [
+        0.22499999999999995,
+        0.29
+      ],
+      "seed_rates": [
+        0.3,
+        0.2,
+        0.3,
+        0.3,
+        0.2,
+        0.2,
+        0.2,
+        0.3,
+        0.0,
+        0.3,
+        0.3,
+        0.3,
+        0.2,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.2,
+        0.4
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.75
+        }
+      ]
+    },
+    {
+      "species": "S1s",
+      "method": "direct-regeneration",
+      "mean_seed_recovery": 0.48999999999999994,
+      "ci95": [
+        0.39499999999999996,
+        0.585
+      ],
+      "seed_rates": [
+        0.3,
+        0.7,
+        0.3,
+        0.7,
+        0.4,
+        0.3,
+        0.3,
+        0.6,
+        0.3,
+        0.7,
+        0.3,
+        0.8,
+        0.5,
+        0.8,
+        0.6,
+        0.7,
+        0.3,
+        0.6,
+        0.0,
+        0.6
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.6
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.5
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.7
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.9
+        }
+      ]
+    },
+    {
+      "species": "S1s",
+      "method": "map-elites",
+      "mean_seed_recovery": 0.33499999999999996,
+      "ci95": [
+        0.27,
+        0.39999999999999997
+      ],
+      "seed_rates": [
+        0.5,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.4,
+        0.3,
+        0.2,
+        0.7,
+        0.5,
+        0.0,
+        0.2,
+        0.6
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.85
+        }
+      ]
+    },
+    {
+      "species": "P4cl",
+      "method": "performance",
+      "mean_seed_recovery": 0.38500000000000006,
+      "ci95": [
+        0.28,
+        0.49000000000000005
+      ],
+      "seed_rates": [
+        0.2,
+        0.4,
+        0.5,
+        0.8,
+        0.2,
+        0.4,
+        0.1,
+        0.7,
+        1.0,
+        0.6,
+        0.0,
+        0.4,
+        0.1,
+        0.4,
+        0.5,
+        0.3,
+        0.3,
+        0.2,
+        0.4,
+        0.2
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.3
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.7
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.6
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.75
+        }
+      ]
+    },
+    {
+      "species": "P4cl",
+      "method": "direct-regeneration",
+      "mean_seed_recovery": 0.6050000000000001,
+      "ci95": [
+        0.495,
+        0.7100000000000002
+      ],
+      "seed_rates": [
+        0.4,
+        0.6,
+        0.4,
+        0.7,
+        0.5,
+        0.9,
+        0.6,
+        0.7,
+        0.4,
+        0.4,
+        0.9,
+        0.4,
+        0.7,
+        0.9,
+        0.9,
+        0.4,
+        0.9,
+        0.9,
+        0.0,
+        0.5
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.45
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.45
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.35
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.45
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.9
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.95
+        }
+      ]
+    },
+    {
+      "species": "P4cl",
+      "method": "map-elites",
+      "mean_seed_recovery": 0.5150000000000001,
+      "ci95": [
+        0.4050000000000001,
+        0.6250000000000001
+      ],
+      "seed_rates": [
+        0.2,
+        0.5,
+        0.5,
+        0.4,
+        0.3,
+        0.4,
+        0.4,
+        0.9,
+        0.1,
+        0.3,
+        0.9,
+        0.9,
+        0.4,
+        0.4,
+        0.9,
+        0.8,
+        0.4,
+        0.4,
+        0.4,
+        0.8
+      ],
+      "control_validity": 1.0,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.3
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.3
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.35
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.45
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.7
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.85
+        }
+      ]
+    },
+    {
+      "species": "H3s",
+      "method": "performance",
+      "mean_seed_recovery": 0.39,
+      "ci95": [
+        0.315,
+        0.4699999999999999
+      ],
+      "seed_rates": [
+        0.3,
+        0.3,
+        0.4,
+        0.1,
+        0.4,
+        0.4,
+        0.5,
+        0.7,
+        0.3,
+        0.7,
+        0.5,
+        0.2,
+        0.4,
+        0.3,
+        0.3,
+        0.7,
+        0.4,
+        0.5,
+        0.4,
+        0.0
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.9
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.65
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.45
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.35
+        }
+      ]
+    },
+    {
+      "species": "H3s",
+      "method": "direct-regeneration",
+      "mean_seed_recovery": 0.615,
+      "ci95": [
+        0.54,
+        0.6849999999999998
+      ],
+      "seed_rates": [
+        0.3,
+        0.6,
+        0.7,
+        0.6,
+        0.6,
+        0.5,
+        0.6,
+        0.6,
+        0.6,
+        0.9,
+        0.7,
+        0.7,
+        0.6,
+        0.7,
+        0.3,
+        0.8,
+        0.8,
+        0.7,
+        0.3,
+        0.7
+      ],
+      "control_validity": 1.0,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.8
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.65
+        }
+      ]
+    },
+    {
+      "species": "H3s",
+      "method": "map-elites",
+      "mean_seed_recovery": 0.45000000000000007,
+      "ci95": [
+        0.355,
+        0.545
+      ],
+      "seed_rates": [
+        0.3,
+        0.5,
+        0.4,
+        0.1,
+        0.2,
+        0.1,
+        0.7,
+        0.5,
+        0.7,
+        0.7,
+        0.4,
+        0.5,
+        0.6,
+        0.6,
+        0.5,
+        0.7,
+        0.4,
+        0.8,
+        0.3,
+        0.0
+      ],
+      "control_validity": 0.95,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.8
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.75
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.6
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.35
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.7
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.7
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.45
+        }
+      ]
+    },
+    {
+      "species": "H3cp",
+      "method": "performance",
+      "mean_seed_recovery": 0.065,
+      "ci95": [
+        0.015000000000000003,
+        0.13
+      ],
+      "seed_rates": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2,
+        0.0,
+        0.5,
+        0.2,
+        0.0,
+        0.0,
+        0.3,
+        0.0,
+        0.1,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "control_validity": 0.25,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.25
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.1
+        }
+      ]
+    },
+    {
+      "species": "H3cp",
+      "method": "direct-regeneration",
+      "mean_seed_recovery": 0.23500000000000001,
+      "ci95": [
+        0.14999999999999997,
+        0.335
+      ],
+      "seed_rates": [
+        0.9,
+        0.1,
+        0.2,
+        0.3,
+        0.2,
+        0.2,
+        0.2,
+        0.0,
+        0.3,
+        0.0,
+        0.3,
+        0.4,
+        0.3,
+        0.2,
+        0.2,
+        0.6,
+        0.3,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "control_validity": 0.75,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.25
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.65
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.5
+        }
+      ]
+    },
+    {
+      "species": "H3cp",
+      "method": "map-elites",
+      "mean_seed_recovery": 0.24500000000000002,
+      "ci95": [
+        0.17,
+        0.335
+      ],
+      "seed_rates": [
+        0.2,
+        0.0,
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.3,
+        0.0,
+        0.2,
+        0.4,
+        0.2,
+        0.2,
+        0.4,
+        0.8,
+        0.1,
+        0.5,
+        0.4,
+        0.2,
+        0.3,
+        0.1
+      ],
+      "control_validity": 0.85,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.05
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.5
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.0
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.45
+        }
+      ]
+    },
+    {
+      "species": "C0v",
+      "method": "performance",
+      "mean_seed_recovery": 0.825,
+      "ci95": [
+        0.785,
+        0.86
+      ],
+      "seed_rates": [
+        0.8,
+        0.8,
+        0.8,
+        0.9,
+        0.8,
+        0.8,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.8,
+        0.6,
+        0.8,
+        0.9,
+        0.6,
+        0.9,
+        0.8,
+        0.9,
+        0.8,
+        0.9
+      ],
+      "control_validity": 1.0,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.9
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.4
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 0.95
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.1
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 0.95
+        }
+      ]
+    },
+    {
+      "species": "C0v",
+      "method": "direct-regeneration",
+      "mean_seed_recovery": 0.775,
+      "ci95": [
+        0.7200000000000001,
+        0.825
+      ],
+      "seed_rates": [
+        0.8,
+        0.8,
+        0.9,
+        0.9,
+        0.6,
+        0.7,
+        0.9,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.7,
+        0.6,
+        1.0,
+        0.8,
+        0.7,
+        0.8,
+        0.9,
+        0.5,
+        0.7
+      ],
+      "control_validity": 1.0,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.9
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.55
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.15
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.3
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 1.0
+        }
+      ]
+    },
+    {
+      "species": "C0v",
+      "method": "map-elites",
+      "mean_seed_recovery": 0.8000000000000002,
+      "ci95": [
+        0.735,
+        0.86
+      ],
+      "seed_rates": [
+        0.9,
+        1.0,
+        0.7,
+        0.9,
+        0.7,
+        0.8,
+        0.9,
+        0.4,
+        0.8,
+        0.9,
+        0.5,
+        0.7,
+        0.8,
+        0.8,
+        1.0,
+        0.8,
+        0.8,
+        0.9,
+        0.8,
+        0.9
+      ],
+      "control_validity": 1.0,
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "central-7",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "central-10",
+          "recovery_rate": 0.85
+        },
+        {
+          "intervention": "central-12",
+          "recovery_rate": 0.65
+        },
+        {
+          "intervention": "repeated-7",
+          "recovery_rate": 0.9
+        },
+        {
+          "intervention": "fragmentation",
+          "recovery_rate": 0.2
+        },
+        {
+          "intervention": "communication-noise",
+          "recovery_rate": 1.0
+        },
+        {
+          "intervention": "kernel-radius",
+          "recovery_rate": 0.5
+        },
+        {
+          "intervention": "diffusion",
+          "recovery_rate": 0.9
+        },
+        {
+          "intervention": "moving-resource",
+          "recovery_rate": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -5,87 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#06100d" />
     <title>Genesis Zoo — artificial life, locally evolved</title>
-    <meta name="description" content="A living, evidence-backed artificial-life observatory running locally on Apple Silicon." />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <meta name="description" content="An artificial-life research observatory: tested limits of recovery, species transfer and coexistence." />
+    <link rel="stylesheet" href="styles.css?v=6" />
   </head>
   <body>
     <header>
       <a class="wordmark" href="#top" aria-label="Genesis Zoo home">GENESIS <i></i> ZOO</a>
-      <div class="status"><span></span> ecosystem online · local universe</div>
+      <div class="status"><span></span> research ledger · local laboratory</div>
     </header>
     <main id="top">
       <section class="hero">
         <div>
-          <p class="eyebrow">Autonomous artificial-life observatory / Berlin</p>
-          <h1>Not a zoo.<br /><em>A living world.</em></h1>
+          <p class="eyebrow">Artificial-life research / transfer gate rejected</p>
+          <h1>Useful in two.<br /><em>Nonviable in five.</em></h1>
         </div>
         <div class="hero-side">
-          <p>Nine artificial lineages have left their glass boxes. They now share energy, space and consequences—reproducing, mutating and sometimes disappearing.</p>
+          <p>A growth-rule mutation that helped Orbium did not generalize across the catalogue. Five of eight species lost viability after the same relative change. That failure sets the direction: search within each species, then test recovery against matched controls.</p>
           <dl class="hero-stats">
-            <div><dt>founding lineages</dt><dd>09</dd></div>
-            <div><dt>controlled trials</dt><dd>4,920</dd></div>
-            <div><dt>local discoveries</dt><dd>01</dd></div>
+            <div><dt>beneficial species</dt><dd>02</dd></div>
+            <div><dt>neutral species</dt><dd>01</dd></div>
+            <div><dt>nonviable transfers</dt><dd>05</dd></div>
+          </dl>
+          <a class="evidence-link" href="data/multispecies-transfer.json">Read the eight-species evidence →</a>
+        </div>
+      </section>
+
+      <section class="discoveries" aria-labelledby="discoveries-title">
+        <div class="section-head"><div><p class="eyebrow">Research ledger</p><h2 id="discoveries-title">What the experiments support</h2></div></div>
+        <article class="discovery restraint">
+          <span class="number">001</span>
+          <div><p class="eyebrow">Rejected transfer</p><h3>Useful rules do not travel cleanly.</h3></div>
+          <p>The same relative growth-rule mutation was beneficial in two of eight species, neutral in one, and nonviable in five even without injury. This rejects universal transfer for this mutation in the tested catalogue. The original screen reused phases and rotations; its trials are not independent replicates. <a href="data/multispecies-transfer.json">Inspect the species record →</a></p>
+        </article>
+        <article class="discovery restraint">
+          <span class="number">002</span>
+          <div><p class="eyebrow">Magnitude holdout / candidate 806</p><h3>The cliff moved.<br />It did not disappear.</h3></div>
+          <p>A new candidate selected on 4%, 6% and 8% injuries passed the recovery endpoint in 32/32 held-out contexts at both 5% and 7%, then 0/32 at 10% and 1/32 at 12%. These are eight independent noisy initial-condition seeds, each measured at four phases. Its 50.8% mean missed the 65% gate. It is distinct from Genesis 001 and was not promoted. <a href="data/genesis-magnitude-validation.json">Inspect the held-out record →</a></p>
+        </article>
+        <article class="discovery">
+          <span class="number">003</span>
+          <div><p class="eyebrow">Charter gate 3 / coverage passed</p><h3>More diversity, unevenly.</h3></div>
+          <p>Across eight species and 20 search seeds per species, MAP-Elites occupied 0.78 more behavior bins than random search on average (95% seed-bootstrap interval: 0.58–0.99), at equal simulation compute. Orbium favored random search. This passes the aggregate coverage gate; whether diversity improves recovery is a separate comparison. <a href="data/charter-coverage.json">Inspect the coverage record →</a> <a href="data/charter-protocol.json">Read the locked protocol →</a></p>
+        </article>
+        <article class="discovery">
+          <span class="number">RESULT</span>
+          <div><p class="eyebrow">Charter comparison / 480 selections</p><h3>Direct selection led.<br />Species still mattered.</h3></div>
+          <p>At 64 evaluations per search seed, direct regeneration produced 48.4% successful selections, MAP-Elites 40.6%, and performance selection 32.4%. Success requires a valid undamaged control and functional recovery. The result combines stability and recovery, varies by species, and does not establish broad superiority. <a href="#charterComparison">Compare the species ↓</a></p>
+        </article>
+        <section class="comparison-panel" id="charterComparison" aria-labelledby="comparison-title">
+          <p class="eyebrow">Eight species · 20 search seeds per method · ten repeated interventions</p>
+          <h3 id="comparison-title">The first three-way comparison</h3>
+          <p id="comparisonStatus">Loading the recorded results…</p>
+          <div class="comparison-scroll" tabindex="0" role="region" aria-label="Species comparison; scroll horizontally on narrow screens">
+            <table><caption>Successful selections; small text gives undamaged-control validity.</caption>
+              <thead><tr><th scope="col">Species</th><th scope="col">Performance</th><th scope="col">MAP-Elites</th><th scope="col">Direct regeneration</th></tr></thead>
+              <tbody id="comparisonRows"></tbody>
+            </table>
+          </div>
+          <p class="comparison-caveat">Failed controls count as failed selections, not demonstrated injury susceptibility. The archive winner is sampled uniformly; the other methods select their own objective’s best specimen. Candidate budgets are equal; direct regeneration uses 2.5× the simulated training steps. Anatomy is inherited and only two growth parameters evolve.</p>
+          <a class="evidence-link" href="data/charter-analysis.json">Analysis and control-validity sensitivity →</a>
+          <a class="evidence-link" href="data/charter-trials.json">All 4,800 trials and selected genomes →</a>
+        </section>
+        <article class="discovery">
+          <span class="number">004</span>
+          <div><p class="eyebrow">Legacy screen / Genesis 001</p><h3>A narrow central-injury advantage.</h3></div>
+          <p>The earlier two-parameter Orbium mutation survived every tested 5% central injury and failed at 7.5%. That screen measured survival-related endpoints and reused near-symmetric rotations. It motivated the stronger matched-control shape and recovery-time tests above; it does not establish broad regeneration.</p>
+        </article>
+        <article class="discovery feature">
+          <span class="number">005</span>
+          <div><p class="eyebrow">Ecological threshold</p><h3>Proximity became the predator.</h3></div>
+          <p>Under the strongest symmetric pressure, coexistence fell from 84.7% when organisms began near one another to 8.3% when their bodies overlapped. A separate held-out run reproduced the same direction: 86.8% versus 25.7%.</p>
+        </article>
+        <article class="discovery restraint">
+          <span class="number">006</span>
+          <div><p class="eyebrow">Failed promotion</p><h3>The promising advantage got smaller.</h3></div>
+          <p>Genesis 001 appeared 7.5 points better than its parent during discovery. In 252 unseen matched contexts the difference contracted to 2.0 points and missed the precommitted gate. It remains an observation, not a promoted finding.</p>
+        </article>
+        <article class="discovery restraint">
+          <span class="number">007</span>
+          <div><p class="eyebrow">Evolution run 001</p><h3>Coexistence was not four numbers away.</h3></div>
+          <p>Of 2,048 paired growth-rule mutations, 77 preserved both parental identities. The best honest candidate rescued 2 of 8 unseen hard encounters from a zero baseline, but passed only 1 of 4 training contexts. Local improvement appeared; robust co-adaptation did not.</p>
+        </article>
+        <article class="discovery restraint">
+          <span class="number">008</span>
+          <div><p class="eyebrow">Evolution run 002</p><h3>Memory transferred two encounters.</h3></div>
+          <p>With both bodies fixed, the best training-selected interaction genome improved unseen coexistence from 1 of 8 encounters to 3 of 8. Both added survivals occurred at contact; overlap stayed at 1 of 4. Remembered boundaries mattered, but robust cooperation did not emerge.</p>
+        </article>
+      </section>
+
+      <section class="zoo-section" aria-labelledby="zoo-title">
+        <div class="section-head">
+          <div><p class="eyebrow">Interactive Lenia demonstration</p><h2 id="zoo-title">The isolation laboratory</h2></div>
+          <div class="zoo-actions">
+            <button id="pauseAll" type="button">Pause</button>
+            <button id="resetAll" type="button">Reset population</button>
+            <button id="stressAll" class="primary" type="button">5% extinction pulse</button>
+          </div>
+        </div>
+        <p class="ecosystem-note lab-disclaimer"><strong>Live view.</strong> These isolated habitats demonstrate native cellular dynamics. Use the recorded matched-control experiments above to assess recovery; an on-screen survival or collapse is a single observation.</p>
+        <div class="zoo-shell">
+          <canvas id="zoo" width="768" height="768" aria-label="Nine live cellular automata habitats"></canvas>
+          <img id="serverZoo" class="server-zoo" alt="Nine MLX-rendered live cellular automata habitats" hidden />
+          <div id="habitatGrid" class="habitat-grid" aria-label="Choose a habitat"></div>
+          <div class="scanline" aria-hidden="true"></div>
+          <div id="eventMessage" class="event-message" aria-live="polite"></div>
+        </div>
+        <p class="zoo-caption"><span id="generation">GEN 000000</span><span>Native physics · no cross-species interference · exact 5% injury</span><span id="renderMode">WebGL renderer</span><span id="renderRate"></span></p>
+      </section>
+      <section class="inspector" aria-live="polite">
+        <div class="identity">
+          <p class="eyebrow" id="selectedKind">Local descendant</p>
+          <h2 id="selectedName">Genesis 001</h2>
+          <p id="selectedSummary">An Orbium descendant from the earlier 5% injury screen. Its reported advantage was narrow and used dependent phase and rotation contexts.</p>
+          <button id="stressSelected" class="text-action" type="button">Injure this creature →</button>
+        </div>
+        <div class="evidence">
+          <p class="mini-title">Legacy 5% injury endpoint</p>
+          <div class="bar-row"><span>parent</span><div><i id="parentBar"></i></div><strong id="parentRate">67%</strong></div>
+          <div class="bar-row"><span>transfer</span><div><i id="transferBar"></i></div><strong id="transferRate">100%</strong></div>
+          <p id="classification" class="finding">Beneficial · +33 percentage points</p>
+        </div>
+        <div class="genome">
+          <p class="mini-title">Identity record</p>
+          <dl>
+            <div><dt>catalogue code</dt><dd id="selectedCode">GEN–001</dd></div>
+            <div><dt>growth μ</dt><dd id="selectedMu">0.1463</dd></div>
+            <div><dt>growth σ</dt><dd id="selectedSigma">0.0169</dd></div>
+            <div><dt>lineage</dt><dd id="selectedLineage">O2u → #942</dd></div>
           </dl>
         </div>
       </section>
-
-      <section class="ecosystem-section" aria-labelledby="ecosystem-title">
-        <div class="section-head ecosystem-heading">
-          <div>
-            <p class="eyebrow">Experimental ecology / live</p>
-            <h2 id="ecosystem-title">The common world</h2>
-          </div>
-          <div class="ecosystem-actions">
-            <button id="ecoPause" type="button">Pause time</button>
-            <button id="ecoBloom" type="button">Nutrient bloom</button>
-            <button id="ecoShock" class="danger" type="button">Climate shock</button>
-            <button id="ecoReset" type="button">Restart epoch</button>
-          </div>
-        </div>
-
-        <div class="ecosystem-stage">
-          <div class="world-wrap">
-            <canvas id="ecosystem" width="1200" height="720" aria-label="A live artificial ecosystem containing evolving lineages"></canvas>
-            <div class="world-hud" aria-hidden="true">
-              <span><i></i> LIVE BIOSPHERE</span>
-              <span id="ecoClock">EPOCH 01 · 00:00</span>
-            </div>
-            <div class="world-legend" aria-hidden="true">
-              <span>matter</span><span>energy</span><span>kinship</span>
-            </div>
-            <p class="world-instruction">Select a lifeform to follow its lineage</p>
-          </div>
-
-          <aside class="ecosystem-sidebar" aria-label="Live ecosystem telemetry">
-            <div class="eco-vitals">
-              <p class="mini-title">World state</p>
-              <dl>
-                <div><dt>living</dt><dd id="ecoPopulation">18</dd></div>
-                <div><dt>births</dt><dd id="ecoBirths">00</dd></div>
-                <div><dt>deaths</dt><dd id="ecoDeaths">00</dd></div>
-                <div><dt>lineages</dt><dd id="ecoLineages">09</dd></div>
-                <div><dt>available energy</dt><dd id="ecoEnergy">100%</dd></div>
-              </dl>
-            </div>
-            <div class="eco-subject">
-              <p class="mini-title">Following</p>
-              <div class="subject-mark" id="ecoSubjectMark">G1</div>
-              <h3 id="ecoSubjectName">Genesis / founder</h3>
-              <p id="ecoSubjectMeta">Generation 0 · no parent</p>
-              <div class="trait"><span>velocity</span><i><b id="traitSpeed"></b></i></div>
-              <div class="trait"><span>efficiency</span><i><b id="traitEfficiency"></b></i></div>
-              <div class="trait"><span>fertility</span><i><b id="traitFertility"></b></i></div>
-            </div>
-            <div class="eco-events">
-              <p class="mini-title">Field notes</p>
-              <ol id="ecoEventLog" aria-live="polite"></ol>
-            </div>
-          </aside>
-        </div>
-        <div class="lineage-ribbon" id="lineageRibbon" aria-label="Living lineage population"></div>
-        <p class="ecosystem-note"><strong>Exploratory layer.</strong> Organism-level ecology and inheritance run here; validated Lenia survival evidence remains isolated in the laboratory below.</p>
-      </section>
-
       <section class="coupling-section" aria-labelledby="coupling-title">
         <div class="section-head">
           <div>
@@ -177,85 +226,72 @@
         <p class="ecosystem-note"><strong>Baseline matrix rule.</strong> Each channel keeps its native continuous Lenia dynamics and receives symmetric local pressure. Run 002 adds bounded, channel-specific sensitivity, boundary response, and contact memory; every result retains a matched isolated control.</p>
       </section>
 
-      <section class="zoo-section" aria-labelledby="zoo-title">
-        <div class="section-head">
-          <div><p class="eyebrow">Controlled evidence</p><h2 id="zoo-title">The isolation laboratory</h2></div>
-          <div class="zoo-actions">
-            <button id="pauseAll" type="button">Pause</button>
-            <button id="resetAll" type="button">Reset population</button>
-            <button id="stressAll" class="primary" type="button">5% extinction pulse</button>
+
+      <details class="ecosystem-section" id="exploratoryWorld">
+        <summary><span class="eyebrow">Optional exploratory simulation</span><span class="world-summary-title">Open the common world</span><span class="world-summary-hint">Starts only when opened · closes to suspend</span></summary>
+        <div class="section-head ecosystem-heading">
+          <div>
+            <p class="eyebrow">Illustrative agent model</p>
+            <h2 id="ecosystem-title">The common world</h2>
+          </div>
+          <div class="ecosystem-actions">
+            <button id="ecoPause" type="button">Pause time</button>
+            <button id="ecoBloom" type="button">Nutrient bloom</button>
+            <button id="ecoShock" class="danger" type="button">Climate shock</button>
+            <button id="ecoReset" type="button">Restart epoch</button>
           </div>
         </div>
-        <div class="zoo-shell">
-          <canvas id="zoo" width="768" height="768" aria-label="Nine live cellular automata habitats"></canvas>
-          <img id="serverZoo" class="server-zoo" alt="Nine MLX-rendered live cellular automata habitats" hidden />
-          <div id="habitatGrid" class="habitat-grid" aria-label="Choose a habitat"></div>
-          <div class="scanline" aria-hidden="true"></div>
-          <div id="eventMessage" class="event-message" aria-live="polite"></div>
+
+        <p class="ecosystem-note exploratory-disclaimer"><strong>Exploratory layer.</strong> This canvas uses a separate organism-level model with designed ecology and inheritance rules. It is not a Lenia experiment, and its births, mutations and interactions provide no evidence for regeneration or evolved coexistence.</p>
+
+        <div class="ecosystem-stage">
+          <div class="world-wrap">
+            <canvas id="ecosystem" width="1200" height="720" aria-label="Optional exploratory agent simulation, separate from the Lenia research"></canvas>
+            <div class="world-hud" aria-hidden="true">
+              <span><i></i> EXPLORATORY SIMULATION</span>
+              <span id="ecoClock">EPOCH 01 · 00:00</span>
+            </div>
+            <div class="world-legend" aria-hidden="true">
+              <span>matter</span><span>energy</span><span>kinship</span>
+            </div>
+            <p class="world-instruction">Select a lifeform to follow its lineage</p>
+          </div>
+
+          <aside class="ecosystem-sidebar" aria-label="Live ecosystem telemetry">
+            <div class="eco-vitals">
+              <p class="mini-title">World state</p>
+              <dl>
+                <div><dt>living</dt><dd id="ecoPopulation">18</dd></div>
+                <div><dt>births</dt><dd id="ecoBirths">00</dd></div>
+                <div><dt>deaths</dt><dd id="ecoDeaths">00</dd></div>
+                <div><dt>lineages</dt><dd id="ecoLineages">09</dd></div>
+                <div><dt>available energy</dt><dd id="ecoEnergy">100%</dd></div>
+              </dl>
+            </div>
+            <div class="eco-subject">
+              <p class="mini-title">Following</p>
+              <div class="subject-mark" id="ecoSubjectMark">G1</div>
+              <h3 id="ecoSubjectName">Genesis / founder</h3>
+              <p id="ecoSubjectMeta">Generation 0 · no parent</p>
+              <div class="trait"><span>velocity</span><i><b id="traitSpeed"></b></i></div>
+              <div class="trait"><span>efficiency</span><i><b id="traitEfficiency"></b></i></div>
+              <div class="trait"><span>fertility</span><i><b id="traitFertility"></b></i></div>
+            </div>
+            <div class="eco-events">
+              <p class="mini-title">Field notes</p>
+              <ol id="ecoEventLog" aria-live="polite"></ol>
+            </div>
+          </aside>
         </div>
-        <p class="zoo-caption"><span id="generation">GEN 000000</span><span>Native physics · no cross-species interference · exact 5% injury</span><span id="renderMode">WebGL renderer</span><span id="renderRate"></span></p>
-      </section>
-      <section class="inspector" aria-live="polite">
-        <div class="identity">
-          <p class="eyebrow" id="selectedKind">Local descendant</p>
-          <h2 id="selectedName">Genesis 001</h2>
-          <p id="selectedSummary">The first organism discovered here: an Orbium descendant with a narrow but reproducible central-injury advantage.</p>
-          <button id="stressSelected" class="text-action" type="button">Injure this creature →</button>
-        </div>
-        <div class="evidence">
-          <p class="mini-title">5% injury recovery</p>
-          <div class="bar-row"><span>parent</span><div><i id="parentBar"></i></div><strong id="parentRate">67%</strong></div>
-          <div class="bar-row"><span>transfer</span><div><i id="transferBar"></i></div><strong id="transferRate">100%</strong></div>
-          <p id="classification" class="finding">Beneficial · +33 percentage points</p>
-        </div>
-        <div class="genome">
-          <p class="mini-title">Identity record</p>
-          <dl>
-            <div><dt>catalogue code</dt><dd id="selectedCode">GEN–001</dd></div>
-            <div><dt>growth μ</dt><dd id="selectedMu">0.1463</dd></div>
-            <div><dt>growth σ</dt><dd id="selectedSigma">0.0169</dd></div>
-            <div><dt>lineage</dt><dd id="selectedLineage">O2u → #942</dd></div>
-          </dl>
-        </div>
-      </section>
-      <section class="discoveries" aria-labelledby="discoveries-title">
-        <div class="section-head"><div><p class="eyebrow">Research ledger</p><h2 id="discoveries-title">What the zoo has taught us</h2></div></div>
-        <article class="discovery feature">
-          <span class="number">001</span>
-          <div><p class="eyebrow">Threshold event</p><h3>Five percent changes everything.</h3></div>
-          <p>A two-parameter Orbium mutation survived every held-out 5% central injury. At 7.5%, every trial failed. Robustness appeared as a narrow threshold—not a gradual superpower.</p>
-        </article>
-        <article class="discovery">
-          <span class="number">002</span>
-          <div><p class="eyebrow">Species barrier</p><h3>Useful rules do not travel cleanly.</h3></div>
-          <p>The same relative mutation helped two species, barely changed one, and erased viability in five. Regeneration cannot simply be copied; it must be found inside each species’ own viable world.</p>
-        </article>
-        <article class="discovery feature">
-          <span class="number">003</span>
-          <div><p class="eyebrow">Ecological threshold</p><h3>Proximity became the predator.</h3></div>
-          <p>Under the strongest symmetric pressure, coexistence fell from 84.7% when organisms began near one another to 8.3% when their bodies overlapped. A separate held-out run reproduced the same direction: 86.8% versus 25.7%.</p>
-        </article>
-        <article class="discovery restraint">
-          <span class="number">004</span>
-          <div><p class="eyebrow">Failed promotion</p><h3>The promising advantage got smaller.</h3></div>
-          <p>Genesis 001 appeared 7.5 points better than its parent during discovery. In 252 unseen matched contexts the difference contracted to 2.0 points and missed the precommitted gate. It remains an observation, not a promoted finding.</p>
-        </article>
-        <article class="discovery restraint">
-          <span class="number">005</span>
-          <div><p class="eyebrow">Evolution run 001</p><h3>Coexistence was not four numbers away.</h3></div>
-          <p>Of 2,048 paired growth-rule mutations, 77 preserved both parental identities. The best honest candidate rescued 2 of 8 unseen hard encounters from a zero baseline, but passed only 1 of 4 training contexts. Local improvement appeared; robust co-adaptation did not.</p>
-        </article>
-        <article class="discovery restraint">
-          <span class="number">006</span>
-          <div><p class="eyebrow">Evolution run 002</p><h3>Memory transferred two encounters.</h3></div>
-          <p>With both bodies fixed, the best training-selected interaction genome improved unseen coexistence from 1 of 8 encounters to 3 of 8. Both added survivals occurred at contact; overlap stayed at 1 of 4. Remembered boundaries mattered, but robust cooperation did not emerge.</p>
-        </article>
-      </section>
+        <div class="lineage-ribbon" id="lineageRibbon" aria-label="Living lineage population"></div>
+      </details>
+
     </main>
     <footer><span>GENESIS RESEARCH CHARTER 001</span><span>Every claim keeps its genome, seed and trial record</span><span>M4 PRO / METAL</span></footer>
-    <script src="ecosystem.js?v=4"></script>
+    <script src="ecosystem.js?v=5"></script>
     <script src="coupling.js?v=5"></script>
-    <script src="app.js?v=5"></script>
+    <script src="app.js?v=6"></script>
+    <script src="research.js?v=1"></script>
     <script src="server-render.js?v=1"></script>
   </body>
 </html>

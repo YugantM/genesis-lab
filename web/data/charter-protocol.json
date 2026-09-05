@@ -1,0 +1,91 @@
+{
+  "locked_at": "2026-09-04T23:06:44.340206+00:00",
+  "sha256": "26a7ab3ae240c8416a07d759ac7d64d7abcadba22f3e2d88fe9a59e19853a375",
+  "protocol": {
+    "schema": "genesis.charter-comparison-protocol/v1",
+    "search_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "source_sha256": {
+      "selection_comparison.py": "c97de4aad47769e4322333071e548824712321ef4eef039b9e236576ad848269",
+      "core.py": "2e05241889146c27fa75a52b812e40acb6d3c740a447989da7f0dcac7faa4d6e",
+      "metrics.py": "75eba6c456646f9f61d1be78c45b6111e84c3fb73ddd68fc3a1ad8bf14410895",
+      "robust_search.py": "1b6ca783c885309f206dadfdf2647370c4d5332944e7dfe6aa497df985012e63"
+    },
+    "evaluations_per_method_per_seed": 64,
+    "population": 16,
+    "species": [
+      "O2u",
+      "OG2g",
+      "O4i",
+      "S1s",
+      "P4cl",
+      "H3s",
+      "H3cp",
+      "C0v"
+    ],
+    "specimen_sha256": {
+      "O2u": "b1247b0e9023cbcfb3270e7e3ad71ea071b74b0c6094a46da327b36b287cd0e2",
+      "OG2g": "7e328adad5eab46d736985318433f6c5534b5d37e907c34888b1a4b108855780",
+      "O4i": "2c87a8359a4abcd1a945cfde7caf22b50d101381556109b89e90381ad7a85f00",
+      "S1s": "728527414e3190f0465251547e1b1c3547a6f93a3f072d1b0c6ecbadc5582cd2",
+      "P4cl": "93c8d352613676e4cc0530417df6fade373015146b7d9ccd6fbec9f4c7101fed",
+      "H3s": "8a01f00780beee0aa7722a578d6539b15aad3b95103053cc786298a90921baf9",
+      "H3cp": "dcf748c4a586b9967390ebcc96f3dca38c309d4cc8a5340f39e732ea26f1665c",
+      "C0v": "2dc31be286ee4727f5bf5e9c78c7fc4505dc142399b60c33eec4d4922ab39762"
+    },
+    "train_damage": [
+      0.04,
+      0.06,
+      0.08
+    ],
+    "heldout_interventions": [
+      "central-5",
+      "central-7",
+      "central-10",
+      "central-12",
+      "repeated-7",
+      "fragmentation",
+      "communication-noise",
+      "kernel-radius",
+      "diffusion",
+      "moving-resource"
+    ],
+    "independent_unit": "search seed within species; ten heldout interventions are repeated measurements",
+    "initial_condition_noise_sigma": {
+      "train": 0.012,
+      "heldout": 0.015
+    },
+    "search_space": "native per-species growth centre x[0.8,1.2], growth width x[0.5,1.5]; fixed inherited anatomy",
+    "descriptors": "fixed8x8 parent-relative final mass[0.5,2] and50-step displacement[0,2]; clipped overflow",
+    "map_quality": "undamaged performance; uniform archive-cell reproduction and uniform final archive-cell choice",
+    "performance_quality": "valid bounded persistence x(0.5+0.5*capped parent-relative motion/2)",
+    "direct_quality": "mean mass closeness x retained motion across4/6/8%; no shape reward",
+    "budget": "equal candidate evaluations; coverage also equal simulated world steps; direct selection has explicitly reported extra injury compute",
+    "coverage_gate": "mean species-stratified paired seed coverage difference lower95% bootstrap bound>0",
+    "gate_scope": "coverage gate precedes heldout comparison; small fixed budget, no scientific novelty claim",
+    "heldout_scope": "fresh initial-state seeds and specified interventions; some injury magnitudes have historical exploratory exposure",
+    "heldout_definition": "300 steps; repeated7% at0 and150; fragmentation3-cell central vertical gap; sensed-neighborhood noise sigma.015 eachstep; radius+10%; diffusion10%4-neighbor mixing eachstep; moving imposed growth field amplitude.002 cosine speed.5cells/step (no explicit resource uptake)",
+    "species_eligibility": "at least90% valid parental controls; excluded species retained in diagnostics",
+    "analysis": "primary functional recovery and survival averaged within seed, species reported separately; anatomy secondary; no tuning after results"
+  }
+}

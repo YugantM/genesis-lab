@@ -13,7 +13,18 @@ import numpy as np
 
 from .core import GenesisWorld
 from .genome import load_specimen
-from .metrics import center_of_mass, mass, toroidal_displacement
+from .metrics import (
+    aligned_similarity,
+    center_of_mass,
+    functional_recovery,
+    functional_recovery_time,
+    mass,
+    occupied_fraction,
+    recovery_time,
+    threshold_recovery_time,
+    toroidal_displacement,
+)
+from .robust_search import calibrated_damage
 
 
 def disk_mask(size: int, center: np.ndarray, radius: float) -> np.ndarray:
@@ -53,11 +64,15 @@ def main() -> None:
     parser.add_argument("--post-steps", type=int, default=300)
     parser.add_argument("--sample-every", type=int, default=10)
     args = parser.parse_args()
+    if args.settle_steps < 50 or args.post_steps < 50 or args.sample_every < 1:
+        parser.error("settle-steps and post-steps must be at least 50; sample-every must be positive")
 
     specimen = load_specimen(args.specimen)
     template = GenesisWorld.from_specimen(specimen)
     # Estimate motion direction immediately before intervention.
-    template.step(args.settle_steps - 20)
+    template.step(args.settle_steps - 50)
+    pre_motion_start = center_of_mass(template.numpy())[0]
+    template.step(30)
     earlier_center = center_of_mass(template.numpy())[0]
     template.step(20)
     state = template.numpy()[0]
@@ -73,7 +88,7 @@ def main() -> None:
     conditions: list[dict] = []
     for target in (0.05, 0.10, 0.15, 0.20, 0.25):
         for location, wound_center in locations.items():
-            radius, actual = calibrate_radius(state, wound_center, target)
+            _, radius, actual = calibrated_damage(state, wound_center, target)
             conditions.append(
                 {
                     "target_removed_fraction": target,
@@ -89,24 +104,71 @@ def main() -> None:
     worlds = GenesisWorld(batch_config)
     batch_state = np.repeat(state[None, :, :], len(conditions), axis=0)
     for index, condition in enumerate(conditions):
-        batch_state[index][disk_mask(template.config.size, condition["center"], condition["radius"])] = 0
+        batch_state[index], _, _ = calibrated_damage(
+            state, condition["center"], condition["target_removed_fraction"]
+        )
     worlds.state = mx.array(batch_state)
     mx.eval(worlds.state)
 
     control = clone_at_state(template, state)
     pre_mass = float(state.sum())
+    pre_motion = float(np.linalg.norm(toroidal_displacement(
+        pre_motion_start, centre, template.config.size
+    )))
+    pre_valid = bool(40 <= pre_mass <= 130 and occupied_fraction(state) <= 0.03 and pre_motion >= 1)
     extinction = [None] * len(conditions)
     trajectories = [[] for _ in conditions]
     control_trajectory = []
+    observed_centers = {}
+    control_centers = {}
     for step in range(0, args.post_steps + 1):
-        if step % args.sample_every == 0:
-            masses = mass(worlds.numpy())
+        measured_states = worlds.numpy()
+        control_state = control.numpy()[0]
+        observed_centers[step] = center_of_mass(measured_states)
+        control_centers[step] = center_of_mass(control_state[None])[0]
+        if step % args.sample_every == 0 or step == args.post_steps:
+            masses = mass(measured_states)
+            control_mass = float(mass(control_state[None])[0])
+            control_motion = pre_motion
+            motion_ratios = [None] * len(conditions)
+            if step >= 50:
+                observed_motion = np.linalg.norm(toroidal_displacement(
+                    observed_centers[step - 50], observed_centers[step], template.config.size
+                ), axis=1)
+                observed_motion = np.where(masses >= 1.0, observed_motion, 0.0)
+                control_motion = float(np.linalg.norm(toroidal_displacement(
+                    control_centers[step - 50], control_centers[step], template.config.size
+                )))
+                motion_ratios = (observed_motion / max(control_motion, 1e-12)).tolist()
+            valid_control = bool(
+                pre_valid and 40 <= control_mass <= 130
+                and occupied_fraction(control_state) <= 0.03 and control_motion >= 1
+            )
+            occupancies = occupied_fraction(measured_states)
             for index, value in enumerate(masses):
                 value = float(value)
-                trajectories[index].append({"step": step, "mass": value})
+                trajectories[index].append(
+                    {
+                        "step": step,
+                        "mass": value,
+                        "control_mass": control_mass,
+                        "mass_ratio_to_control": value / max(control_mass, 1e-12),
+                        "occupied_fraction": float(occupancies[index]),
+                        "motion_ratio_to_control": motion_ratios[index],
+                        "control_valid": valid_control,
+                        "aligned_similarity_to_control": aligned_similarity(
+                            measured_states[index], control_state
+                        ),
+                    }
+                )
                 if extinction[index] is None and value < 1.0:
                     extinction[index] = step
-            control_trajectory.append({"step": step, "mass": float(mass(control.numpy())[0])})
+            control_trajectory.append({
+                "step": step, "mass": control_mass,
+                "occupied_fraction": float(occupied_fraction(control_state)),
+                "motion_50_steps": control_motion if step >= 50 else None,
+                "control_valid": valid_control,
+            })
         if step < args.post_steps:
             worlds.step()
             control.step()
@@ -115,6 +177,30 @@ def main() -> None:
     rows = []
     for index, condition in enumerate(conditions):
         final_mass = float(final_masses[index])
+        final = trajectories[index][-1]
+        final_valid = final["control_valid"]
+        steps = [sample["step"] for sample in trajectories[index]]
+        mass_recovery_step = recovery_time(
+            steps,
+            [sample["mass"] if sample["control_valid"] else np.nan for sample in trajectories[index]],
+            [sample["control_mass"] for sample in trajectories[index]],
+            relative_tolerance=0.02,
+            consecutive_samples=3,
+        ) if final_valid else None
+        shape_recovery_step = threshold_recovery_time(
+            steps,
+            [sample["aligned_similarity_to_control"] if sample["control_valid"] else np.nan for sample in trajectories[index]],
+            threshold=0.9,
+            consecutive_samples=3,
+        ) if final_valid else None
+        functional_samples = [sample for sample in trajectories[index] if sample["step"] >= 50]
+        functional_time = functional_recovery_time(
+            [sample["step"] for sample in functional_samples],
+            [sample["mass_ratio_to_control"] for sample in functional_samples],
+            [sample["motion_ratio_to_control"] for sample in functional_samples],
+            [sample["occupied_fraction"] for sample in functional_samples],
+            [sample["control_valid"] for sample in functional_samples],
+        ) if final_valid else None
         rows.append(
             {
                 "target_removed_fraction": condition["target_removed_fraction"],
@@ -124,6 +210,25 @@ def main() -> None:
                 "initial_post_damage_mass": trajectories[index][0]["mass"],
                 "final_mass": final_mass,
                 "final_mass_ratio": final_mass / pre_mass,
+                "final_mass_ratio_to_control": trajectories[index][-1][
+                    "mass_ratio_to_control"
+                ],
+                "final_aligned_similarity_to_control": trajectories[index][-1][
+                    "aligned_similarity_to_control"
+                ],
+                "mass_recovered": mass_recovery_step is not None,
+                "mass_recovery_time_steps": mass_recovery_step,
+                "shape_recovered": shape_recovery_step is not None,
+                "shape_recovery_time_steps": shape_recovery_step,
+                "control_valid": final_valid,
+                "final_motion_ratio_to_control": final["motion_ratio_to_control"],
+                "functionally_recovered": functional_recovery(
+                    control_valid=final_valid,
+                    mass_ratio=final["mass_ratio_to_control"],
+                    motion_ratio=final["motion_ratio_to_control"],
+                    occupied=final["occupied_fraction"],
+                ),
+                "functional_recovery_time_steps": functional_time,
                 "survived": final_mass >= 1.0,
                 "extinction_step": extinction[index],
             }
@@ -141,9 +246,20 @@ def main() -> None:
             "sample_every": args.sample_every,
             "extinction_mass": 1.0,
             "location_offset_cells": 4.0,
+            "damage_calibration": "exact fractional edge ring",
+            "mass_recovery_tolerance": 0.02,
+            "shape_recovery_similarity": 0.9,
+            "recovery_sustain_samples": 3,
+            "functional_recovery": "mass ratio 0.75–1.25, motion ratio >=0.25, occupancy <=0.03, valid matched control",
+            "motion_window_steps": 50,
+            "functional_time_first_eligible_step": 50,
+            "recovery_time_null": "no sustained recovery during follow-up, or invalid control",
+            "recovery_time_zero": "already inside the tolerance band immediately after injury",
         },
         "baseline": {
             "pre_damage_mass": pre_mass,
+            "pre_motion_50_steps": pre_motion,
+            "control_valid": control_trajectory[-1]["control_valid"],
             "control_final_mass": control_final,
             "control_mass_retention": control_final / pre_mass,
             "motion_direction_yx": direction.tolist(),
@@ -159,7 +275,7 @@ def main() -> None:
     csv_path = Path(args.csv)
     csv_path.parent.mkdir(parents=True, exist_ok=True)
     with csv_path.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=rows[0].keys())
+        writer = csv.DictWriter(handle, fieldnames=rows[0].keys(), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

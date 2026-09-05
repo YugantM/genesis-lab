@@ -1,0 +1,292 @@
+{
+  "schema": "genesis.research-audit/v1",
+  "created_at": "2026-09-05T08:10:55.328144+00:00",
+  "metrics": "survival, functional recovery, strict mass return, translation-aligned shape and sustained recovery times separated",
+  "replication": "20 independent noisy initial conditions; one phase per seed; damage and location repeated within seed",
+  "magnitude_candidate_decision": {
+    "accepted": false,
+    "criterion": "mean held-out recovery >=65%, >=25 points above canonical, and >=95% valid matched controls",
+    "candidate_mean_seed_recovery_rate": 0.5078125,
+    "canonical_mean_seed_recovery_rate": 0.0,
+    "difference": 0.5078125,
+    "minimum_control_validity": 1.0
+  },
+  "charter_comparison_status": "comparison complete; ablation pending",
+  "evidence": [
+    "genesis-magnitude-validation.json",
+    "replicated-damage-sweep.json",
+    "multispecies-transfer.json",
+    "charter-coverage.json",
+    "charter-protocol.json",
+    "charter-comparison.json",
+    "charter-analysis.json",
+    "charter-trials.json"
+  ],
+  "coverage_gate": {
+    "protocol_sha256": "26a7ab3ae240c8416a07d759ac7d64d7abcadba22f3e2d88fe9a59e19853a375",
+    "gate_passed": true,
+    "mean_coverage_difference": 0.78125,
+    "ci95": [
+      0.575,
+      0.9875
+    ],
+    "per_species": [
+      {
+        "species": "O2u",
+        "eligible": true,
+        "parent_control_validity": 1.0,
+        "seed_differences": [
+          -1,
+          -2,
+          -2,
+          -1,
+          0,
+          2,
+          -2,
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          2,
+          -3,
+          1,
+          0,
+          -1,
+          -2,
+          -1,
+          -2
+        ],
+        "mean_difference": -0.7,
+        "ci95": [
+          -1.3,
+          -0.1
+        ]
+      },
+      {
+        "species": "OG2g",
+        "eligible": true,
+        "parent_control_validity": 1.0,
+        "seed_differences": [
+          0,
+          0,
+          0,
+          1,
+          3,
+          1,
+          -2,
+          2,
+          -1,
+          0,
+          -1,
+          2,
+          2,
+          1,
+          0,
+          3,
+          3,
+          0,
+          2,
+          2
+        ],
+        "mean_difference": 0.9,
+        "ci95": [
+          0.3,
+          1.5
+        ]
+      },
+      {
+        "species": "O4i",
+        "eligible": true,
+        "parent_control_validity": 1.0,
+        "seed_differences": [
+          1,
+          0,
+          2,
+          4,
+          1,
+          3,
+          1,
+          0,
+          1,
+          -1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          0,
+          2,
+          -1,
+          1,
+          5
+        ],
+        "mean_difference": 1.3,
+        "ci95": [
+          0.65,
+          1.95
+        ]
+      },
+      {
+        "species": "S1s",
+        "eligible": true,
+        "parent_control_validity": 1.0,
+        "seed_differences": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          -1,
+          1,
+          2,
+          0,
+          2,
+          -1,
+          0,
+          0,
+          0,
+          2,
+          -1,
+          2,
+          2
+        ],
+        "mean_difference": 0.5,
+        "ci95": [
+          0.05,
+          0.95
+        ]
+      },
+      {
+        "species": "P4cl",
+        "eligible": true,
+        "parent_control_validity": 1.0,
+        "seed_differences": [
+          2,
+          -1,
+          2,
+          0,
+          0,
+          -1,
+          0,
+          3,
+          0,
+          0,
+          -2,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "mean_difference": 0.25,
+        "ci95": [
+          -0.25,
+          0.8
+        ]
+      },
+      {
+        "species": "H3s",
+        "eligible": true,
+        "parent_control_validity": 1.0,
+        "seed_differences": [
+          -2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          2,
+          2,
+          2,
+          2,
+          -2,
+          -1,
+          1,
+          2,
+          1,
+          0,
+          3,
+          8,
+          1,
+          2
+        ],
+        "mean_difference": 1.5,
+        "ci95": [
+          0.6,
+          2.55
+        ]
+      },
+      {
+        "species": "H3cp",
+        "eligible": true,
+        "parent_control_validity": 1.0,
+        "seed_differences": [
+          4,
+          3,
+          3,
+          4,
+          1,
+          3,
+          2,
+          3,
+          4,
+          0,
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          7,
+          3,
+          0,
+          1
+        ],
+        "mean_difference": 2.7,
+        "ci95": [
+          2.05,
+          3.4
+        ]
+      },
+      {
+        "species": "C0v",
+        "eligible": true,
+        "parent_control_validity": 1.0,
+        "seed_differences": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "mean_difference": -0.2,
+        "ci95": [
+          -0.45,
+          0.05
+        ]
+      }
+    ]
+  }
+}

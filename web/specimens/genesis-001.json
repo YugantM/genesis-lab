@@ -3,7 +3,8 @@
   "id": "specimen-001-genesis",
   "name": "Genesis 001",
   "provenance": {
-    "author": "Bert Wang-Chak Chan",
+    "author": "Genesis Lab",
+    "parent_author": "Bert Wang-Chak Chan",
     "catalogue_code": "O2u",
     "source": "https://github.com/Chakazul/Lenia/blob/master/Python/animals.json"
   },

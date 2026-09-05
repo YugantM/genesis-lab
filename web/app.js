@@ -278,7 +278,7 @@ function selectHabitat(index) {
   document.querySelector('#selectedKind').textContent = isGenesis ? 'Local descendant · candidate 942' : 'Pinned catalogue ancestor';
   document.querySelector('#selectedName').textContent = record.name;
   document.querySelector('#selectedSummary').textContent = isGenesis
-    ? 'The first organism discovered here: an Orbium descendant with a narrow but reproducible central-injury advantage.'
+    ? 'An Orbium descendant from the original 5% search. The displayed legacy benchmark uses correlated phases and rotations; broader robustness was not established.'
     : 'A stable parental species in the normalized injury benchmark. Its habitat uses the species’ native rule—not Genesis 001’s rule.';
   document.querySelector('#selectedCode').textContent = isGenesis ? 'GEN–001' : code;
   document.querySelector('#selectedMu').textContent = record.parameters.growth_center.toFixed(4);
@@ -289,7 +289,7 @@ function selectHabitat(index) {
   document.querySelector('#parentBar').style.width = `${parent*100}%`;
   document.querySelector('#transferBar').style.width = `${transfer*100}%`;
   document.querySelector('#classification').textContent = isGenesis
-    ? 'Beneficial · central recovery 0% → 100%'
+    ? 'Legacy paired benchmark · narrow injury advantage'
     : classificationText(item);
 }
 function buildHabitats() {

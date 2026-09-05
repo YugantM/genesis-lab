@@ -1,6 +1,7 @@
 (() => {
   const canvas = document.querySelector('#ecosystem');
   if (!canvas) return;
+  const disclosure = document.querySelector('#exploratoryWorld');
   const ctx = canvas.getContext('2d', { alpha: false });
   const W = canvas.width;
   const H = canvas.height;
@@ -26,7 +27,9 @@
   let last = performance.now();
   let uiAccumulator = 0;
   let shock = null;
-  let ecosystemVisible = true;
+  let ecosystemVisible = !('IntersectionObserver' in window);
+  let initialized = false;
+  let frameId = null;
 
   function random() {
     seed |= 0;
@@ -487,39 +490,62 @@
     paused = !paused;
     event.currentTarget.textContent = paused ? 'Resume time' : 'Pause time';
     note(paused ? 'Ecosystem time suspended' : 'Ecosystem time resumed', 'system');
+    syncRuntime();
   });
-  document.querySelector('#ecoBloom').addEventListener('click', bloom);
-  document.querySelector('#ecoShock').addEventListener('click', climateShock);
+  document.querySelector('#ecoBloom').addEventListener('click', () => { bloom(); render(); });
+  document.querySelector('#ecoShock').addEventListener('click', () => { climateShock(); render(); });
   document.querySelector('#ecoReset').addEventListener('click', resetWorld);
 
+  function ensureInitialized() {
+    if (initialized) return;
+    initialized = true;
+    resetWorld();
+  }
+
+  function canRun() {
+    return initialized && (!disclosure || disclosure.open) && ecosystemVisible && !document.hidden && !paused;
+  }
+
+  function syncRuntime() {
+    if (!disclosure || disclosure.open) ensureInitialized();
+    if (canRun() && frameId === null) {
+      last = performance.now();
+      frameId = requestAnimationFrame(frame);
+    } else if (!canRun() && frameId !== null) {
+      cancelAnimationFrame(frameId);
+      frameId = null;
+    }
+  }
+
   function frame(now) {
+    frameId = null;
+    if (!canRun()) return;
     const dt = Math.min(.04, (now - last) / 1000 || .016);
     last = now;
-    if (ecosystemVisible) {
-      if (!paused) update(dt);
-      render();
-      uiAccumulator += dt;
-      if (uiAccumulator > .25) { updateUI(); uiAccumulator = 0; }
-    }
-    requestAnimationFrame(frame);
+    update(dt);
+    render();
+    uiAccumulator += dt;
+    if (uiAccumulator > .25) { updateUI(); uiAccumulator = 0; }
+    frameId = requestAnimationFrame(frame);
   }
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       ecosystemVisible = entries[0].isIntersecting;
-      if (ecosystemVisible) render();
+      syncRuntime();
     }, { rootMargin: '160px' });
     observer.observe(canvas);
   }
+  disclosure?.addEventListener('toggle', syncRuntime);
+  document.addEventListener('visibilitychange', syncRuntime);
 
   window.genesisEcosystem = {
-    getState: () => ({ epoch, elapsed, births, deaths, population: agents.length, lineages: new Set(agents.map(a => a.lineage)).size, paused }),
-    bloom,
-    climateShock,
-    reset: resetWorld,
-    advance: seconds => { for (let time = 0; time < seconds; time += .025) update(.025); updateUI(); render(); },
+    getState: () => ({ epoch, elapsed, births, deaths, population: agents.length, lineages: new Set(agents.map(a => a.lineage)).size, paused, initialized, running: frameId !== null }),
+    bloom: () => { ensureInitialized(); bloom(); render(); },
+    climateShock: () => { ensureInitialized(); climateShock(); render(); },
+    reset: () => { if (initialized) resetWorld(); else ensureInitialized(); },
+    advance: seconds => { ensureInitialized(); for (let time = 0; time < seconds; time += .025) update(.025); updateUI(); render(); },
   };
 
-  resetWorld();
-  requestAnimationFrame(frame);
+  syncRuntime();
 })();

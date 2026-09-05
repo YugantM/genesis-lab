@@ -19,11 +19,11 @@ from .core import GenesisConfig, GenesisWorld
 from .coupled_ecology import (
     CoupledConfig,
     CoupledWorld,
-    aligned_similarity,
     channel_metrics,
     shift_center,
 )
 from .genome import Specimen, load_specimen
+from .metrics import aligned_similarity
 from .multispecies_benchmark import centered_state
 
 

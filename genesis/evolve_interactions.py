@@ -16,9 +16,10 @@ import mlx.core as mx
 import numpy as np
 
 from .core import GenesisConfig, GenesisWorld
-from .coupled_ecology import aligned_similarity, channel_metrics, shift_center
+from .coupled_ecology import channel_metrics, shift_center
 from .genome import Specimen, load_specimen
 from .interaction_ecology import InteractionConfig, ResponsiveCoupledWorld
+from .metrics import aligned_similarity
 from .multispecies_benchmark import centered_state
 
 

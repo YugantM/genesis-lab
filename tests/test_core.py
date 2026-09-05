@@ -5,7 +5,15 @@ import numpy as np
 
 from genesis.core import GenesisConfig, GenesisWorld
 from genesis.genome import decode_lenia_rle, load_specimen
-from genesis.metrics import center_of_mass, mass, occupied_fraction, survival
+from genesis.metrics import (
+    aligned_similarity,
+    center_of_mass,
+    mass,
+    occupied_fraction,
+    recovery_time,
+    survival,
+    threshold_recovery_time,
+)
 from genesis.robust_search import calibrated_damage
 
 SPECIMEN = "web/specimens/orbium-unicaudatus.json"
@@ -84,6 +92,34 @@ class GenesisCoreTests(unittest.TestCase):
         state = np.ones((32, 32), np.float32)
         _, _, actual = calibrated_damage(state, np.array([15.1234, 16.9876]), 0.05)
         self.assertAlmostEqual(actual, 0.05, places=6)
+
+    def test_aligned_similarity_ignores_toroidal_translation(self):
+        state = np.zeros((16, 16), np.float32)
+        state[3:6, 5:9] = np.arange(12, dtype=np.float32).reshape(3, 4)
+        shifted = np.roll(state, (7, -4), axis=(0, 1))
+        self.assertAlmostEqual(aligned_similarity(state, shifted), 1.0, places=6)
+
+    def test_recovery_time_requires_sustained_control_band(self):
+        steps = [0, 10, 20, 30, 40, 50]
+        observed = [80, 99, 80, 99, 100, 101]
+        controls = [100] * len(steps)
+        self.assertEqual(
+            recovery_time(
+                steps,
+                observed,
+                controls,
+                relative_tolerance=0.02,
+                consecutive_samples=3,
+            ),
+            30,
+        )
+        self.assertEqual(
+            threshold_recovery_time(
+                steps, [0.5, 0.91, 0.8, 0.91, 0.92, 0.93],
+                threshold=0.9, consecutive_samples=3,
+            ),
+            30,
+        )
 
 
 if __name__ == "__main__":

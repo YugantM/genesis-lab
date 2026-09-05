@@ -1,6 +1,6 @@
 {
   "schema": "genesis.damage-sweep/v1",
-  "created_at": "2026-09-03T11:50:30.303547+00:00",
+  "created_at": "2026-09-04T23:02:24.611925+00:00",
   "specimen_id": "specimen-000-orbium-unicaudatus",
   "simulator": "lenia/classic-v1",
   "protocol": {
@@ -8,10 +8,21 @@
     "post_steps": 300,
     "sample_every": 10,
     "extinction_mass": 1.0,
-    "location_offset_cells": 4.0
+    "location_offset_cells": 4.0,
+    "damage_calibration": "exact fractional edge ring",
+    "mass_recovery_tolerance": 0.02,
+    "shape_recovery_similarity": 0.9,
+    "recovery_sustain_samples": 3,
+    "functional_recovery": "mass ratio 0.75\u20131.25, motion ratio >=0.25, occupancy <=0.03, valid matched control",
+    "motion_window_steps": 50,
+    "functional_time_first_eligible_step": 50,
+    "recovery_time_null": "no sustained recovery during follow-up, or invalid control",
+    "recovery_time_zero": "already inside the tolerance band immediately after injury"
   },
   "baseline": {
     "pre_damage_mass": 71.52076721191406,
+    "pre_motion_50_steps": 30.722562983390247,
+    "control_valid": true,
     "control_final_mass": 70.84443664550781,
     "control_mass_retention": 0.9905435778617656,
     "motion_direction_yx": [
@@ -22,166 +33,316 @@
   "results": [
     {
       "target_removed_fraction": 0.05,
-      "actual_removed_fraction": 0.05200058443927432,
+      "actual_removed_fraction": 0.04999994486570358,
       "location": "center",
-      "radius": 1.1999999999999997,
-      "initial_post_damage_mass": 67.80164337158203,
+      "radius": 1.191500608933965,
+      "initial_post_damage_mass": 67.94473266601562,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 40
     },
     {
       "target_removed_fraction": 0.05,
-      "actual_removed_fraction": 0.046179853286140826,
+      "actual_removed_fraction": 0.04999994486570358,
       "location": "leading",
-      "radius": 1.1999999999999997,
-      "initial_post_damage_mass": 68.21795654296875,
+      "radius": 1.2137113681012834,
+      "initial_post_damage_mass": 67.94473266601562,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
-      "extinction_step": 50
+      "extinction_step": 40
     },
     {
       "target_removed_fraction": 0.05,
-      "actual_removed_fraction": 0.045752561238781915,
+      "actual_removed_fraction": 0.05000005289912224,
       "location": "trailing",
-      "radius": 1.6499999999999997,
-      "initial_post_damage_mass": 68.2485122680664,
-      "final_mass": 71.2166519165039,
-      "final_mass_ratio": 0.9957478742571501,
+      "radius": 1.7272626721398525,
+      "initial_post_damage_mass": 67.9447250366211,
+      "final_mass": 71.2710189819336,
+      "final_mass_ratio": 0.9965080320064175,
+      "final_mass_ratio_to_control": 1.0060213949976102,
+      "final_aligned_similarity_to_control": 0.9810371334959385,
+      "mass_recovered": true,
+      "mass_recovery_time_steps": 20.0,
+      "shape_recovered": true,
+      "shape_recovery_time_steps": 0.0,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.9976882454795076,
+      "functionally_recovered": true,
+      "functional_recovery_time_steps": 50.0,
       "survived": true,
       "extinction_step": null
     },
     {
       "target_removed_fraction": 0.1,
-      "actual_removed_fraction": 0.09255815324123115,
+      "actual_removed_fraction": 0.10000000149011612,
       "location": "center",
-      "radius": 1.5499999999999998,
-      "initial_post_damage_mass": 64.90093994140625,
+      "radius": 1.7247066176682821,
+      "initial_post_damage_mass": 64.36869049072266,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 30
     },
     {
       "target_removed_fraction": 0.1,
-      "actual_removed_fraction": 0.10386541308909292,
+      "actual_removed_fraction": 0.09999988973140717,
       "location": "leading",
-      "radius": 1.8999999999999997,
-      "initial_post_damage_mass": 64.09223937988281,
+      "radius": 1.8721688724502241,
+      "initial_post_damage_mass": 64.36869812011719,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 50
     },
     {
       "target_removed_fraction": 0.1,
-      "actual_removed_fraction": 0.09985002325489606,
+      "actual_removed_fraction": 0.10000000149011612,
       "location": "trailing",
-      "radius": 2.3999999999999995,
-      "initial_post_damage_mass": 64.3794174194336,
-      "final_mass": 70.86676025390625,
-      "final_mass_ratio": 0.9908557055034098,
+      "radius": 2.464905885065035,
+      "initial_post_damage_mass": 64.36869049072266,
+      "final_mass": 70.91205596923828,
+      "final_mass_ratio": 0.9914890280626858,
+      "final_mass_ratio_to_control": 1.0009544761301274,
+      "final_aligned_similarity_to_control": 0.9870371488025279,
+      "mass_recovered": true,
+      "mass_recovery_time_steps": 30.0,
+      "shape_recovered": true,
+      "shape_recovery_time_steps": 0.0,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.9979222937937497,
+      "functionally_recovered": true,
+      "functional_recovery_time_steps": 50.0,
       "survived": true,
       "extinction_step": null
     },
     {
       "target_removed_fraction": 0.15,
-      "actual_removed_fraction": 0.14933139506974868,
+      "actual_removed_fraction": 0.1499999463558197,
       "location": "center",
-      "radius": 1.9999999999999996,
-      "initial_post_damage_mass": 60.84046936035156,
+      "radius": 2.071150571633556,
+      "initial_post_damage_mass": 60.79265594482422,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 20
     },
     {
       "target_removed_fraction": 0.15,
-      "actual_removed_fraction": 0.1590921843281202,
+      "actual_removed_fraction": 0.1499999463558197,
       "location": "leading",
-      "radius": 2.2499999999999996,
-      "initial_post_damage_mass": 60.14237976074219,
+      "radius": 2.21730221587026,
+      "initial_post_damage_mass": 60.79265594482422,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 20
     },
     {
       "target_removed_fraction": 0.15,
-      "actual_removed_fraction": 0.15067416530390842,
+      "actual_removed_fraction": 0.1499999463558197,
       "location": "trailing",
-      "radius": 2.8499999999999996,
-      "initial_post_damage_mass": 60.74443817138672,
+      "radius": 2.8270401530760774,
+      "initial_post_damage_mass": 60.79265594482422,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 20
     },
     {
       "target_removed_fraction": 0.2,
-      "actual_removed_fraction": 0.20739433689943965,
+      "actual_removed_fraction": 0.20000000298023224,
       "location": "center",
-      "radius": 2.2999999999999994,
-      "initial_post_damage_mass": 56.687767028808594,
+      "radius": 2.2879315851774886,
+      "initial_post_damage_mass": 57.21661376953125,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 10
     },
     {
       "target_removed_fraction": 0.2,
-      "actual_removed_fraction": 0.1962244396156755,
+      "actual_removed_fraction": 0.20000000298023224,
       "location": "leading",
-      "radius": 2.5999999999999996,
-      "initial_post_damage_mass": 57.48664474487305,
+      "radius": 2.792046375871746,
+      "initial_post_damage_mass": 57.21661376953125,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 20
     },
     {
       "target_removed_fraction": 0.2,
-      "actual_removed_fraction": 0.21109625233482357,
+      "actual_removed_fraction": 0.20000000298023224,
       "location": "trailing",
-      "radius": 3.599999999999999,
-      "initial_post_damage_mass": 56.423004150390625,
+      "radius": 3.553187475545302,
+      "initial_post_damage_mass": 57.21661376953125,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 20
     },
     {
       "target_removed_fraction": 0.25,
-      "actual_removed_fraction": 0.24725901580586215,
+      "actual_removed_fraction": 0.24999994039535522,
       "location": "center",
-      "radius": 2.5999999999999996,
-      "initial_post_damage_mass": 53.83660888671875,
+      "radius": 2.722059590029719,
+      "initial_post_damage_mass": 53.64057922363281,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 10
     },
     {
       "target_removed_fraction": 0.25,
-      "actual_removed_fraction": 0.24638069011570912,
+      "actual_removed_fraction": 0.24999994039535522,
       "location": "leading",
-      "radius": 2.9499999999999993,
-      "initial_post_damage_mass": 53.899436950683594,
+      "radius": 2.9690521001091175,
+      "initial_post_damage_mass": 53.64057922363281,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 10
     },
     {
       "target_removed_fraction": 0.25,
-      "actual_removed_fraction": 0.2474614294080562,
+      "actual_removed_fraction": 0.24999994039535522,
       "location": "trailing",
-      "radius": 4.049999999999999,
-      "initial_post_damage_mass": 53.82213592529297,
+      "radius": 4.112093426299694,
+      "initial_post_damage_mass": 53.64057922363281,
       "final_mass": 0.0,
       "final_mass_ratio": 0.0,
+      "final_mass_ratio_to_control": 0.0,
+      "final_aligned_similarity_to_control": 0.0,
+      "mass_recovered": false,
+      "mass_recovery_time_steps": null,
+      "shape_recovered": false,
+      "shape_recovery_time_steps": null,
+      "control_valid": true,
+      "final_motion_ratio_to_control": 0.0,
+      "functionally_recovered": false,
+      "functional_recovery_time_steps": null,
       "survived": false,
       "extinction_step": 10
     }
@@ -190,2018 +351,4901 @@
     [
       {
         "step": 0,
-        "mass": 67.80164337158203
+        "mass": 67.94473266601562,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.9500000533369176,
+        "occupied_fraction": 0.00982666015625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9662358170739008
       },
       {
         "step": 10,
-        "mass": 73.06790924072266
+        "mass": 72.96654510498047,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 1.023904817106764,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.6822314251280936
       },
       {
         "step": 20,
-        "mass": 67.3133316040039
+        "mass": 64.97071838378906,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.913407354738882,
+        "occupied_fraction": 0.01153564453125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.6837834560386249
       },
       {
         "step": 30,
-        "mass": 24.894243240356445
+        "mass": 43.09870910644531,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.603434696720076,
+        "occupied_fraction": 0.00628662109375,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.50191676660771
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 68.21795654296875
+        "mass": 67.94473266601562,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.9500000533369176,
+        "occupied_fraction": 0.009765625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9707848394176297
       },
       {
         "step": 10,
-        "mass": 69.24000549316406
+        "mass": 69.37608337402344,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.9735215756270538,
+        "occupied_fraction": 0.01092529296875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9149960080060301
       },
       {
         "step": 20,
-        "mass": 73.31922149658203
+        "mass": 74.20718383789062,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 1.0432605514933297,
+        "occupied_fraction": 0.0076904296875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.7137037822231632
       },
       {
         "step": 30,
-        "mass": 73.30775451660156
+        "mass": 44.229270935058594,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.6192639465588032,
+        "occupied_fraction": 0.00701904296875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.5242617470498275
       },
       {
         "step": 40,
-        "mass": 48.71559143066406
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.9240525960922241
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 68.2485122680664
+        "mass": 67.9447250366211,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.9499999466630824,
+        "occupied_fraction": 0.00958251953125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9803725487997863
       },
       {
         "step": 10,
-        "mass": 69.90502166748047
+        "mass": 69.5311279296875,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.9756972421216399,
+        "occupied_fraction": 0.010009765625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9830095030660448
       },
       {
         "step": 20,
-        "mass": 71.03983306884766
+        "mass": 71.13224792480469,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 1.0000307835573758,
+        "occupied_fraction": 0.01025390625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9819239768502436
       },
       {
         "step": 30,
-        "mass": 70.7259750366211
+        "mass": 70.88540649414062,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.9924824816452379,
+        "occupied_fraction": 0.01019287109375,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9873134672899143
       },
       {
         "step": 40,
-        "mass": 71.48827362060547
+        "mass": 71.47135925292969,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 1.0049857210596669,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9800425372856154
       },
       {
         "step": 50,
-        "mass": 70.91374206542969
+        "mass": 70.76210021972656,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.9961532620479605,
+        "occupied_fraction": 0.01025390625,
+        "motion_ratio_to_control": 0.9804389505357535,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9818321761795682
       },
       {
         "step": 60,
-        "mass": 71.19647216796875
+        "mass": 71.18148803710938,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.9984974218584451,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": 0.9881727146619934,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9746577274833812
       },
       {
         "step": 70,
-        "mass": 70.76354217529297
+        "mass": 70.90359497070312,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.997694352295712,
+        "occupied_fraction": 0.01019287109375,
+        "motion_ratio_to_control": 0.9947210602583796,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9790266945364289
       },
       {
         "step": 80,
-        "mass": 71.19380187988281
+        "mass": 71.17097473144531,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 1.0026244332608492,
+        "occupied_fraction": 0.01031494140625,
+        "motion_ratio_to_control": 0.9941695435289538,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9823369483674262
       },
       {
         "step": 90,
-        "mass": 71.04673767089844
+        "mass": 71.09210205078125,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.9977268381078299,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 1.0030577947632384,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9868419942588977
       },
       {
         "step": 100,
-        "mass": 70.88133239746094
+        "mass": 71.11076354980469,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.9994899943015764,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 0.996416856773896,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.987766407895535
       },
       {
         "step": 110,
-        "mass": 71.10615539550781
+        "mass": 71.05653381347656,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 1.000960816939439,
+        "occupied_fraction": 0.01007080078125,
+        "motion_ratio_to_control": 1.001076419796452,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9889550754450818
       },
       {
         "step": 120,
-        "mass": 71.02033233642578
+        "mass": 71.19351196289062,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.9994091245436298,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 0.9989556328309293,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9914929082133335
       },
       {
         "step": 130,
-        "mass": 70.87220001220703
+        "mass": 71.04717254638672,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.997138350704892,
+        "occupied_fraction": 0.01068115234375,
+        "motion_ratio_to_control": 1.0016931289665991,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9908847619956108
       },
       {
         "step": 140,
-        "mass": 70.98694610595703
+        "mass": 71.3516845703125,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 1.0021882194494773,
+        "occupied_fraction": 0.01019287109375,
+        "motion_ratio_to_control": 0.9989736864604267,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9931182249466847
       },
       {
         "step": 150,
-        "mass": 70.9779052734375
+        "mass": 71.24581909179688,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 1.001030151825727,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": 0.9991344757031615,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9936485461610552
       },
       {
         "step": 160,
-        "mass": 70.91507720947266
+        "mass": 70.95853424072266,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.996369301718087,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 1.001100032284855,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9917118911799845
       },
       {
         "step": 170,
-        "mass": 71.01671600341797
+        "mass": 71.42181396484375,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 1.0014511381512403,
+        "occupied_fraction": 0.0101318359375,
+        "motion_ratio_to_control": 0.9990941603955171,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9938382502506912
       },
       {
         "step": 180,
-        "mass": 70.89828491210938
+        "mass": 71.0364990234375,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.9984365409336746,
+        "occupied_fraction": 0.01019287109375,
+        "motion_ratio_to_control": 1.00023325215892,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9913545580966899
       },
       {
         "step": 190,
-        "mass": 71.05210876464844
+        "mass": 71.37581634521484,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 1.0033656192252458,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": 0.9996892597416557,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9924024248451727
       },
       {
         "step": 200,
-        "mass": 71.02960968017578
+        "mass": 71.00749206542969,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.997012741323495,
+        "occupied_fraction": 0.0103759765625,
+        "motion_ratio_to_control": 0.9995455234652041,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9932460768037114
       },
       {
         "step": 210,
-        "mass": 70.88880920410156
+        "mass": 71.02893829345703,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 1.0024736909885847,
+        "occupied_fraction": 0.01031494140625,
+        "motion_ratio_to_control": 0.9995021778215207,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9921319894090682
       },
       {
         "step": 220,
-        "mass": 71.13074493408203
+        "mass": 71.31124877929688,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 1.0024678519649186,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": 1.0001358360070587,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9935814204577181
       },
       {
         "step": 230,
-        "mass": 71.03073120117188
+        "mass": 70.93211364746094,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.9984676982675798,
+        "occupied_fraction": 0.01025390625,
+        "motion_ratio_to_control": 0.9992250248816378,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9915318853215624
       },
       {
         "step": 240,
-        "mass": 70.93161010742188
+        "mass": 71.1060562133789,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 1.0023522981636868,
+        "occupied_fraction": 0.01025390625,
+        "motion_ratio_to_control": 1.0014426008422084,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9894567726543557
       },
       {
         "step": 250,
-        "mass": 71.1518783569336
+        "mass": 71.33848571777344,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 1.003923368165725,
+        "occupied_fraction": 0.01055908203125,
+        "motion_ratio_to_control": 1.0007065328172802,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9877052951922349
       },
       {
         "step": 260,
-        "mass": 70.952880859375
+        "mass": 71.06027221679688,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 1.0008980560745053,
+        "occupied_fraction": 0.01055908203125,
+        "motion_ratio_to_control": 0.9998980397934231,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9847386766937111
       },
       {
         "step": 270,
-        "mass": 71.09735107421875
+        "mass": 71.19957733154297,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 1.0045308061340907,
+        "occupied_fraction": 0.0101318359375,
+        "motion_ratio_to_control": 0.99968496006618,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9832768170664157
       },
       {
         "step": 280,
-        "mass": 71.09236145019531
+        "mass": 71.29792022705078,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 1.0023146688289262,
+        "occupied_fraction": 0.0107421875,
+        "motion_ratio_to_control": 0.9993846572405805,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9804160575514052
       },
       {
         "step": 290,
-        "mass": 70.94856262207031
+        "mass": 71.18321228027344,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 1.0038186553465855,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": 0.9999237944865488,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9799005999336391
       },
       {
         "step": 300,
-        "mass": 71.2166519165039
+        "mass": 71.2710189819336,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 1.0060213949976102,
+        "occupied_fraction": 0.01031494140625,
+        "motion_ratio_to_control": 0.9976882454795076,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9810371334959385
       }
     ],
     [
       {
         "step": 0,
-        "mass": 64.90093994140625
+        "mass": 64.36869049072266,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.9,
+        "occupied_fraction": 0.00958251953125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9222902856192123
       },
       {
         "step": 10,
-        "mass": 72.08708953857422
+        "mass": 76.0455093383789,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 1.067110457523757,
+        "occupied_fraction": 0.01031494140625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.5884609457517681
       },
       {
         "step": 20,
-        "mass": 1.6892489194869995
+        "mass": 12.669609069824219,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.17811891870555893,
+        "occupied_fraction": 0.00244140625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.48128086588404995
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 64.09223937988281
+        "mass": 64.36869812011719,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.9000001066738351,
+        "occupied_fraction": 0.00946044921875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9376435687636836
       },
       {
         "step": 10,
-        "mass": 76.13285064697266
+        "mass": 75.48564910888672,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 1.0592542052500775,
+        "occupied_fraction": 0.01080322265625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.6930813068267672
       },
       {
         "step": 20,
-        "mass": 67.50696563720703
+        "mass": 67.39529418945312,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.9474938698353208,
+        "occupied_fraction": 0.00860595703125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.6448664228338595
       },
       {
         "step": 30,
-        "mass": 50.25990295410156
+        "mass": 49.01902770996094,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.6863264058934353,
+        "occupied_fraction": 0.00653076171875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.5076220373385193
       },
       {
         "step": 40,
-        "mass": 8.341656684875488
+        "mass": 1.6502134799957275,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.023204273731899216,
+        "occupied_fraction": 0.00048828125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.306026146078176
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 64.3794174194336
+        "mass": 64.36869049072266,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.9,
+        "occupied_fraction": 0.009033203125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9574084183748837
       },
       {
         "step": 10,
-        "mass": 68.81080627441406
+        "mass": 68.8230209350586,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.96576071351412,
+        "occupied_fraction": 0.0103759765625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9162547111169339
       },
       {
         "step": 20,
-        "mass": 69.64111328125
+        "mass": 69.62804412841797,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.9788835522380344,
+        "occupied_fraction": 0.01055908203125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.963985027403977
       },
       {
         "step": 30,
-        "mass": 70.31243896484375
+        "mass": 70.31892395019531,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.9845510324396807,
+        "occupied_fraction": 0.00982666015625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.973524154422262
       },
       {
         "step": 40,
-        "mass": 70.94019317626953
+        "mass": 70.93461608886719,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.9974383731234082,
+        "occupied_fraction": 0.0106201171875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9660607234013868
       },
       {
         "step": 50,
-        "mass": 71.05245971679688
+        "mass": 71.05880737304688,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 1.000330156144309,
+        "occupied_fraction": 0.01025390625,
+        "motion_ratio_to_control": 0.9471458971671628,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9525769402726745
       },
       {
         "step": 60,
-        "mass": 71.33787536621094
+        "mass": 71.33040618896484,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 1.000586369347406,
+        "occupied_fraction": 0.0106201171875,
+        "motion_ratio_to_control": 0.9804114850306266,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9736006116804047
       },
       {
         "step": 70,
-        "mass": 70.75505065917969
+        "mass": 70.75276947021484,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.9955720656883615,
+        "occupied_fraction": 0.01031494140625,
+        "motion_ratio_to_control": 0.9820796206256369,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9858895801546259
       },
       {
         "step": 80,
-        "mass": 71.39495849609375
+        "mass": 71.40685272216797,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 1.0059473754807555,
+        "occupied_fraction": 0.0106201171875,
+        "motion_ratio_to_control": 0.9909594244406499,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9871296541362674
       },
       {
         "step": 90,
-        "mass": 70.87776184082031
+        "mass": 70.84210205078125,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.9942182667991804,
+        "occupied_fraction": 0.01055908203125,
+        "motion_ratio_to_control": 0.9931144196418027,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9458710963465641
       },
       {
         "step": 100,
-        "mass": 71.23831176757812
+        "mass": 71.23877716064453,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 1.001289276390275,
+        "occupied_fraction": 0.01025390625,
+        "motion_ratio_to_control": 0.9998363489889615,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9519741149611707
       },
       {
         "step": 110,
-        "mass": 70.79269409179688
+        "mass": 70.75814819335938,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.9967575115142195,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 1.001704821512649,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9727465639037657
       },
       {
         "step": 120,
-        "mass": 71.26829528808594
+        "mass": 71.2503662109375,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 1.0002072401682212,
+        "occupied_fraction": 0.01007080078125,
+        "motion_ratio_to_control": 0.9977807903043558,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9954028207366371
       },
       {
         "step": 130,
-        "mass": 70.73377227783203
+        "mass": 70.95391845703125,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.99582954100109,
+        "occupied_fraction": 0.0101318359375,
+        "motion_ratio_to_control": 1.0037668775891082,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.990721590933376
       },
       {
         "step": 140,
-        "mass": 71.19097900390625
+        "mass": 71.19282531738281,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.9999569214388496,
+        "occupied_fraction": 0.0106201171875,
+        "motion_ratio_to_control": 0.9999820476197632,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9679404989276431
       },
       {
         "step": 150,
-        "mass": 71.27632904052734
+        "mass": 71.35382843017578,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 1.0025477230428776,
+        "occupied_fraction": 0.01055908203125,
+        "motion_ratio_to_control": 0.9993652822778508,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9759703933459091
       },
       {
         "step": 160,
-        "mass": 70.93070983886719
+        "mass": 71.23709106445312,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 1.000280677156136,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 1.001143191898145,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9658734222295051
       },
       {
         "step": 170,
-        "mass": 71.297607421875
+        "mass": 70.65648651123047,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.9907199902437303,
+        "occupied_fraction": 0.0101318359375,
+        "motion_ratio_to_control": 1.0033199082675428,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9541119712809474
       },
       {
         "step": 180,
-        "mass": 70.89277648925781
+        "mass": 71.3150863647461,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 1.002352158753076,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 0.9990240219829117,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9641910711243579
       },
       {
         "step": 190,
-        "mass": 71.1828842163086
+        "mass": 71.372314453125,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 1.003316391373221,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 0.9987927605388169,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9747702314367771
       },
       {
         "step": 200,
-        "mass": 71.02964782714844
+        "mass": 70.82354736328125,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.9944299827101932,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 1.0031924347678731,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9814288158753197
       },
       {
         "step": 210,
-        "mass": 70.91352844238281
+        "mass": 71.28279113769531,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 1.006056467302657,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": 0.9998205202652355,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.981854953746954
       },
       {
         "step": 220,
-        "mass": 71.3798828125
+        "mass": 71.13066101074219,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.9999292141548524,
+        "occupied_fraction": 0.01019287109375,
+        "motion_ratio_to_control": 0.9979437805697572,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9800041315132106
       },
       {
         "step": 230,
-        "mass": 70.89977264404297
+        "mass": 71.22357940673828,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 1.0025704823356798,
+        "occupied_fraction": 0.0103759765625,
+        "motion_ratio_to_control": 1.0000596148871197,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9798030946737462
       },
       {
         "step": 240,
-        "mass": 71.03665161132812
+        "mass": 71.02635192871094,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 1.0012287402395812,
+        "occupied_fraction": 0.01019287109375,
+        "motion_ratio_to_control": 1.0008252462857619,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9801619071930419
       },
       {
         "step": 250,
-        "mass": 71.40032958984375
+        "mass": 70.8612060546875,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.997206766290857,
+        "occupied_fraction": 0.01019287109375,
+        "motion_ratio_to_control": 0.9994677494390255,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.979959793706316
       },
       {
         "step": 260,
-        "mass": 71.03886413574219
+        "mass": 71.39637756347656,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 1.0056321666771442,
+        "occupied_fraction": 0.01043701171875,
+        "motion_ratio_to_control": 0.9978468259995142,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9822643069976094
       },
       {
         "step": 270,
-        "mass": 70.82633972167969
+        "mass": 70.85093688964844,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.9996119558083865,
+        "occupied_fraction": 0.01031494140625,
+        "motion_ratio_to_control": 0.9998083927888778,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9840969199563313
       },
       {
         "step": 280,
-        "mass": 71.20588684082031
+        "mass": 71.05072021484375,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.9988395015648496,
+        "occupied_fraction": 0.0103759765625,
+        "motion_ratio_to_control": 0.999277429426016,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9854820825342515
       },
       {
         "step": 290,
-        "mass": 71.37232208251953
+        "mass": 71.0820083618164,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 1.0023914876466882,
+        "occupied_fraction": 0.010498046875,
+        "motion_ratio_to_control": 0.999925260904848,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9867564679110055
       },
       {
         "step": 300,
-        "mass": 70.86676025390625
+        "mass": 70.91205596923828,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 1.0009544761301274,
+        "occupied_fraction": 0.0103759765625,
+        "motion_ratio_to_control": 0.9979222937937497,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9870371488025279
       }
     ],
     [
       {
         "step": 0,
-        "mass": 60.84046936035156
+        "mass": 60.79265594482422,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.8500000533369175,
+        "occupied_fraction": 0.00927734375,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.8782399273866246
       },
       {
         "step": 10,
-        "mass": 1.1891710758209229
+        "mass": 1.1231193542480469,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.015760199627732136,
+        "occupied_fraction": 0.0003662109375,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.37534254503856757
       },
       {
         "step": 20,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 60.14237976074219
+        "mass": 60.79265594482422,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.8500000533369175,
+        "occupied_fraction": 0.00909423828125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9053214018234176
       },
       {
         "step": 10,
-        "mass": 53.410797119140625
+        "mass": 52.49744415283203,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.736671660643133,
+        "occupied_fraction": 0.0086669921875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.6298946287463302
       },
       {
         "step": 20,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 60.74443817138672
+        "mass": 60.79265594482422,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.8500000533369175,
+        "occupied_fraction": 0.00860595703125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.9268235179244461
       },
       {
         "step": 10,
-        "mass": 50.144004821777344
+        "mass": 50.244441986083984,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.7050563529954116,
+        "occupied_fraction": 0.010009765625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.6122095301683188
       },
       {
         "step": 20,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 56.687767028808594
+        "mass": 57.21661376953125,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.8,
+        "occupied_fraction": 0.009033203125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.8348503289365738
       },
       {
         "step": 10,
-        "mass": 0.2466437816619873
+        "mass": 0.27320486307144165,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.00383375387930693,
+        "occupied_fraction": 6.103515625e-05,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.2674552116915686
       },
       {
         "step": 20,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 57.48664474487305
+        "mass": 57.21661376953125,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.8,
+        "occupied_fraction": 0.00872802734375,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.8714307656301802
       },
       {
         "step": 10,
-        "mass": 64.06695556640625
+        "mass": 65.00845336914062,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.9122327014600583,
+        "occupied_fraction": 0.00982666015625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.6279118483672435
       },
       {
         "step": 20,
-        "mass": 0.2759033441543579
+        "mass": 0.35736772418022156,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0050241449645715575,
+        "occupied_fraction": 0.0001220703125,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.1723208063364849
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 56.423004150390625
+        "mass": 57.21661376953125,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.8,
+        "occupied_fraction": 0.0081787109375,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.8960748862829009
       },
       {
         "step": 10,
-        "mass": 2.0525596141815186
+        "mass": 61.455848693847656,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.8623806900337945,
+        "occupied_fraction": 0.0086669921875,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.5902155025648012
       },
       {
         "step": 20,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 53.83660888671875
+        "mass": 53.64057922363281,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.7500000533369175,
+        "occupied_fraction": 0.00872802734375,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.7924526532957077
       },
       {
         "step": 10,
-        "mass": 0.12370908260345459
+        "mass": 0.09218475967645645,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.001293584880039914,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.17894906903429644
       },
       {
         "step": 20,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 53.899436950683594
+        "mass": 53.64057922363281,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.7500000533369175,
+        "occupied_fraction": 0.0084228515625,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.8301714336678852
       },
       {
         "step": 10,
-        "mass": 0.4410271644592285
+        "mass": 0.4148504137992859,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.0058213985115601954,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.3620785049346695
       },
       {
         "step": 20,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ],
     [
       {
         "step": 0,
-        "mass": 53.82213592529297
+        "mass": 53.64057922363281,
+        "control_mass": 71.52076721191406,
+        "mass_ratio_to_control": 0.7500000533369175,
+        "occupied_fraction": 0.00775146484375,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.8637041513371355
       },
       {
         "step": 10,
-        "mass": 0.5572863817214966
+        "mass": 0.40217041969299316,
+        "control_mass": 71.26301574707031,
+        "mass_ratio_to_control": 0.005643466186168619,
+        "occupied_fraction": 6.103515625e-05,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.32755048990840785
       },
       {
         "step": 20,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13005828857422,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 30,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.42232513427734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 40,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.11679077148438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": null,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 50,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.03535461425781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 60,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.28860473632812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 70,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.06745147705078,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 80,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98468017578125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 90,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25407409667969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 100,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14704895019531,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 110,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.98832702636719,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 120,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.23560333251953,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 130,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.25106811523438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 140,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.19589233398438,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 150,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.17250061035156,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 160,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.21710205078125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 170,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.31832122802734,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 180,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.14773559570312,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 190,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13639831542969,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 200,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.22024536132812,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 210,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.85366821289062,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 220,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13569641113281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 230,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.04096984863281,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 240,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.9391860961914,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 250,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.0596923828125,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 260,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.99651336669922,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 270,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.8784408569336,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 280,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 71.13327026367188,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 290,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.91242218017578,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       },
       {
         "step": 300,
-        "mass": 0.0
+        "mass": 0.0,
+        "control_mass": 70.84443664550781,
+        "mass_ratio_to_control": 0.0,
+        "occupied_fraction": 0.0,
+        "motion_ratio_to_control": 0.0,
+        "control_valid": true,
+        "aligned_similarity_to_control": 0.0
       }
     ]
   ],
   "control_trajectory": [
     {
       "step": 0,
-      "mass": 71.52076721191406
+      "mass": 71.52076721191406,
+      "occupied_fraction": 0.01007080078125,
+      "motion_50_steps": null,
+      "control_valid": true
     },
     {
       "step": 10,
-      "mass": 71.26301574707031
+      "mass": 71.26301574707031,
+      "occupied_fraction": 0.01031494140625,
+      "motion_50_steps": null,
+      "control_valid": true
     },
     {
       "step": 20,
-      "mass": 71.13005828857422
+      "mass": 71.13005828857422,
+      "occupied_fraction": 0.01043701171875,
+      "motion_50_steps": null,
+      "control_valid": true
     },
     {
       "step": 30,
-      "mass": 71.42232513427734
+      "mass": 71.42232513427734,
+      "occupied_fraction": 0.01019287109375,
+      "motion_50_steps": null,
+      "control_valid": true
     },
     {
       "step": 40,
-      "mass": 71.11679077148438
+      "mass": 71.11679077148438,
+      "occupied_fraction": 0.01055908203125,
+      "motion_50_steps": null,
+      "control_valid": true
     },
     {
       "step": 50,
-      "mass": 71.03535461425781
+      "mass": 71.03535461425781,
+      "occupied_fraction": 0.0106201171875,
+      "motion_50_steps": 30.750447729865655,
+      "control_valid": true
     },
     {
       "step": 60,
-      "mass": 71.28860473632812
+      "mass": 71.28860473632812,
+      "occupied_fraction": 0.0103759765625,
+      "motion_50_steps": 30.744676664905924,
+      "control_valid": true
     },
     {
       "step": 70,
-      "mass": 71.06745147705078
+      "mass": 71.06745147705078,
+      "occupied_fraction": 0.01068115234375,
+      "motion_50_steps": 30.77235865695572,
+      "control_valid": true
     },
     {
       "step": 80,
-      "mass": 70.98468017578125
+      "mass": 70.98468017578125,
+      "occupied_fraction": 0.0107421875,
+      "motion_50_steps": 30.755904324758536,
+      "control_valid": true
     },
     {
       "step": 90,
-      "mass": 71.25407409667969
+      "mass": 71.25407409667969,
+      "occupied_fraction": 0.0103759765625,
+      "motion_50_steps": 30.74391958337974,
+      "control_valid": true
     },
     {
       "step": 100,
-      "mass": 71.14704895019531
+      "mass": 71.14704895019531,
+      "occupied_fraction": 0.0103759765625,
+      "motion_50_steps": 30.75857202963371,
+      "control_valid": true
     },
     {
       "step": 110,
-      "mass": 70.98832702636719
+      "mass": 70.98832702636719,
+      "occupied_fraction": 0.0107421875,
+      "motion_50_steps": 30.755933506441618,
+      "control_valid": true
     },
     {
       "step": 120,
-      "mass": 71.23560333251953
+      "mass": 71.23560333251953,
+      "occupied_fraction": 0.01031494140625,
+      "motion_50_steps": 30.74952660261127,
+      "control_valid": true
     },
     {
       "step": 130,
-      "mass": 71.25106811523438
+      "mass": 71.25106811523438,
+      "occupied_fraction": 0.010498046875,
+      "motion_50_steps": 30.725684368751455,
+      "control_valid": true
     },
     {
       "step": 140,
-      "mass": 71.19589233398438
+      "mass": 71.19589233398438,
+      "occupied_fraction": 0.0107421875,
+      "motion_50_steps": 30.753384200893354,
+      "control_valid": true
     },
     {
       "step": 150,
-      "mass": 71.17250061035156
+      "mass": 71.17250061035156,
+      "occupied_fraction": 0.0103759765625,
+      "motion_50_steps": 30.758993202312634,
+      "control_valid": true
     },
     {
       "step": 160,
-      "mass": 71.21710205078125
+      "mass": 71.21710205078125,
+      "occupied_fraction": 0.01025390625,
+      "motion_50_steps": 30.716060738345913,
+      "control_valid": true
     },
     {
       "step": 170,
-      "mass": 71.31832122802734
+      "mass": 71.31832122802734,
+      "occupied_fraction": 0.0106201171875,
+      "motion_50_steps": 30.749426947377763,
+      "control_valid": true
     },
     {
       "step": 180,
-      "mass": 71.14773559570312
+      "mass": 71.14773559570312,
+      "occupied_fraction": 0.01031494140625,
+      "motion_50_steps": 30.739875887495433,
+      "control_valid": true
     },
     {
       "step": 190,
-      "mass": 71.13639831542969
+      "mass": 71.13639831542969,
+      "occupied_fraction": 0.01019287109375,
+      "motion_50_steps": 30.73995107847671,
+      "control_valid": true
     },
     {
       "step": 200,
-      "mass": 71.22024536132812
+      "mass": 71.22024536132812,
+      "occupied_fraction": 0.01019287109375,
+      "motion_50_steps": 30.750630406877814,
+      "control_valid": true
     },
     {
       "step": 210,
-      "mass": 70.85366821289062
+      "mass": 70.85366821289062,
+      "occupied_fraction": 0.0101318359375,
+      "motion_50_steps": 30.739072106886802,
+      "control_valid": true
     },
     {
       "step": 220,
-      "mass": 71.13569641113281
+      "mass": 71.13569641113281,
+      "occupied_fraction": 0.0103759765625,
+      "motion_50_steps": 30.7479958637946,
+      "control_valid": true
     },
     {
       "step": 230,
-      "mass": 71.04096984863281
+      "mass": 71.04096984863281,
+      "occupied_fraction": 0.01025390625,
+      "motion_50_steps": 30.73782478918357,
+      "control_valid": true
     },
     {
       "step": 240,
-      "mass": 70.9391860961914
+      "mass": 70.9391860961914,
+      "occupied_fraction": 0.0101318359375,
+      "motion_50_steps": 30.73134793718499,
+      "control_valid": true
     },
     {
       "step": 250,
-      "mass": 71.0596923828125
+      "mass": 71.0596923828125,
+      "occupied_fraction": 0.010498046875,
+      "motion_50_steps": 30.735463928441202,
+      "control_valid": true
     },
     {
       "step": 260,
-      "mass": 70.99651336669922
+      "mass": 70.99651336669922,
+      "occupied_fraction": 0.01025390625,
+      "motion_50_steps": 30.74240270462599,
+      "control_valid": true
     },
     {
       "step": 270,
-      "mass": 70.8784408569336
+      "mass": 70.8784408569336,
+      "occupied_fraction": 0.01055908203125,
+      "motion_50_steps": 30.75328320620618,
+      "control_valid": true
     },
     {
       "step": 280,
-      "mass": 71.13327026367188
+      "mass": 71.13327026367188,
+      "occupied_fraction": 0.01031494140625,
+      "motion_50_steps": 30.76524895688457,
+      "control_valid": true
     },
     {
       "step": 290,
-      "mass": 70.91242218017578
+      "mass": 70.91242218017578,
+      "occupied_fraction": 0.01019287109375,
+      "motion_50_steps": 30.74367357822444,
+      "control_valid": true
     },
     {
       "step": 300,
-      "mass": 70.84443664550781
+      "mass": 70.84443664550781,
+      "occupied_fraction": 0.010498046875,
+      "motion_50_steps": 30.77683591275794,
+      "control_valid": true
     }
   ]
 }

@@ -1,0 +1,3967 @@
+{
+  "schema": "genesis.charter-analysis/v1",
+  "protocol_sha256": "26a7ab3ae240c8416a07d759ac7d64d7abcadba22f3e2d88fe9a59e19853a375",
+  "scope": "64 evaluations per method per seed, inherited anatomy and two growth parameters within each species",
+  "independent_unit": "search seed within species; interventions repeated within seed",
+  "uncertainty": "descriptive95% paired seed-bootstrap intervals; species contrasts not multiplicity-adjusted; not a broad superiority claim",
+  "survival_definition": "mass>=1 at final observation; no viable selected specimen is scored as failure",
+  "primary_estimand": "selection-pipeline success yield: valid undamaged control AND functional recovery; invalid controls count as failed selection, not demonstrated injury susceptibility",
+  "time_definition": "first3-sample sustained return; medians among events with censored counts; later relapse possible",
+  "summary": [
+    {
+      "species": "O2u",
+      "method": "performance",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.28,
+      "survival_rate": 0.41,
+      "control_validity": 1.0,
+      "recovery_among_valid_controls": 0.28,
+      "seed_rates": [
+        0.4,
+        0.2,
+        0.3,
+        0.2,
+        0.5,
+        0.5,
+        0.3,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.1,
+        0.5,
+        0.2,
+        0.3,
+        0.2,
+        0.5,
+        0.2,
+        0.2
+      ],
+      "ci95": [
+        0.23000000000000004,
+        0.33999999999999997
+      ],
+      "functional_recovery_time": {
+        "events": 70,
+        "censored_or_invalid": 130,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 49,
+        "censored_or_invalid": 151,
+        "median_steps_among_events": 20.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.3,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 7,
+            "censored_or_invalid": 13,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.1,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 70.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.35,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.35,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "O2u",
+      "method": "direct-regeneration",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.39999999999999997,
+      "survival_rate": 0.445,
+      "control_validity": 1.0,
+      "recovery_among_valid_controls": 0.4,
+      "seed_rates": [
+        0.0,
+        0.5,
+        0.5,
+        0.3,
+        0.6,
+        0.6,
+        0.4,
+        0.5,
+        0.1,
+        0.5,
+        0.2,
+        0.2,
+        0.5,
+        0.5,
+        0.3,
+        0.3,
+        0.6,
+        0.5,
+        0.3,
+        0.6
+      ],
+      "ci95": [
+        0.32499999999999996,
+        0.475
+      ],
+      "functional_recovery_time": {
+        "events": 86,
+        "censored_or_invalid": 114,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 64,
+        "censored_or_invalid": 136,
+        "median_steps_among_events": 20.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 12,
+            "censored_or_invalid": 8,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.25,
+          "survival_rate": 0.3,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.8,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 18,
+            "censored_or_invalid": 2,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "O2u",
+      "method": "map-elites",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.31500000000000006,
+      "survival_rate": 0.41,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.33157894736842103,
+      "seed_rates": [
+        0.3,
+        0.5,
+        0.4,
+        0.5,
+        0.2,
+        0.2,
+        0.5,
+        0.0,
+        0.2,
+        0.2,
+        0.2,
+        0.5,
+        0.2,
+        0.5,
+        0.5,
+        0.5,
+        0.2,
+        0.3,
+        0.2,
+        0.2
+      ],
+      "ci95": [
+        0.25,
+        0.38
+      ],
+      "functional_recovery_time": {
+        "events": 70,
+        "censored_or_invalid": 130,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 53,
+        "censored_or_invalid": 147,
+        "median_steps_among_events": 20.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.75,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 15,
+            "censored_or_invalid": 5,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.35,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 7,
+            "censored_or_invalid": 13,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.1,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.2,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 100.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.7,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "OG2g",
+      "method": "performance",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.18500000000000005,
+      "survival_rate": 0.475,
+      "control_validity": 0.8,
+      "recovery_among_valid_controls": 0.23125,
+      "seed_rates": [
+        0.3,
+        0.5,
+        0.2,
+        0.2,
+        0.2,
+        0.4,
+        0.0,
+        0.2,
+        0.2,
+        0.3,
+        0.0,
+        0.2,
+        0.1,
+        0.0,
+        0.2,
+        0.1,
+        0.2,
+        0.2,
+        0.0,
+        0.2
+      ],
+      "ci95": [
+        0.13000000000000003,
+        0.24000000000000005
+      ],
+      "functional_recovery_time": {
+        "events": 44,
+        "censored_or_invalid": 156,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 32,
+        "censored_or_invalid": 168,
+        "median_steps_among_events": 35.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.2,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.15,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.3,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.45,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.7,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 16,
+            "censored_or_invalid": 4,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.8,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 16,
+            "censored_or_invalid": 4,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "OG2g",
+      "method": "direct-regeneration",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.33999999999999997,
+      "survival_rate": 0.77,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.35789473684210527,
+      "seed_rates": [
+        0.4,
+        0.3,
+        0.7,
+        0.5,
+        0.3,
+        0.2,
+        0.2,
+        0.5,
+        0.5,
+        0.2,
+        0.4,
+        0.4,
+        0.2,
+        0.0,
+        0.2,
+        0.3,
+        0.2,
+        0.3,
+        0.5,
+        0.5
+      ],
+      "ci95": [
+        0.27,
+        0.41
+      ],
+      "functional_recovery_time": {
+        "events": 81,
+        "censored_or_invalid": 119,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 47,
+        "censored_or_invalid": 153,
+        "median_steps_among_events": 50.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.25,
+          "functional_recovery_time": {
+            "events": 9,
+            "censored_or_invalid": 11,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.25,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "OG2g",
+      "method": "map-elites",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.27999999999999997,
+      "survival_rate": 0.805,
+      "control_validity": 0.85,
+      "recovery_among_valid_controls": 0.32941176470588235,
+      "seed_rates": [
+        0.2,
+        0.3,
+        0.0,
+        0.6,
+        0.3,
+        0.1,
+        0.4,
+        0.4,
+        0.0,
+        0.1,
+        0.2,
+        0.2,
+        0.3,
+        0.6,
+        0.0,
+        0.6,
+        0.3,
+        0.2,
+        0.6,
+        0.2
+      ],
+      "ci95": [
+        0.195,
+        0.37
+      ],
+      "functional_recovery_time": {
+        "events": 69,
+        "censored_or_invalid": 131,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 43,
+        "censored_or_invalid": 157,
+        "median_steps_among_events": 60.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.4,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 7,
+            "censored_or_invalid": 13,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.7,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "O4i",
+      "method": "performance",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.2,
+      "survival_rate": 0.615,
+      "control_validity": 0.55,
+      "recovery_among_valid_controls": 0.36363636363636365,
+      "seed_rates": [
+        0.0,
+        0.0,
+        0.6,
+        0.3,
+        0.0,
+        0.0,
+        0.7,
+        0.0,
+        0.0,
+        0.3,
+        0.6,
+        0.2,
+        0.0,
+        0.0,
+        0.3,
+        0.6,
+        0.1,
+        0.0,
+        0.0,
+        0.3
+      ],
+      "ci95": [
+        0.1,
+        0.30999999999999994
+      ],
+      "functional_recovery_time": {
+        "events": 60,
+        "censored_or_invalid": 140,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 47,
+        "censored_or_invalid": 153,
+        "median_steps_among_events": 10.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 10,
+            "censored_or_invalid": 10,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.7,
+          "functional_recovery_time": {
+            "events": 6,
+            "censored_or_invalid": 14,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 6,
+            "censored_or_invalid": 14,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.25,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 6,
+            "censored_or_invalid": 14,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.2,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 55.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "O4i",
+      "method": "direct-regeneration",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.41500000000000004,
+      "survival_rate": 0.67,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.4368421052631579,
+      "seed_rates": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        0.2,
+        0.4,
+        0.5,
+        0.3,
+        0.6,
+        0.3,
+        0.3,
+        0.3,
+        0.6,
+        0.3,
+        0.0,
+        0.5,
+        0.5,
+        0.6,
+        0.4,
+        0.5
+      ],
+      "ci95": [
+        0.33499999999999996,
+        0.49000000000000005
+      ],
+      "functional_recovery_time": {
+        "events": 105,
+        "censored_or_invalid": 95,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 84,
+        "censored_or_invalid": 116,
+        "median_steps_among_events": 15.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.5,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 14,
+            "censored_or_invalid": 6,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 6,
+            "censored_or_invalid": 14,
+            "median_steps_among_events": 70.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.6,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 13,
+            "censored_or_invalid": 7,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.4,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.5,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 18,
+            "censored_or_invalid": 2,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "O4i",
+      "method": "map-elites",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.31,
+      "survival_rate": 0.62,
+      "control_validity": 0.8,
+      "recovery_among_valid_controls": 0.3875,
+      "seed_rates": [
+        0.1,
+        0.3,
+        0.6,
+        0.1,
+        0.4,
+        0.2,
+        0.0,
+        0.3,
+        0.0,
+        0.3,
+        0.6,
+        0.4,
+        0.1,
+        0.7,
+        0.0,
+        0.6,
+        0.7,
+        0.0,
+        0.4,
+        0.4
+      ],
+      "ci95": [
+        0.20500000000000002,
+        0.4151249999999982
+      ],
+      "functional_recovery_time": {
+        "events": 89,
+        "censored_or_invalid": 111,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 64,
+        "censored_or_invalid": 136,
+        "median_steps_among_events": 10.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 13,
+            "censored_or_invalid": 7,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 13,
+            "censored_or_invalid": 7,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.25,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.1,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 55.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 12,
+            "censored_or_invalid": 8,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.65,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 16,
+            "censored_or_invalid": 4,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "S1s",
+      "method": "performance",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.26,
+      "survival_rate": 0.285,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.2736842105263158,
+      "seed_rates": [
+        0.3,
+        0.2,
+        0.3,
+        0.3,
+        0.2,
+        0.2,
+        0.2,
+        0.3,
+        0.0,
+        0.3,
+        0.3,
+        0.3,
+        0.2,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.2,
+        0.4
+      ],
+      "ci95": [
+        0.22499999999999995,
+        0.29
+      ],
+      "functional_recovery_time": {
+        "events": 58,
+        "censored_or_invalid": 142,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 33,
+        "censored_or_invalid": 167,
+        "median_steps_among_events": 0.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 18,
+            "censored_or_invalid": 2,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.75,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "S1s",
+      "method": "direct-regeneration",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.48999999999999994,
+      "survival_rate": 0.495,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.5157894736842106,
+      "seed_rates": [
+        0.3,
+        0.7,
+        0.3,
+        0.7,
+        0.4,
+        0.3,
+        0.3,
+        0.6,
+        0.3,
+        0.7,
+        0.3,
+        0.8,
+        0.5,
+        0.8,
+        0.6,
+        0.7,
+        0.3,
+        0.6,
+        0.0,
+        0.6
+      ],
+      "ci95": [
+        0.39499999999999996,
+        0.585
+      ],
+      "functional_recovery_time": {
+        "events": 108,
+        "censored_or_invalid": 92,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 85,
+        "censored_or_invalid": 115,
+        "median_steps_among_events": 40.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.6,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 12,
+            "censored_or_invalid": 8,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.5,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 10,
+            "censored_or_invalid": 10,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.1,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 95.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.7,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "S1s",
+      "method": "map-elites",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.33499999999999996,
+      "survival_rate": 0.34,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.3526315789473684,
+      "seed_rates": [
+        0.5,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.4,
+        0.3,
+        0.2,
+        0.7,
+        0.5,
+        0.0,
+        0.2,
+        0.6
+      ],
+      "ci95": [
+        0.27,
+        0.39999999999999997
+      ],
+      "functional_recovery_time": {
+        "events": 72,
+        "censored_or_invalid": 128,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 54,
+        "censored_or_invalid": 146,
+        "median_steps_among_events": 35.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.2,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.2,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.2,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "P4cl",
+      "method": "performance",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.38500000000000006,
+      "survival_rate": 0.955,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.4052631578947368,
+      "seed_rates": [
+        0.2,
+        0.4,
+        0.5,
+        0.8,
+        0.2,
+        0.4,
+        0.1,
+        0.7,
+        1.0,
+        0.6,
+        0.0,
+        0.4,
+        0.1,
+        0.4,
+        0.5,
+        0.3,
+        0.3,
+        0.2,
+        0.4,
+        0.2
+      ],
+      "ci95": [
+        0.28,
+        0.49000000000000005
+      ],
+      "functional_recovery_time": {
+        "events": 90,
+        "censored_or_invalid": 110,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 62,
+        "censored_or_invalid": 138,
+        "median_steps_among_events": 0.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 80.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 110.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 70.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.3,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 6,
+            "censored_or_invalid": 14,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.7,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.6,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 12,
+            "censored_or_invalid": 8,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.75,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "P4cl",
+      "method": "direct-regeneration",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.6050000000000001,
+      "survival_rate": 0.935,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.6368421052631579,
+      "seed_rates": [
+        0.4,
+        0.6,
+        0.4,
+        0.7,
+        0.5,
+        0.9,
+        0.6,
+        0.7,
+        0.4,
+        0.4,
+        0.9,
+        0.4,
+        0.7,
+        0.9,
+        0.9,
+        0.4,
+        0.9,
+        0.9,
+        0.0,
+        0.5
+      ],
+      "ci95": [
+        0.495,
+        0.7100000000000002
+      ],
+      "functional_recovery_time": {
+        "events": 141,
+        "censored_or_invalid": 59,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 77,
+        "censored_or_invalid": 123,
+        "median_steps_among_events": 0.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 14,
+            "censored_or_invalid": 6,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 10,
+            "censored_or_invalid": 10,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 70.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 9,
+            "censored_or_invalid": 11,
+            "median_steps_among_events": 70.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.35,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 75.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 13,
+            "censored_or_invalid": 7,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "P4cl",
+      "method": "map-elites",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.5150000000000001,
+      "survival_rate": 0.78,
+      "control_validity": 1.0,
+      "recovery_among_valid_controls": 0.515,
+      "seed_rates": [
+        0.2,
+        0.5,
+        0.5,
+        0.4,
+        0.3,
+        0.4,
+        0.4,
+        0.9,
+        0.1,
+        0.3,
+        0.9,
+        0.9,
+        0.4,
+        0.4,
+        0.9,
+        0.8,
+        0.4,
+        0.4,
+        0.4,
+        0.8
+      ],
+      "ci95": [
+        0.4050000000000001,
+        0.6250000000000001
+      ],
+      "functional_recovery_time": {
+        "events": 114,
+        "censored_or_invalid": 86,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 77,
+        "censored_or_invalid": 123,
+        "median_steps_among_events": 0.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.3,
+          "survival_rate": 0.7,
+          "functional_recovery_time": {
+            "events": 9,
+            "censored_or_invalid": 11,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.3,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 7,
+            "censored_or_invalid": 13,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.35,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 7,
+            "censored_or_invalid": 13,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 6,
+            "censored_or_invalid": 14,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.6,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 60.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 9,
+            "censored_or_invalid": 11,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.7,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 15,
+            "censored_or_invalid": 5,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 18,
+            "censored_or_invalid": 2,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "H3s",
+      "method": "performance",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.39,
+      "survival_rate": 0.53,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.4105263157894737,
+      "seed_rates": [
+        0.3,
+        0.3,
+        0.4,
+        0.1,
+        0.4,
+        0.4,
+        0.5,
+        0.7,
+        0.3,
+        0.7,
+        0.5,
+        0.2,
+        0.4,
+        0.3,
+        0.3,
+        0.7,
+        0.4,
+        0.5,
+        0.4,
+        0.0
+      ],
+      "ci95": [
+        0.315,
+        0.4699999999999999
+      ],
+      "functional_recovery_time": {
+        "events": 118,
+        "censored_or_invalid": 82,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 91,
+        "censored_or_invalid": 109,
+        "median_steps_among_events": 40.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.65,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.0,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.7,
+          "functional_recovery_time": {
+            "events": 13,
+            "censored_or_invalid": 7,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 11,
+            "censored_or_invalid": 9,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 70.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.35,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 16,
+            "censored_or_invalid": 4,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "H3s",
+      "method": "direct-regeneration",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.615,
+      "survival_rate": 0.755,
+      "control_validity": 1.0,
+      "recovery_among_valid_controls": 0.615,
+      "seed_rates": [
+        0.3,
+        0.6,
+        0.7,
+        0.6,
+        0.6,
+        0.5,
+        0.6,
+        0.6,
+        0.6,
+        0.9,
+        0.7,
+        0.7,
+        0.6,
+        0.7,
+        0.3,
+        0.8,
+        0.8,
+        0.7,
+        0.3,
+        0.7
+      ],
+      "ci95": [
+        0.54,
+        0.6849999999999998
+      ],
+      "functional_recovery_time": {
+        "events": 138,
+        "censored_or_invalid": 62,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 125,
+        "censored_or_invalid": 75,
+        "median_steps_among_events": 50.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.35,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.8,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 16,
+            "censored_or_invalid": 4,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.5,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.65,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "H3s",
+      "method": "map-elites",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.45000000000000007,
+      "survival_rate": 0.58,
+      "control_validity": 0.95,
+      "recovery_among_valid_controls": 0.47368421052631576,
+      "seed_rates": [
+        0.3,
+        0.5,
+        0.4,
+        0.1,
+        0.2,
+        0.1,
+        0.7,
+        0.5,
+        0.7,
+        0.7,
+        0.4,
+        0.5,
+        0.6,
+        0.6,
+        0.5,
+        0.7,
+        0.4,
+        0.8,
+        0.3,
+        0.0
+      ],
+      "ci95": [
+        0.355,
+        0.545
+      ],
+      "functional_recovery_time": {
+        "events": 120,
+        "censored_or_invalid": 80,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 105,
+        "censored_or_invalid": 95,
+        "median_steps_among_events": 50.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.8,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.75,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 18,
+            "censored_or_invalid": 2,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.15,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.05,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.6,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 16,
+            "censored_or_invalid": 4,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.35,
+          "survival_rate": 0.4,
+          "functional_recovery_time": {
+            "events": 9,
+            "censored_or_invalid": 11,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.7,
+          "survival_rate": 0.7,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.15,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.7,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "H3cp",
+      "method": "performance",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.065,
+      "survival_rate": 0.775,
+      "control_validity": 0.25,
+      "recovery_among_valid_controls": 0.26,
+      "seed_rates": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2,
+        0.0,
+        0.5,
+        0.2,
+        0.0,
+        0.0,
+        0.3,
+        0.0,
+        0.1,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ci95": [
+        0.015000000000000003,
+        0.13
+      ],
+      "functional_recovery_time": {
+        "events": 22,
+        "censored_or_invalid": 178,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 13,
+        "censored_or_invalid": 187,
+        "median_steps_among_events": 40.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 0,
+            "censored_or_invalid": 20,
+            "median_steps_among_events": null
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 90.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.25,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 5,
+            "censored_or_invalid": 15,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "H3cp",
+      "method": "direct-regeneration",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.23500000000000001,
+      "survival_rate": 0.805,
+      "control_validity": 0.75,
+      "recovery_among_valid_controls": 0.31333333333333335,
+      "seed_rates": [
+        0.9,
+        0.1,
+        0.2,
+        0.3,
+        0.2,
+        0.2,
+        0.2,
+        0.0,
+        0.3,
+        0.0,
+        0.3,
+        0.4,
+        0.3,
+        0.2,
+        0.2,
+        0.6,
+        0.3,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ci95": [
+        0.14999999999999997,
+        0.335
+      ],
+      "functional_recovery_time": {
+        "events": 71,
+        "censored_or_invalid": 129,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 57,
+        "censored_or_invalid": 143,
+        "median_steps_among_events": 40.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.75,
+          "functional_recovery_time": {
+            "events": 2,
+            "censored_or_invalid": 18,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 10,
+            "censored_or_invalid": 10,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.25,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 15,
+            "censored_or_invalid": 5,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.8,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 90.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.65,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 15,
+            "censored_or_invalid": 5,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.5,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 15,
+            "censored_or_invalid": 5,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "H3cp",
+      "method": "map-elites",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.24500000000000002,
+      "survival_rate": 0.925,
+      "control_validity": 0.85,
+      "recovery_among_valid_controls": 0.28823529411764703,
+      "seed_rates": [
+        0.2,
+        0.0,
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.3,
+        0.0,
+        0.2,
+        0.4,
+        0.2,
+        0.2,
+        0.4,
+        0.8,
+        0.1,
+        0.5,
+        0.4,
+        0.2,
+        0.3,
+        0.1
+      ],
+      "ci95": [
+        0.17,
+        0.335
+      ],
+      "functional_recovery_time": {
+        "events": 75,
+        "censored_or_invalid": 125,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 64,
+        "censored_or_invalid": 136,
+        "median_steps_among_events": 40.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 7,
+            "censored_or_invalid": 13,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.05,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.5,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 10,
+            "censored_or_invalid": 10,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.0,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 1,
+            "censored_or_invalid": 19,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.45,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 17,
+            "censored_or_invalid": 3,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "C0v",
+      "method": "performance",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.825,
+      "survival_rate": 0.975,
+      "control_validity": 1.0,
+      "recovery_among_valid_controls": 0.825,
+      "seed_rates": [
+        0.8,
+        0.8,
+        0.8,
+        0.9,
+        0.8,
+        0.8,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.8,
+        0.6,
+        0.8,
+        0.9,
+        0.6,
+        0.9,
+        0.8,
+        0.9,
+        0.8,
+        0.9
+      ],
+      "ci95": [
+        0.785,
+        0.86
+      ],
+      "functional_recovery_time": {
+        "events": 170,
+        "censored_or_invalid": 30,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 157,
+        "censored_or_invalid": 43,
+        "median_steps_among_events": 70.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.4,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 8,
+            "censored_or_invalid": 12,
+            "median_steps_among_events": 60.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.1,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 3,
+            "censored_or_invalid": 17,
+            "median_steps_among_events": 60.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 0.95,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "C0v",
+      "method": "direct-regeneration",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.775,
+      "survival_rate": 0.805,
+      "control_validity": 1.0,
+      "recovery_among_valid_controls": 0.775,
+      "seed_rates": [
+        0.8,
+        0.8,
+        0.9,
+        0.9,
+        0.6,
+        0.7,
+        0.9,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.7,
+        0.6,
+        1.0,
+        0.8,
+        0.7,
+        0.8,
+        0.9,
+        0.5,
+        0.7
+      ],
+      "ci95": [
+        0.7200000000000001,
+        0.825
+      ],
+      "functional_recovery_time": {
+        "events": 165,
+        "censored_or_invalid": 35,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 135,
+        "censored_or_invalid": 65,
+        "median_steps_among_events": 50.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.55,
+          "survival_rate": 0.55,
+          "functional_recovery_time": {
+            "events": 15,
+            "censored_or_invalid": 5,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.15,
+          "survival_rate": 0.25,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.3,
+          "survival_rate": 0.45,
+          "functional_recovery_time": {
+            "events": 7,
+            "censored_or_invalid": 13,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "species": "C0v",
+      "method": "map-elites",
+      "independent_search_seeds": 20,
+      "repeated_trials": 200,
+      "functional_recovery_rate": 0.8000000000000002,
+      "survival_rate": 0.865,
+      "control_validity": 1.0,
+      "recovery_among_valid_controls": 0.8,
+      "seed_rates": [
+        0.9,
+        1.0,
+        0.7,
+        0.9,
+        0.7,
+        0.8,
+        0.9,
+        0.4,
+        0.8,
+        0.9,
+        0.5,
+        0.7,
+        0.8,
+        0.8,
+        1.0,
+        0.8,
+        0.8,
+        0.9,
+        0.8,
+        0.9
+      ],
+      "ci95": [
+        0.735,
+        0.86
+      ],
+      "functional_recovery_time": {
+        "events": 166,
+        "censored_or_invalid": 34,
+        "median_steps_among_events": 50.0
+      },
+      "mass_recovery_time": {
+        "events": 126,
+        "censored_or_invalid": 74,
+        "median_steps_among_events": 50.0
+      },
+      "per_intervention": [
+        {
+          "intervention": "central-5",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-7",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-10",
+          "functional_recovery_rate": 0.85,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "central-12",
+          "functional_recovery_rate": 0.65,
+          "survival_rate": 0.65,
+          "functional_recovery_time": {
+            "events": 15,
+            "censored_or_invalid": 5,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "repeated-7",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 0.9,
+          "functional_recovery_time": {
+            "events": 19,
+            "censored_or_invalid": 1,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "fragmentation",
+          "functional_recovery_rate": 0.2,
+          "survival_rate": 0.45,
+          "functional_recovery_time": {
+            "events": 4,
+            "censored_or_invalid": 16,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "communication-noise",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "kernel-radius",
+          "functional_recovery_rate": 0.5,
+          "survival_rate": 0.85,
+          "functional_recovery_time": {
+            "events": 9,
+            "censored_or_invalid": 11,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "diffusion",
+          "functional_recovery_rate": 0.9,
+          "survival_rate": 0.95,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        },
+        {
+          "intervention": "moving-resource",
+          "functional_recovery_rate": 1.0,
+          "survival_rate": 1.0,
+          "functional_recovery_time": {
+            "events": 20,
+            "censored_or_invalid": 0,
+            "median_steps_among_events": 50.0
+          }
+        }
+      ]
+    }
+  ],
+  "overall": [
+    {
+      "method": "performance",
+      "mean_species_success_rate": 0.32375,
+      "mean_species_control_validity": 0.8062499999999999,
+      "mean_species_survival": 0.6275
+    },
+    {
+      "method": "direct-regeneration",
+      "mean_species_success_rate": 0.48437500000000006,
+      "mean_species_control_validity": 0.94375,
+      "mean_species_survival": 0.71
+    },
+    {
+      "method": "map-elites",
+      "mean_species_success_rate": 0.40625,
+      "mean_species_control_validity": 0.91875,
+      "mean_species_survival": 0.6656249999999999
+    }
+  ],
+  "species_contrasts": [
+    {
+      "species": "O2u",
+      "contrast": "map-elites minus performance",
+      "mean_difference": 0.034999999999999996,
+      "ci95": [
+        -0.05,
+        0.11012499999999821
+      ]
+    },
+    {
+      "species": "O2u",
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": -0.08499999999999999,
+      "ci95": [
+        -0.195,
+        0.025
+      ]
+    },
+    {
+      "species": "OG2g",
+      "contrast": "map-elites minus performance",
+      "mean_difference": 0.095,
+      "ci95": [
+        -0.025000000000000005,
+        0.22000000000000003
+      ]
+    },
+    {
+      "species": "OG2g",
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": -0.059999999999999984,
+      "ci95": [
+        -0.18,
+        0.05499999999999999
+      ]
+    },
+    {
+      "species": "O4i",
+      "contrast": "map-elites minus performance",
+      "mean_difference": 0.11000000000000001,
+      "ci95": [
+        -0.024999999999999988,
+        0.24000000000000005
+      ]
+    },
+    {
+      "species": "O4i",
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": -0.10500000000000001,
+      "ci95": [
+        -0.24,
+        0.029999999999999992
+      ]
+    },
+    {
+      "species": "S1s",
+      "contrast": "map-elites minus performance",
+      "mean_difference": 0.07499999999999998,
+      "ci95": [
+        0.009999999999999995,
+        0.135
+      ]
+    },
+    {
+      "species": "S1s",
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": -0.15499999999999997,
+      "ci95": [
+        -0.26512499999999994,
+        -0.045000000000000005
+      ]
+    },
+    {
+      "species": "P4cl",
+      "contrast": "map-elites minus performance",
+      "mean_difference": 0.13000000000000003,
+      "ci95": [
+        -0.039999999999999994,
+        0.29000000000000004
+      ]
+    },
+    {
+      "species": "P4cl",
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": -0.09,
+      "ci95": [
+        -0.225,
+        0.050000000000000024
+      ]
+    },
+    {
+      "species": "H3s",
+      "contrast": "map-elites minus performance",
+      "mean_difference": 0.06,
+      "ci95": [
+        -0.020000000000000007,
+        0.14499999999999996
+      ]
+    },
+    {
+      "species": "H3s",
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": -0.16499999999999998,
+      "ci95": [
+        -0.265,
+        -0.06499999999999999
+      ]
+    },
+    {
+      "species": "H3cp",
+      "contrast": "map-elites minus performance",
+      "mean_difference": 0.18000000000000002,
+      "ci95": [
+        0.07,
+        0.28500000000000003
+      ]
+    },
+    {
+      "species": "H3cp",
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": 0.01000000000000002,
+      "ci95": [
+        -0.10499999999999998,
+        0.125
+      ]
+    },
+    {
+      "species": "C0v",
+      "contrast": "map-elites minus performance",
+      "mean_difference": -0.025000000000000012,
+      "ci95": [
+        -0.10000000000000002,
+        0.04999999999999999
+      ]
+    },
+    {
+      "species": "C0v",
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": 0.025000000000000005,
+      "ci95": [
+        -0.05500000000000001,
+        0.1
+      ]
+    }
+  ],
+  "aggregate_contrasts": [
+    {
+      "contrast": "map-elites minus performance",
+      "mean_difference": 0.08249999999999999,
+      "ci95": [
+        0.03937500000000001,
+        0.12625
+      ],
+      "eligible_species": 8
+    },
+    {
+      "contrast": "map-elites minus direct-regeneration",
+      "mean_difference": -0.07812499999999999,
+      "ci95": [
+        -0.11875,
+        -0.034999999999999996
+      ],
+      "eligible_species": 8
+    }
+  ],
+  "common_valid_sensitivity": [
+    {
+      "species": "O2u",
+      "common_valid_search_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "n": 19,
+      "method_rates": {
+        "performance": 0.28421052631578947,
+        "direct-regeneration": 0.3947368421052631,
+        "map-elites": 0.33157894736842103
+      },
+      "status": "post-selection sensitivity only; excluding unstable selections changes the population"
+    },
+    {
+      "species": "OG2g",
+      "common_valid_search_seeds": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        9,
+        11,
+        12,
+        15,
+        16,
+        17,
+        19
+      ],
+      "n": 13,
+      "method_rates": {
+        "performance": 0.23846153846153853,
+        "direct-regeneration": 0.33076923076923076,
+        "map-elites": 0.2923076923076923
+      },
+      "status": "post-selection sensitivity only; excluding unstable selections changes the population"
+    },
+    {
+      "species": "O4i",
+      "common_valid_search_seeds": [
+        0,
+        2,
+        3,
+        9,
+        10,
+        11,
+        15,
+        16,
+        19
+      ],
+      "n": 9,
+      "method_rates": {
+        "performance": 0.3333333333333333,
+        "direct-regeneration": 0.4444444444444444,
+        "map-elites": 0.4222222222222222
+      },
+      "status": "post-selection sensitivity only; excluding unstable selections changes the population"
+    },
+    {
+      "species": "S1s",
+      "common_valid_search_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19
+      ],
+      "n": 17,
+      "method_rates": {
+        "performance": 0.2764705882352942,
+        "direct-regeneration": 0.5235294117647059,
+        "map-elites": 0.36470588235294116
+      },
+      "status": "post-selection sensitivity only; excluding unstable selections changes the population"
+    },
+    {
+      "species": "P4cl",
+      "common_valid_search_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19
+      ],
+      "n": 18,
+      "method_rates": {
+        "performance": 0.4055555555555556,
+        "direct-regeneration": 0.6222222222222222,
+        "map-elites": 0.5000000000000001
+      },
+      "status": "post-selection sensitivity only; excluding unstable selections changes the population"
+    },
+    {
+      "species": "H3s",
+      "common_valid_search_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "n": 19,
+      "method_rates": {
+        "performance": 0.41052631578947374,
+        "direct-regeneration": 0.6105263157894737,
+        "map-elites": 0.4736842105263159
+      },
+      "status": "post-selection sensitivity only; excluding unstable selections changes the population"
+    },
+    {
+      "species": "H3cp",
+      "common_valid_search_seeds": [
+        5,
+        8,
+        11,
+        13
+      ],
+      "n": 4,
+      "method_rates": {
+        "performance": 0.19999999999999998,
+        "direct-regeneration": 0.275,
+        "map-elites": 0.375
+      },
+      "status": "post-selection sensitivity only; excluding unstable selections changes the population"
+    },
+    {
+      "species": "C0v",
+      "common_valid_search_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "n": 20,
+      "method_rates": {
+        "performance": 0.825,
+        "direct-regeneration": 0.775,
+        "map-elites": 0.8000000000000002
+      },
+      "status": "post-selection sensitivity only; excluding unstable selections changes the population"
+    }
+  ]
+}

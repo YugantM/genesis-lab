@@ -21,7 +21,7 @@ import numpy as np
 
 from .core import GenesisConfig, GenesisWorld, _kernel
 from .genome import Specimen, load_specimen
-from .metrics import center_of_mass, occupied_fraction
+from .metrics import aligned_similarity, center_of_mass, occupied_fraction
 from .multispecies_benchmark import centered_state, load_manifest
 
 
@@ -87,17 +87,6 @@ def shift_center(state: np.ndarray, target_yx: tuple[float, float]) -> np.ndarra
     centre = center_of_mass(state[None])[0]
     shift = np.rint(np.asarray(target_yx) - centre).astype(int)
     return np.roll(state, tuple(shift), axis=(0, 1))
-
-
-def aligned_similarity(left: np.ndarray, right: np.ndarray) -> float:
-    """Maximum cosine similarity over every toroidal translation."""
-    denominator = float(np.linalg.norm(left) * np.linalg.norm(right))
-    if not denominator:
-        return 0.0
-    correlation = np.fft.ifft2(
-        np.fft.fft2(left) * np.conj(np.fft.fft2(right))
-    ).real
-    return float(np.clip(correlation.max() / denominator, 0.0, 1.0))
 
 
 def develop_specimens(

@@ -1,546 +1,3284 @@
 {
-  "schema": "genesis.robust-selection/v1",
-  "created_at": "2026-09-03T12:38:00.280394+00:00",
+  "schema": "genesis.robust-selection/v2",
+  "created_at": "2026-09-04T23:00:36.152215+00:00",
   "source_search": "runs/robust-search.json",
   "random_seed": 20260903,
   "protocol": {
-    "candidate_count": 243,
+    "candidate_count": 100,
     "phases": [
-      260,
+      180,
       300,
-      340
+      420
     ],
-    "orientations": [
-      0,
-      90
+    "initial_condition_seeds": [
+      101,
+      211,
+      307,
+      401
     ],
-    "noise_seeds": [
-      31,
-      47
+    "initial_state_noise_sigma": 0.012,
+    "rotations_as_replicates": false,
+    "training_damage_levels": [
+      0.04,
+      0.06,
+      0.08
     ],
-    "trials_per_candidate": 12,
-    "target_damage": 0.05
+    "post_steps": 300,
+    "independent_unit": "initial_condition_seed",
+    "trials_per_candidate": 36
   },
   "selected_candidate": {
-    "rank": 39,
-    "candidate": 942,
-    "growth_center": 0.1463322937488556,
-    "growth_width": 0.01689031347632408,
-    "wound_radius": 0.9186360239982605,
-    "actual_removed_fraction": 0.049999989569187164,
-    "pre_mass": 75.45396423339844,
-    "final_mass": 75.19828796386719,
-    "mass_ratio": 0.996611475944519,
-    "pre_motion_50_steps": 32.72702812344446,
-    "post_motion_50_steps": 32.74936690252309,
-    "motion_ratio": 1.000682578906779,
-    "score": 2.235526049863638,
-    "multi_condition_passed": 12,
-    "multi_condition_trials": 12,
-    "multi_condition_recovery_rate": 1.0,
-    "median_mass_ratio": 0.9999831914901733,
-    "median_motion_ratio": 1.0005839456760668
+    "candidate": 806,
+    "growth_center": 0.125904381275177,
+    "growth_width": 0.014049871824681759,
+    "viable_control": true,
+    "pre_mass": 66.89142608642578,
+    "control_final_mass": 66.93815612792969,
+    "pre_motion_50_steps": 33.4233968801067,
+    "control_motion_50_steps": 33.50264543234109,
+    "mean_recovery_score": 0.9928567708971237,
+    "recovered_magnitudes": 3,
+    "training_magnitudes": 3,
+    "passed_all_training_magnitudes": true,
+    "parameter_distance": 2.0219690799713135,
+    "per_damage": [
+      {
+        "candidate": 806,
+        "target_removed_fraction": 0.04,
+        "actual_removed_fraction": 0.040000032633543015,
+        "wound_radius": 0.7420646052630467,
+        "mass_ratio_to_control": 1.011021614074707,
+        "motion_ratio_to_control": 0.9966262038184125,
+        "aligned_similarity_to_control": 0.9623351570185771,
+        "functionally_recovered": true,
+        "recovery_score": 0.9857615207668242
+      },
+      {
+        "candidate": 806,
+        "target_removed_fraction": 0.06,
+        "actual_removed_fraction": 0.06000004708766937,
+        "wound_radius": 1.4461549313370383,
+        "mass_ratio_to_control": 1.0011250972747803,
+        "motion_ratio_to_control": 0.9994652567707333,
+        "aligned_similarity_to_control": 0.9910334677855928,
+        "functionally_recovered": true,
+        "recovery_score": 0.9983420248792431
+      },
+      {
+        "candidate": 806,
+        "target_removed_fraction": 0.08,
+        "actual_removed_fraction": 0.08000000566244125,
+        "wound_radius": 1.4669828884785692,
+        "mass_ratio_to_control": 1.005245327949524,
+        "motion_ratio_to_control": 0.999683071373359,
+        "aligned_similarity_to_control": 0.9292602195873723,
+        "functionally_recovered": true,
+        "recovery_score": 0.9944667670453036
+      }
+    ],
+    "independent_initial_conditions": 4,
+    "trials": 36,
+    "valid_trials": 36,
+    "recovered": 36,
+    "mean_seed_recovery_rate": 1.0,
+    "mean_seed_recovery_score": 0.9931179645770458,
+    "seed_breakdown": [
+      {
+        "initial_condition_seed": 101,
+        "valid_trials": 9,
+        "trials": 9,
+        "recovered": 9,
+        "recovery_rate": 1.0,
+        "mean_recovery_score": 0.9971468855017283
+      },
+      {
+        "initial_condition_seed": 211,
+        "valid_trials": 9,
+        "trials": 9,
+        "recovered": 9,
+        "recovery_rate": 1.0,
+        "mean_recovery_score": 0.9909093440281972
+      },
+      {
+        "initial_condition_seed": 307,
+        "valid_trials": 9,
+        "trials": 9,
+        "recovered": 9,
+        "recovery_rate": 1.0,
+        "mean_recovery_score": 0.9934405986295712
+      },
+      {
+        "initial_condition_seed": 401,
+        "valid_trials": 9,
+        "trials": 9,
+        "recovered": 9,
+        "recovery_rate": 1.0,
+        "mean_recovery_score": 0.9909750301486862
+      }
+    ],
+    "damage_breakdown": [
+      {
+        "target_removed_fraction": 0.04,
+        "recovered": 12,
+        "trials": 12
+      },
+      {
+        "target_removed_fraction": 0.06,
+        "recovered": 12,
+        "trials": 12
+      },
+      {
+        "target_removed_fraction": 0.08,
+        "recovered": 12,
+        "trials": 12
+      }
+    ]
   },
   "top_candidates": [
     {
-      "rank": 39,
-      "candidate": 942,
-      "growth_center": 0.1463322937488556,
-      "growth_width": 0.01689031347632408,
-      "wound_radius": 0.9186360239982605,
-      "actual_removed_fraction": 0.049999989569187164,
-      "pre_mass": 75.45396423339844,
-      "final_mass": 75.19828796386719,
-      "mass_ratio": 0.996611475944519,
-      "pre_motion_50_steps": 32.72702812344446,
-      "post_motion_50_steps": 32.74936690252309,
-      "motion_ratio": 1.000682578906779,
-      "score": 2.235526049863638,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9999831914901733,
-      "median_motion_ratio": 1.0005839456760668
+      "candidate": 806,
+      "growth_center": 0.125904381275177,
+      "growth_width": 0.014049871824681759,
+      "viable_control": true,
+      "pre_mass": 66.89142608642578,
+      "control_final_mass": 66.93815612792969,
+      "pre_motion_50_steps": 33.4233968801067,
+      "control_motion_50_steps": 33.50264543234109,
+      "mean_recovery_score": 0.9928567708971237,
+      "recovered_magnitudes": 3,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": true,
+      "parameter_distance": 2.0219690799713135,
+      "per_damage": [
+        {
+          "candidate": 806,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.040000032633543015,
+          "wound_radius": 0.7420646052630467,
+          "mass_ratio_to_control": 1.011021614074707,
+          "motion_ratio_to_control": 0.9966262038184125,
+          "aligned_similarity_to_control": 0.9623351570185771,
+          "functionally_recovered": true,
+          "recovery_score": 0.9857615207668242
+        },
+        {
+          "candidate": 806,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000004708766937,
+          "wound_radius": 1.4461549313370383,
+          "mass_ratio_to_control": 1.0011250972747803,
+          "motion_ratio_to_control": 0.9994652567707333,
+          "aligned_similarity_to_control": 0.9910334677855928,
+          "functionally_recovered": true,
+          "recovery_score": 0.9983420248792431
+        },
+        {
+          "candidate": 806,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000000566244125,
+          "wound_radius": 1.4669828884785692,
+          "mass_ratio_to_control": 1.005245327949524,
+          "motion_ratio_to_control": 0.999683071373359,
+          "aligned_similarity_to_control": 0.9292602195873723,
+          "functionally_recovered": true,
+          "recovery_score": 0.9944667670453036
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 36,
+      "mean_seed_recovery_rate": 1.0,
+      "mean_seed_recovery_score": 0.9931179645770458,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9971468855017283
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9909093440281972
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9934405986295712
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9909750301486862
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 12,
+          "trials": 12
+        }
+      ]
     },
     {
-      "rank": 126,
-      "candidate": 978,
-      "growth_center": 0.1409323364496231,
-      "growth_width": 0.017764301970601082,
-      "wound_radius": 1.070610761642456,
-      "actual_removed_fraction": 0.049999941140413284,
-      "pre_mass": 76.07614135742188,
-      "final_mass": 75.92510223388672,
-      "mass_ratio": 0.9980146288871765,
-      "pre_motion_50_steps": 35.05896288278651,
-      "post_motion_50_steps": 35.064488434573924,
-      "motion_ratio": 1.000157607394317,
-      "score": 2.227574092720414,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0000194311141968,
-      "median_motion_ratio": 1.000099204726736
+      "candidate": 1000,
+      "growth_center": 0.12208730727434158,
+      "growth_width": 0.013133513741195202,
+      "viable_control": true,
+      "pre_mass": 64.9693832397461,
+      "control_final_mass": 65.03571319580078,
+      "pre_motion_50_steps": 32.87661678291251,
+      "control_motion_50_steps": 32.75330795792443,
+      "mean_recovery_score": 0.9969209432601929,
+      "recovered_magnitudes": 3,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": true,
+      "parameter_distance": 2.3724000453948975,
+      "per_damage": [
+        {
+          "candidate": 1000,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000003635883331,
+          "wound_radius": 0.9245826729279353,
+          "mass_ratio_to_control": 0.9980121850967407,
+          "motion_ratio_to_control": 1.0040814283909643,
+          "aligned_similarity_to_control": 0.9733250665255041,
+          "functionally_recovered": true,
+          "recovery_score": 0.9980121850967407
+        },
+        {
+          "candidate": 1000,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.05999999865889549,
+          "wound_radius": 1.0869397585573926,
+          "mass_ratio_to_control": 0.999514102935791,
+          "motion_ratio_to_control": 1.0030276256524888,
+          "aligned_similarity_to_control": 0.9696367176838979,
+          "functionally_recovered": true,
+          "recovery_score": 0.999514102935791
+        },
+        {
+          "candidate": 1000,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999996095895767,
+          "wound_radius": 1.2808467991282768,
+          "mass_ratio_to_control": 0.9932365417480469,
+          "motion_ratio_to_control": 1.0048174548692088,
+          "aligned_similarity_to_control": 0.9627712341130792,
+          "functionally_recovered": true,
+          "recovery_score": 0.9932365417480469
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 35,
+      "mean_seed_recovery_rate": 0.9722222222222222,
+      "mean_seed_recovery_score": 0.9654149924639263,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9921294948193705
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9928507155230799
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9968315534849734
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8798482060282812
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 11,
+          "trials": 12
+        }
+      ]
     },
     {
-      "rank": 35,
-      "candidate": 230,
-      "growth_center": 0.14337433874607086,
-      "growth_width": 0.01677059754729271,
-      "wound_radius": 1.1145600080490112,
-      "actual_removed_fraction": 0.049999985843896866,
-      "pre_mass": 74.63899993896484,
-      "final_mass": 74.66732025146484,
-      "mass_ratio": 1.0003794431686401,
-      "pre_motion_50_steps": 33.1698699845538,
-      "post_motion_50_steps": 33.22079386250849,
-      "motion_ratio": 1.0015352450274424,
-      "score": 2.2358509806906928,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9999731779098511,
-      "median_motion_ratio": 0.9995661978873095
-    },
-    {
-      "rank": 71,
-      "candidate": 665,
-      "growth_center": 0.146540567278862,
-      "growth_width": 0.017852937802672386,
-      "wound_radius": 0.9328147768974304,
-      "actual_removed_fraction": 0.05000001937150955,
-      "pre_mass": 76.84780883789062,
-      "final_mass": 76.91346740722656,
-      "mass_ratio": 1.0008543729782104,
-      "pre_motion_50_steps": 33.852651156754554,
-      "post_motion_50_steps": 33.818566598723514,
-      "motion_ratio": 0.998993149521046,
-      "score": 2.233508043580277,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9999430179595947,
-      "median_motion_ratio": 0.9990114776871435
-    },
-    {
-      "rank": 66,
-      "candidate": 373,
-      "growth_center": 0.14420075714588165,
-      "growth_width": 0.01527469139546156,
-      "wound_radius": 1.052449107170105,
-      "actual_removed_fraction": 0.04999992623925209,
-      "pre_mass": 71.11476135253906,
-      "final_mass": 71.569091796875,
-      "mass_ratio": 1.0063886642456055,
-      "pre_motion_50_steps": 31.73197092765971,
-      "post_motion_50_steps": 31.696552499386563,
-      "motion_ratio": 0.9988838251379376,
-      "score": 2.233569780450246,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9999279379844666,
-      "median_motion_ratio": 1.000287544809789
-    },
-    {
-      "rank": 113,
-      "candidate": 600,
-      "growth_center": 0.15050046145915985,
-      "growth_width": 0.018746549263596535,
-      "wound_radius": 1.097813606262207,
-      "actual_removed_fraction": 0.050000037997961044,
-      "pre_mass": 79.1317138671875,
-      "final_mass": 78.91175842285156,
-      "mass_ratio": 0.9972203969955444,
-      "pre_motion_50_steps": 33.93856463695804,
-      "post_motion_50_steps": 33.97076836529684,
-      "motion_ratio": 1.0009488830386106,
-      "score": 2.2287063112958894,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0000743865966797,
-      "median_motion_ratio": 1.0005868176868482
-    },
-    {
-      "rank": 121,
-      "candidate": 757,
-      "growth_center": 0.14540427923202515,
-      "growth_width": 0.018850887194275856,
-      "wound_radius": 1.0971674919128418,
-      "actual_removed_fraction": 0.05000000819563866,
-      "pre_mass": 78.21043395996094,
-      "final_mass": 78.27877807617188,
-      "mass_ratio": 1.0008738040924072,
-      "pre_motion_50_steps": 35.24556910578478,
-      "post_motion_50_steps": 35.200657727586616,
-      "motion_ratio": 0.998725758177904,
-      "score": 2.2280856187599074,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9999091625213623,
-      "median_motion_ratio": 0.9994624486483746
-    },
-    {
-      "rank": 33,
-      "candidate": 237,
-      "growth_center": 0.147040456533432,
-      "growth_width": 0.01763215847313404,
-      "wound_radius": 1.0377733707427979,
-      "actual_removed_fraction": 0.05000004544854164,
-      "pre_mass": 76.6336898803711,
-      "final_mass": 76.64801025390625,
-      "mass_ratio": 1.0001869201660156,
-      "pre_motion_50_steps": 33.43096666767278,
-      "post_motion_50_steps": 33.48747653369856,
-      "motion_ratio": 1.0016903449603336,
-      "score": 2.2361808852480953,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0000914335250854,
-      "median_motion_ratio": 0.9996049298807763
-    },
-    {
-      "rank": 92,
-      "candidate": 112,
-      "growth_center": 0.1497126817703247,
-      "growth_width": 0.018688693642616272,
-      "wound_radius": 1.117181658744812,
-      "actual_removed_fraction": 0.05000004917383194,
-      "pre_mass": 78.84880065917969,
-      "final_mass": 78.92154693603516,
-      "mass_ratio": 1.0009225606918335,
-      "pre_motion_50_steps": 34.04005338541363,
-      "post_motion_50_steps": 34.06209699807857,
-      "motion_ratio": 1.0006475786749027,
-      "score": 2.2307896493718897,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9999069571495056,
-      "median_motion_ratio": 0.9999529526158799
-    },
-    {
-      "rank": 72,
-      "candidate": 727,
-      "growth_center": 0.14342257380485535,
-      "growth_width": 0.016729628667235374,
-      "wound_radius": 1.0793216228485107,
-      "actual_removed_fraction": 0.05000004544854164,
-      "pre_mass": 74.67720794677734,
-      "final_mass": 74.47274780273438,
-      "mass_ratio": 0.9972620606422424,
-      "pre_motion_50_steps": 33.16362008303818,
-      "post_motion_50_steps": 33.15929995159575,
-      "motion_ratio": 0.9998697328147043,
-      "score": 2.2332664715766097,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0000948905944824,
-      "median_motion_ratio": 0.9998276463792434
-    },
-    {
-      "rank": 233,
       "candidate": 555,
       "growth_center": 0.1255391389131546,
       "growth_width": 0.014048256911337376,
-      "wound_radius": 1.0389056205749512,
-      "actual_removed_fraction": 0.0499999038875103,
+      "viable_control": true,
       "pre_mass": 67.4877700805664,
-      "final_mass": 67.05142211914062,
-      "mass_ratio": 0.9935343861579895,
+      "control_final_mass": 67.14234924316406,
       "pre_motion_50_steps": 33.471078396230766,
-      "post_motion_50_steps": 33.527725548710414,
-      "motion_ratio": 1.0016924208957076,
-      "score": 2.202912525995526,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9999051094055176,
-      "median_motion_ratio": 0.9994583435362787
+      "control_motion_50_steps": 33.624862888501205,
+      "mean_recovery_score": 0.994631963986986,
+      "recovered_magnitudes": 3,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": true,
+      "parameter_distance": 2.0522453784942627,
+      "per_damage": [
+        {
+          "candidate": 555,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.03999996930360794,
+          "wound_radius": 0.993877439680678,
+          "mass_ratio_to_control": 0.9975990056991577,
+          "motion_ratio_to_control": 0.9989324581367689,
+          "aligned_similarity_to_control": 0.9681840649025079,
+          "functionally_recovered": true,
+          "recovery_score": 0.9965340269978561
+        },
+        {
+          "candidate": 555,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.05999995395541191,
+          "wound_radius": 1.1819768620948767,
+          "mass_ratio_to_control": 0.9951388835906982,
+          "motion_ratio_to_control": 0.9984421538184127,
+          "aligned_similarity_to_control": 0.9668807768305222,
+          "functionally_recovered": true,
+          "recovery_score": 0.9935886102807474
+        },
+        {
+          "candidate": 555,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999993860721588,
+          "wound_radius": 1.2744731072945807,
+          "mass_ratio_to_control": 0.9966083765029907,
+          "motion_ratio_to_control": 0.9971552297898755,
+          "aligned_similarity_to_control": 0.8042096809037137,
+          "functionally_recovered": true,
+          "recovery_score": 0.9937732546823544
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 35,
+      "mean_seed_recovery_rate": 0.9722222222222222,
+      "mean_seed_recovery_score": 0.965253327206582,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9938003348570077
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9942203495599787
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9887850053381757
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8842076190711657
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 11,
+          "trials": 12
+        }
+      ]
     },
     {
-      "rank": 13,
-      "candidate": 866,
-      "growth_center": 0.1482820361852646,
-      "growth_width": 0.01678539253771305,
-      "wound_radius": 1.042917013168335,
-      "actual_removed_fraction": 0.05000004544854164,
-      "pre_mass": 75.64156341552734,
-      "final_mass": 75.54837036132812,
-      "mass_ratio": 0.9987679719924927,
-      "pre_motion_50_steps": 32.20151490157817,
-      "post_motion_50_steps": 32.19575450016405,
-      "motion_ratio": 0.999821113962131,
-      "score": 2.239348333929528,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.000096321105957,
-      "median_motion_ratio": 1.0003350862507752
-    },
-    {
-      "rank": 97,
-      "candidate": 583,
-      "growth_center": 0.15101128816604614,
-      "growth_width": 0.018669134005904198,
-      "wound_radius": 1.1560083627700806,
-      "actual_removed_fraction": 0.050000015646219254,
-      "pre_mass": 78.94269561767578,
-      "final_mass": 78.84294891357422,
-      "mass_ratio": 0.9987364411354065,
-      "pre_motion_50_steps": 33.72653771395826,
-      "post_motion_50_steps": 33.751818035988215,
-      "motion_ratio": 1.0007495676622475,
-      "score": 2.2305008420135994,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0001068115234375,
-      "median_motion_ratio": 1.000052148473023
-    },
-    {
-      "rank": 24,
-      "candidate": 765,
-      "growth_center": 0.15251174569129944,
-      "growth_width": 0.017022883519530296,
-      "wound_radius": 1.1279343366622925,
-      "actual_removed_fraction": 0.050000015646219254,
-      "pre_mass": 76.6094741821289,
-      "final_mass": 76.71243286132812,
-      "mass_ratio": 1.0013439655303955,
-      "pre_motion_50_steps": 31.650535003245718,
-      "post_motion_50_steps": 31.64154430942576,
-      "motion_ratio": 0.9997159386462493,
-      "score": 2.2376385134281347,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.999879002571106,
-      "median_motion_ratio": 1.0003556464101626
-    },
-    {
-      "rank": 184,
-      "candidate": 256,
-      "growth_center": 0.14381778240203857,
-      "growth_width": 0.01861937902867794,
-      "wound_radius": 1.1387906074523926,
-      "actual_removed_fraction": 0.05000005289912224,
-      "pre_mass": 77.97248077392578,
-      "final_mass": 77.33777618408203,
-      "mass_ratio": 0.9918599128723145,
-      "pre_motion_50_steps": 35.36574178290314,
-      "post_motion_50_steps": 35.34821000790627,
-      "motion_ratio": 0.9995042723801894,
-      "score": 2.2209113790936064,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9998717308044434,
-      "median_motion_ratio": 0.999542600640639
-    },
-    {
-      "rank": 102,
-      "candidate": 349,
-      "growth_center": 0.15572693943977356,
-      "growth_width": 0.0183836929500103,
-      "wound_radius": 1.3206826448440552,
-      "actual_removed_fraction": 0.05000005289912224,
-      "pre_mass": 79.06531524658203,
-      "final_mass": 79.13866424560547,
-      "mass_ratio": 1.0009276866912842,
-      "pre_motion_50_steps": 32.49953314671419,
-      "post_motion_50_steps": 32.49790136086427,
-      "motion_ratio": 0.9999497904833723,
-      "score": 2.229634534554098,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0001335144042969,
-      "median_motion_ratio": 1.000012206248667
-    },
-    {
-      "rank": 41,
-      "candidate": 447,
-      "growth_center": 0.1506173461675644,
-      "growth_width": 0.01773577369749546,
-      "wound_radius": 1.0404404401779175,
-      "actual_removed_fraction": 0.04999997466802597,
-      "pre_mass": 77.23468780517578,
-      "final_mass": 77.30647277832031,
-      "mass_ratio": 1.0009294748306274,
-      "pre_motion_50_steps": 32.82313490270961,
-      "post_motion_50_steps": 32.822180104823445,
-      "motion_ratio": 0.9999709108258856,
-      "score": 2.235345742138365,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9998620748519897,
-      "median_motion_ratio": 1.0004958221198954
-    },
-    {
-      "rank": 134,
-      "candidate": 871,
-      "growth_center": 0.1431502401828766,
-      "growth_width": 0.017882587388157845,
-      "wound_radius": 1.1104397773742676,
-      "actual_removed_fraction": 0.049999941140413284,
-      "pre_mass": 76.38375854492188,
-      "final_mass": 76.72178649902344,
-      "mass_ratio": 1.0044254064559937,
-      "pre_motion_50_steps": 34.69975668681826,
-      "post_motion_50_steps": 34.67020111398155,
-      "motion_ratio": 0.999148248412706,
-      "score": 2.226975135201836,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9998414516448975,
-      "median_motion_ratio": 1.000517328563052
-    },
-    {
-      "rank": 44,
-      "candidate": 202,
-      "growth_center": 0.15107862651348114,
-      "growth_width": 0.017462998628616333,
-      "wound_radius": 1.0571753978729248,
-      "actual_removed_fraction": 0.04999997466802597,
-      "pre_mass": 76.89685821533203,
-      "final_mass": 77.06919860839844,
-      "mass_ratio": 1.0022411346435547,
-      "pre_motion_50_steps": 32.410204759059084,
-      "post_motion_50_steps": 32.39627447026221,
-      "motion_ratio": 0.9995701881891698,
-      "score": 2.2352058983133785,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0001623630523682,
-      "median_motion_ratio": 1.0002361543032485
-    },
-    {
-      "rank": 70,
-      "candidate": 417,
-      "growth_center": 0.14381670951843262,
-      "growth_width": 0.01724507473409176,
-      "wound_radius": 1.0761115550994873,
-      "actual_removed_fraction": 0.04999997094273567,
-      "pre_mass": 75.46025085449219,
-      "final_mass": 75.52339935302734,
-      "mass_ratio": 1.0008368492126465,
-      "pre_motion_50_steps": 33.716118364394106,
-      "post_motion_50_steps": 33.66105576829294,
-      "motion_ratio": 0.998366876177558,
-      "score": 2.2335163575243375,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0001649856567383,
-      "median_motion_ratio": 0.9991205652131208
-    },
-    {
-      "rank": 79,
-      "candidate": 773,
-      "growth_center": 0.14530064165592194,
-      "growth_width": 0.01782228611409664,
-      "wound_radius": 1.1024786233901978,
-      "actual_removed_fraction": 0.04999999329447746,
-      "pre_mass": 76.78482818603516,
-      "final_mass": 76.90438079833984,
-      "mass_ratio": 1.0015569925308228,
-      "pre_motion_50_steps": 34.06932476378644,
-      "post_motion_50_steps": 34.06212734963261,
-      "motion_ratio": 0.9997887420956026,
-      "score": 2.2322508943156336,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9998335242271423,
-      "median_motion_ratio": 0.9996935874676071
-    },
-    {
-      "rank": 162,
-      "candidate": 431,
-      "growth_center": 0.14063748717308044,
-      "growth_width": 0.015464534983038902,
-      "wound_radius": 0.8569200038909912,
-      "actual_removed_fraction": 0.050000108778476715,
-      "pre_mass": 71.33895874023438,
-      "final_mass": 72.13783264160156,
-      "mass_ratio": 1.0111982822418213,
-      "pre_motion_50_steps": 32.16133902557871,
-      "post_motion_50_steps": 32.10718424817012,
-      "motion_ratio": 0.998316152901298,
-      "score": 2.222604641445191,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.0001767873764038,
-      "median_motion_ratio": 0.9984241048418652
-    },
-    {
-      "rank": 221,
-      "candidate": 288,
-      "growth_center": 0.1296847015619278,
-      "growth_width": 0.014556066133081913,
-      "wound_radius": 1.051774024963379,
-      "actual_removed_fraction": 0.04999994859099388,
-      "pre_mass": 69.10285186767578,
-      "final_mass": 68.65692901611328,
-      "mass_ratio": 0.9935469627380371,
-      "pre_motion_50_steps": 33.24281234461765,
-      "post_motion_50_steps": 33.317754684991726,
-      "motion_ratio": 1.0022543923058367,
-      "score": 2.210179040978309,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.9997849464416504,
-      "median_motion_ratio": 1.000015903004661
-    },
-    {
-      "rank": 60,
-      "candidate": 37,
-      "growth_center": 0.14692695438861847,
-      "growth_width": 0.01725984364748001,
-      "wound_radius": 0.9420686364173889,
-      "actual_removed_fraction": 0.04999999329447746,
-      "pre_mass": 76.10321807861328,
-      "final_mass": 75.83687591552734,
-      "mass_ratio": 0.9965002536773682,
-      "pre_motion_50_steps": 33.029000692323976,
-      "post_motion_50_steps": 33.03556604223163,
-      "motion_ratio": 1.000198775311697,
-      "score": 2.2341441152071924,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 1.000219464302063,
-      "median_motion_ratio": 0.9997753501963929
-    },
-    {
-      "rank": 229,
       "candidate": 339,
       "growth_center": 0.12678304314613342,
       "growth_width": 0.014517874456942081,
-      "wound_radius": 1.094125747680664,
-      "actual_removed_fraction": 0.04999997839331627,
+      "viable_control": true,
       "pre_mass": 67.634765625,
-      "final_mass": 67.99365234375,
-      "mass_ratio": 1.0053062438964844,
+      "control_final_mass": 67.86186218261719,
       "pre_motion_50_steps": 34.0564586635328,
-      "post_motion_50_steps": 34.02016985295063,
-      "motion_ratio": 0.9989344514372239,
-      "score": 2.20565741600996,
-      "multi_condition_passed": 12,
-      "multi_condition_trials": 12,
-      "multi_condition_recovery_rate": 1.0,
-      "median_mass_ratio": 0.999743640422821,
-      "median_motion_ratio": 1.000638640939449
+      "control_motion_50_steps": 34.06228841430648,
+      "mean_recovery_score": 0.9911571133194811,
+      "recovered_magnitudes": 3,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": true,
+      "parameter_distance": 1.9384976625442505,
+      "per_damage": [
+        {
+          "candidate": 339,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000000283122063,
+          "wound_radius": 0.935709272487802,
+          "mass_ratio_to_control": 1.0070056915283203,
+          "motion_ratio_to_control": 0.9976529740816902,
+          "aligned_similarity_to_control": 0.9922419424993351,
+          "functionally_recovered": true,
+          "recovery_score": 0.9907123489714983
+        },
+        {
+          "candidate": 339,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.05999995023012161,
+          "wound_radius": 1.175578209481605,
+          "mass_ratio_to_control": 1.0091177225112915,
+          "motion_ratio_to_control": 0.9993280311200029,
+          "aligned_similarity_to_control": 0.9729884801835058,
+          "functionally_recovered": true,
+          "recovery_score": 0.990298761806575
+        },
+        {
+          "candidate": 339,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000000566244125,
+          "wound_radius": 1.2368909323773136,
+          "mass_ratio_to_control": 1.0072917938232422,
+          "motion_ratio_to_control": 0.999697044549321,
+          "aligned_similarity_to_control": 0.9956380677749762,
+          "functionally_recovered": true,
+          "recovery_score": 0.99246022918037
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 35,
+      "mean_seed_recovery_rate": 0.9722222222222222,
+      "mean_seed_recovery_score": 0.9648330763820563,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8822170567634284
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9899356127831855
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9950243913312361
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9921552446503747
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 11,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 397,
+      "growth_center": 0.12660937011241913,
+      "growth_width": 0.014510677196085453,
+      "viable_control": true,
+      "pre_mass": 67.54144287109375,
+      "control_final_mass": 67.5687484741211,
+      "pre_motion_50_steps": 34.07732335511896,
+      "control_motion_50_steps": 34.143139434869745,
+      "mean_recovery_score": 0.9855867040746075,
+      "recovered_magnitudes": 3,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": true,
+      "parameter_distance": 1.9530545473098755,
+      "per_damage": [
+        {
+          "candidate": 397,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000003635883331,
+          "wound_radius": 0.9305486573852912,
+          "mass_ratio_to_control": 1.0094985961914062,
+          "motion_ratio_to_control": 0.9994570290032849,
+          "aligned_similarity_to_control": 0.982544876789552,
+          "functionally_recovered": true,
+          "recovery_score": 0.9900529161447021
+        },
+        {
+          "candidate": 397,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000005453824997,
+          "wound_radius": 1.1799611305006723,
+          "mass_ratio_to_control": 1.0169893503189087,
+          "motion_ratio_to_control": 0.9957236312272246,
+          "aligned_similarity_to_control": 0.9689703924490803,
+          "functionally_recovered": true,
+          "recovery_score": 0.979089536104763
+        },
+        {
+          "candidate": 397,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000007271766663,
+          "wound_radius": 1.2297696952313812,
+          "mass_ratio_to_control": 1.0121403932571411,
+          "motion_ratio_to_control": 0.9996077267541436,
+          "aligned_similarity_to_control": 0.9568125816057188,
+          "functionally_recovered": true,
+          "recovery_score": 0.9876176599743574
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 34,
+      "mean_seed_recovery_rate": 0.9444444444444444,
+      "mean_seed_recovery_score": 0.9394746903262645,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9953631729769982
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8859767217213331
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9939794492886173
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8825794173181097
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 10,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 159,
+      "growth_center": 0.12907765805721283,
+      "growth_width": 0.015448435209691525,
+      "viable_control": true,
+      "pre_mass": 69.81795501708984,
+      "control_final_mass": 69.25601196289062,
+      "pre_motion_50_steps": 34.891255297813636,
+      "control_motion_50_steps": 35.04122437673591,
+      "mean_recovery_score": 0.6599602177416332,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.7471295595169067,
+      "per_damage": [
+        {
+          "candidate": 159,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.039999984204769135,
+          "wound_radius": 0.9876901782262894,
+          "mass_ratio_to_control": 1.0089062452316284,
+          "motion_ratio_to_control": 0.9977434927846083,
+          "aligned_similarity_to_control": 0.9837712409314525,
+          "functionally_recovered": true,
+          "recovery_score": 0.9889357881371252
+        },
+        {
+          "candidate": 159,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000002846121788,
+          "wound_radius": 1.190168065244109,
+          "mass_ratio_to_control": 1.0066111087799072,
+          "motion_ratio_to_control": 0.9974961093857599,
+          "aligned_similarity_to_control": 0.9909854776245378,
+          "functionally_recovered": true,
+          "recovery_score": 0.9909448650877741
+        },
+        {
+          "candidate": 159,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999996840953827,
+          "wound_radius": 1.275635649266114,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 34,
+      "mean_seed_recovery_rate": 0.9444444444444444,
+      "mean_seed_recovery_score": 0.9387946922213928,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8854312348750109
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.993074663572798
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9908540946312567
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8858187758065059
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 10,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 30,
+      "growth_center": 0.12634330987930298,
+      "growth_width": 0.013590723276138306,
+      "viable_control": true,
+      "pre_mass": 66.23709869384766,
+      "control_final_mass": 66.15174865722656,
+      "pre_motion_50_steps": 32.636270786094684,
+      "control_motion_50_steps": 32.61963786809387,
+      "mean_recovery_score": 0.994330349645932,
+      "recovered_magnitudes": 3,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": true,
+      "parameter_distance": 2.002626419067383,
+      "per_damage": [
+        {
+          "candidate": 30,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.039999980479478836,
+          "wound_radius": 1.0266662064979089,
+          "mass_ratio_to_control": 1.0013798475265503,
+          "motion_ratio_to_control": 0.9987468606547191,
+          "aligned_similarity_to_control": 0.9711535357687324,
+          "functionally_recovered": true,
+          "recovery_score": 0.997370641242347
+        },
+        {
+          "candidate": 30,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.05999991297721863,
+          "wound_radius": 1.1974467746084565,
+          "mass_ratio_to_control": 0.9885908365249634,
+          "motion_ratio_to_control": 1.0051439644103195,
+          "aligned_similarity_to_control": 0.9866264125063813,
+          "functionally_recovered": true,
+          "recovery_score": 0.9885908365249634
+        },
+        {
+          "candidate": 30,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999996095895767,
+          "wound_radius": 1.2324770238886276,
+          "mass_ratio_to_control": 1.0029792785644531,
+          "motion_ratio_to_control": 1.001205661230738,
+          "aligned_similarity_to_control": 0.713596520349726,
+          "functionally_recovered": true,
+          "recovery_score": 0.9970295711704859
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 33,
+      "mean_seed_recovery_rate": 0.9166666666666666,
+      "mean_seed_recovery_score": 0.9113508385162874,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9927280391109243
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.995341867491354
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.77430206021226
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8830313872506113
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 9,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 304,
+      "growth_center": 0.12652915716171265,
+      "growth_width": 0.013574466109275818,
+      "viable_control": true,
+      "pre_mass": 66.09642791748047,
+      "control_final_mass": 66.41127014160156,
+      "pre_motion_50_steps": 32.530900562691734,
+      "control_motion_50_steps": 32.491810748000525,
+      "mean_recovery_score": 0.9915482401847839,
+      "recovered_magnitudes": 3,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": true,
+      "parameter_distance": 1.9881070852279663,
+      "per_damage": [
+        {
+          "candidate": 304,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.039999984204769135,
+          "wound_radius": 0.9217960573852315,
+          "mass_ratio_to_control": 0.9976269006729126,
+          "motion_ratio_to_control": 1.0014225259675396,
+          "aligned_similarity_to_control": 0.9892499749345856,
+          "functionally_recovered": true,
+          "recovery_score": 0.9976269006729126
+        },
+        {
+          "candidate": 304,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000000610947609,
+          "wound_radius": 1.162424597349664,
+          "mass_ratio_to_control": 0.9974454045295715,
+          "motion_ratio_to_control": 1.0015731357849238,
+          "aligned_similarity_to_control": 0.9863988661388414,
+          "functionally_recovered": true,
+          "recovery_score": 0.9974454045295715
+        },
+        {
+          "candidate": 304,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000002801418304,
+          "wound_radius": 1.2971906278290308,
+          "mass_ratio_to_control": 0.9795724153518677,
+          "motion_ratio_to_control": 1.0228294534588265,
+          "aligned_similarity_to_control": 0.7858463287990864,
+          "functionally_recovered": true,
+          "recovery_score": 0.9795724153518677
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 33,
+      "mean_seed_recovery_rate": 0.9166666666666666,
+      "mean_seed_recovery_score": 0.9105187060635479,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9951779194799764
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.994243015667556
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6646738913324144
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9879799977742452
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 9,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 466,
+      "growth_center": 0.1299700289964676,
+      "growth_width": 0.015628932043910027,
+      "viable_control": true,
+      "pre_mass": 70.4719467163086,
+      "control_final_mass": 70.56806945800781,
+      "pre_motion_50_steps": 35.0000634093185,
+      "control_motion_50_steps": 34.966611940964896,
+      "mean_recovery_score": 0.6645740035704925,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.6765540838241577,
+      "per_damage": [
+        {
+          "candidate": 466,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000000283122063,
+          "wound_radius": 0.8700015873639758,
+          "mass_ratio_to_control": 1.0037779808044434,
+          "motion_ratio_to_control": 0.9987547328574912,
+          "aligned_similarity_to_control": 0.9646916336465782,
+          "functionally_recovered": true,
+          "recovery_score": 0.9949956583597037
+        },
+        {
+          "candidate": 466,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000000610947609,
+          "wound_radius": 1.1787610655041438,
+          "mass_ratio_to_control": 1.0008591413497925,
+          "motion_ratio_to_control": 0.9995843994582065,
+          "aligned_similarity_to_control": 0.9535737177289779,
+          "functionally_recovered": true,
+          "recovery_score": 0.9987263523517736
+        },
+        {
+          "candidate": 466,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000000566244125,
+          "wound_radius": 1.229712393322527,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 31,
+      "mean_seed_recovery_rate": 0.861111111111111,
+      "mean_seed_recovery_score": 0.857457356071177,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8862659989681282
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8863190547275241
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8843344217015613
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7729099488874946
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 7,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 299,
+      "growth_center": 0.12865984439849854,
+      "growth_width": 0.014136179350316525,
+      "viable_control": true,
+      "pre_mass": 67.44793701171875,
+      "control_final_mass": 67.21575927734375,
+      "pre_motion_50_steps": 32.81985995547314,
+      "control_motion_50_steps": 32.9130314740727,
+      "mean_recovery_score": 0.9860395984207071,
+      "recovered_magnitudes": 3,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": true,
+      "parameter_distance": 1.7914111614227295,
+      "per_damage": [
+        {
+          "candidate": 299,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.039999838918447495,
+          "wound_radius": 0.954875335207574,
+          "mass_ratio_to_control": 0.9947633743286133,
+          "motion_ratio_to_control": 1.0014260528833483,
+          "aligned_similarity_to_control": 0.9982718817335254,
+          "functionally_recovered": true,
+          "recovery_score": 0.9947633743286133
+        },
+        {
+          "candidate": 299,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.05999992415308952,
+          "wound_radius": 1.178555141118818,
+          "mass_ratio_to_control": 1.013536810874939,
+          "motion_ratio_to_control": 0.9962483848362433,
+          "aligned_similarity_to_control": 0.9922948550101243,
+          "functionally_recovered": true,
+          "recovery_score": 0.9829424784051293
+        },
+        {
+          "candidate": 299,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999984174966812,
+          "wound_radius": 1.2849138965666929,
+          "mass_ratio_to_control": 1.018249750137329,
+          "motion_ratio_to_control": 0.9983052337609251,
+          "aligned_similarity_to_control": 0.7847647094383459,
+          "functionally_recovered": true,
+          "recovery_score": 0.9804129425283786
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 31,
+      "mean_seed_recovery_rate": 0.861111111111111,
+      "mean_seed_recovery_score": 0.8573104419638138,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7725097295345696
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9976931163335843
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8839048384619199
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.775134083525181
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 7,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 546,
+      "growth_center": 0.12680399417877197,
+      "growth_width": 0.013801056891679764,
+      "viable_control": true,
+      "pre_mass": 66.69422149658203,
+      "control_final_mass": 66.55843353271484,
+      "pre_motion_50_steps": 32.77855940264986,
+      "control_motion_50_steps": 32.87033954819761,
+      "mean_recovery_score": 0.6618786687265076,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.9561017751693726,
+      "per_damage": [
+        {
+          "candidate": 546,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000002145767212,
+          "wound_radius": 0.9475423643625125,
+          "mass_ratio_to_control": 1.0022364854812622,
+          "motion_ratio_to_control": 0.9978471153746247,
+          "aligned_similarity_to_control": 0.9924505884695637,
+          "functionally_recovered": true,
+          "recovery_score": 0.9956204247498236
+        },
+        {
+          "candidate": 546,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000003591179848,
+          "wound_radius": 1.1881838477390774,
+          "mass_ratio_to_control": 1.0060670375823975,
+          "motion_ratio_to_control": 0.9960220431693922,
+          "aligned_similarity_to_control": 0.99706899698339,
+          "functionally_recovered": true,
+          "recovery_score": 0.9900155814296991
+        },
+        {
+          "candidate": 546,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000004291534424,
+          "wound_radius": 1.2915133138635324,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 31,
+      "mean_seed_recovery_rate": 0.8611111111111112,
+      "mean_seed_recovery_score": 0.8570768283579198,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.77274096666814
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7735108381572438
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8859607026356922
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9960948059706036
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 7,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 785,
+      "growth_center": 0.12818726897239685,
+      "growth_width": 0.014162668026983738,
+      "viable_control": true,
+      "pre_mass": 68.24366760253906,
+      "control_final_mass": 67.59523010253906,
+      "pre_motion_50_steps": 33.048890178361205,
+      "control_motion_50_steps": 33.02868212896077,
+      "mean_recovery_score": 0.6619964052711454,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.8297419548034668,
+      "per_damage": [
+        {
+          "candidate": 785,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.040000069886446,
+          "wound_radius": 0.8287874268076929,
+          "mass_ratio_to_control": 0.9934055209159851,
+          "motion_ratio_to_control": 1.0044166567895152,
+          "aligned_similarity_to_control": 0.9768837303457858,
+          "functionally_recovered": true,
+          "recovery_score": 0.9934055209159851
+        },
+        {
+          "candidate": 785,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.059999994933605194,
+          "wound_radius": 1.354000067992483,
+          "mass_ratio_to_control": 1.0048850774765015,
+          "motion_ratio_to_control": 0.9974325431489377,
+          "aligned_similarity_to_control": 0.9748469159341977,
+          "functionally_recovered": true,
+          "recovery_score": 0.9925836948974515
+        },
+        {
+          "candidate": 785,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000002801418304,
+          "wound_radius": 1.410536328054938,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 31,
+      "mean_seed_recovery_rate": 0.861111111111111,
+      "mean_seed_recovery_score": 0.8549550841848296,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.883151509772606
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6625112709854094
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 9,
+          "recovery_rate": 1.0,
+          "mean_recovery_score": 0.9894808489383409
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8846767070429621
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 7,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 535,
+      "growth_center": 0.1320342719554901,
+      "growth_width": 0.015061222948133945,
+      "viable_control": true,
+      "pre_mass": 69.95049285888672,
+      "control_final_mass": 69.73574829101562,
+      "pre_motion_50_steps": 33.34902892915987,
+      "control_motion_50_steps": 33.498725571945535,
+      "mean_recovery_score": 0.6636258349111612,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.497222661972046,
+      "per_damage": [
+        {
+          "candidate": 535,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.03999999538064003,
+          "wound_radius": 0.8615422521866133,
+          "mass_ratio_to_control": 1.0011038780212402,
+          "motion_ratio_to_control": 0.9995910303619294,
+          "aligned_similarity_to_control": 0.9842670499194317,
+          "functionally_recovered": true,
+          "recovery_score": 0.998488820498527
+        },
+        {
+          "candidate": 535,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.059999994933605194,
+          "wound_radius": 1.2884355015069284,
+          "mass_ratio_to_control": 0.993531346321106,
+          "motion_ratio_to_control": 0.9988498983042855,
+          "aligned_similarity_to_control": 0.98198228644391,
+          "functionally_recovered": true,
+          "recovery_score": 0.9923886842349565
+        },
+        {
+          "candidate": 535,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999999076128006,
+          "wound_radius": 1.3745257327007823,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 28,
+      "mean_seed_recovery_rate": 0.7777777777777777,
+      "mean_seed_recovery_score": 0.7739289023330128,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8841155731361633
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7743451972520979
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6645049894556269
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.772749849488163
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 4,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 288,
+      "growth_center": 0.1296847015619278,
+      "growth_width": 0.014556066133081913,
+      "viable_control": true,
+      "pre_mass": 69.10285186767578,
+      "control_final_mass": 68.43472290039062,
+      "pre_motion_50_steps": 33.24281234461765,
+      "control_motion_50_steps": 33.35844497199056,
+      "mean_recovery_score": 0.6634795494187294,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.6965759992599487,
+      "per_damage": [
+        {
+          "candidate": 288,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000000283122063,
+          "wound_radius": 0.8010111421455339,
+          "mass_ratio_to_control": 1.0054866075515747,
+          "motion_ratio_to_control": 0.9972814645142382,
+          "aligned_similarity_to_control": 0.9589298341165672,
+          "functionally_recovered": true,
+          "recovery_score": 0.9918396297119098
+        },
+        {
+          "candidate": 288,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000000610947609,
+          "wound_radius": 1.2734975211680961,
+          "mass_ratio_to_control": 0.9995636343955994,
+          "motion_ratio_to_control": 0.9990349630397429,
+          "aligned_similarity_to_control": 0.985619045486417,
+          "functionally_recovered": true,
+          "recovery_score": 0.9985990185442787
+        },
+        {
+          "candidate": 288,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000000566244125,
+          "wound_radius": 1.2911613806210038,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 28,
+      "mean_seed_recovery_rate": 0.7777777777777777,
+      "mean_seed_recovery_score": 0.7733124588897152,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7742663101051911
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8818956708980171
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7749250668590365
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6621627876966162
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 4,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 257,
+      "growth_center": 0.12370278686285019,
+      "growth_width": 0.012727638706564903,
+      "viable_control": true,
+      "pre_mass": 64.19538879394531,
+      "control_final_mass": 64.30377960205078,
+      "pre_motion_50_steps": 31.961502593076503,
+      "control_motion_50_steps": 31.979981361203272,
+      "mean_recovery_score": 0.6615082641137172,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 2.263871431350708,
+      "per_damage": [
+        {
+          "candidate": 257,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.040000032633543015,
+          "wound_radius": 0.7727833948633803,
+          "mass_ratio_to_control": 0.9919998049736023,
+          "motion_ratio_to_control": 0.9999432252706109,
+          "aligned_similarity_to_control": 0.9467145083008031,
+          "functionally_recovered": true,
+          "recovery_score": 0.9919434844531209
+        },
+        {
+          "candidate": 257,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000005081295967,
+          "wound_radius": 1.429675445141176,
+          "mass_ratio_to_control": 0.992581307888031,
+          "motion_ratio_to_control": 1.0009813702911543,
+          "aligned_similarity_to_control": 0.9797558315186571,
+          "functionally_recovered": true,
+          "recovery_score": 0.992581307888031
+        },
+        {
+          "candidate": 257,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000006526708603,
+          "wound_radius": 1.474022548294192,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 28,
+      "mean_seed_recovery_rate": 0.7777777777777777,
+      "mean_seed_recovery_score": 0.77268590565722,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 8,
+          "recovery_rate": 0.8888888888888888,
+          "mean_recovery_score": 0.8842487228935626
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7706086261785303
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7730020634301444
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6628842101266424
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 4,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 658,
+      "growth_center": 0.13219250738620758,
+      "growth_width": 0.01646605134010315,
+      "viable_control": true,
+      "pre_mass": 72.28399658203125,
+      "control_final_mass": 72.19511413574219,
+      "pre_motion_50_steps": 35.72022245808132,
+      "control_motion_50_steps": 35.73309662307498,
+      "mean_recovery_score": 0.6647973446635227,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.5285495519638062,
+      "per_damage": [
+        {
+          "candidate": 658,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.03999996557831764,
+          "wound_radius": 1.0266097683851636,
+          "mass_ratio_to_control": 0.9982455372810364,
+          "motion_ratio_to_control": 0.9983441545376608,
+          "aligned_similarity_to_control": 0.9849870365650905,
+          "functionally_recovered": true,
+          "recovery_score": 0.9965925969378292
+        },
+        {
+          "candidate": 658,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.05999995023012161,
+          "wound_radius": 1.2168122322586612,
+          "mass_ratio_to_control": 1.0006657838821411,
+          "motion_ratio_to_control": 0.9984637558355379,
+          "aligned_similarity_to_control": 0.9748718928308409,
+          "functionally_recovered": true,
+          "recovery_score": 0.9977994370527388
+        },
+        {
+          "candidate": 658,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999993115663528,
+          "wound_radius": 1.239965791552222,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 27,
+      "mean_seed_recovery_rate": 0.75,
+      "mean_seed_recovery_score": 0.7460905244354551,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7748431162277083
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7743217075006084
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.771921179694345
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6632760943191589
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 3,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 741,
+      "growth_center": 0.13326996564865112,
+      "growth_width": 0.015779627487063408,
+      "viable_control": true,
+      "pre_mass": 70.99726867675781,
+      "control_final_mass": 70.9197006225586,
+      "pre_motion_50_steps": 34.257750533235395,
+      "control_motion_50_steps": 34.295556077428465,
+      "mean_recovery_score": 0.663623430889172,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.4077281951904297,
+      "per_damage": [
+        {
+          "candidate": 741,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.039999984204769135,
+          "wound_radius": 0.9237875513714207,
+          "mass_ratio_to_control": 1.0059336423873901,
+          "motion_ratio_to_control": 1.0009848146579572,
+          "aligned_similarity_to_control": 0.9829923145258779,
+          "functionally_recovered": true,
+          "recovery_score": 0.9941013580445448
+        },
+        {
+          "candidate": 741,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.0599999725818634,
+          "wound_radius": 1.1168512249392686,
+          "mass_ratio_to_control": 1.0032415390014648,
+          "motion_ratio_to_control": 1.000785097786292,
+          "aligned_similarity_to_control": 0.9705130243508997,
+          "functionally_recovered": true,
+          "recovery_score": 0.9967689346229711
+        },
+        {
+          "candidate": 741,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999996840953827,
+          "wound_radius": 1.2751054306128706,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 27,
+      "mean_seed_recovery_rate": 0.75,
+      "mean_seed_recovery_score": 0.7446306833515827,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7719024257523155
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7723947112690779
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6623159628603602
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7719096335245771
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 3,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 956,
+      "growth_center": 0.13822419941425323,
+      "growth_width": 0.017494184896349907,
+      "viable_control": true,
+      "pre_mass": 75.17425537109375,
+      "control_final_mass": 74.97704315185547,
+      "pre_motion_50_steps": 35.41766836158286,
+      "control_motion_50_steps": 35.419474461534335,
+      "mean_recovery_score": 0.6625399828245323,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.1626665592193604,
+      "per_damage": [
+        {
+          "candidate": 956,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000004008412361,
+          "wound_radius": 1.1100219999953862,
+          "mass_ratio_to_control": 1.0047129392623901,
+          "motion_ratio_to_control": 0.997901551177152,
+          "aligned_similarity_to_control": 0.9956114815925216,
+          "functionally_recovered": true,
+          "recovery_score": 0.9932205629896249
+        },
+        {
+          "candidate": 956,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.060000061988830566,
+          "wound_radius": 1.1613941408289328,
+          "mass_ratio_to_control": 1.004789113998413,
+          "motion_ratio_to_control": 0.9991616775010067,
+          "aligned_similarity_to_control": 0.9609166444049019,
+          "functionally_recovered": true,
+          "recovery_score": 0.9943993854839721
+        },
+        {
+          "candidate": 956,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999998331069946,
+          "wound_radius": 1.3115235502105236,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 26,
+      "mean_seed_recovery_rate": 0.7222222222222222,
+      "mean_seed_recovery_score": 0.7195699596775638,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6631518733386886
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7741570142732391
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6648708021769002
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7761001489214272
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 2,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 354,
+      "growth_center": 0.13631178438663483,
+      "growth_width": 0.01712835766375065,
+      "viable_control": true,
+      "pre_mass": 73.99771118164062,
+      "control_final_mass": 73.8421859741211,
+      "pre_motion_50_steps": 35.49198307567556,
+      "control_motion_50_steps": 35.469652210908706,
+      "mean_recovery_score": 0.6625071106407957,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.2586824893951416,
+      "per_damage": [
+        {
+          "candidate": 354,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.039999883621931076,
+          "wound_radius": 0.9775337277834522,
+          "mass_ratio_to_control": 1.0052692890167236,
+          "motion_ratio_to_control": 0.9992147972060055,
+          "aligned_similarity_to_control": 0.9815378440698567,
+          "functionally_recovered": true,
+          "recovery_score": 0.9939772438322072
+        },
+        {
+          "candidate": 354,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000003218650818,
+          "wound_radius": 1.2301641193429749,
+          "mass_ratio_to_control": 1.0045126676559448,
+          "motion_ratio_to_control": 0.9980276223612595,
+          "aligned_similarity_to_control": 0.9701731478012658,
+          "functionally_recovered": true,
+          "recovery_score": 0.9935440880901798
+        },
+        {
+          "candidate": 354,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999997586011887,
+          "wound_radius": 1.470303422182731,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 26,
+      "mean_seed_recovery_rate": 0.7222222222222222,
+      "mean_seed_recovery_score": 0.7195021433488971,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6642320994596821
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6645993801906853
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7733840618692479
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7757930318759726
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 2,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 198,
+      "growth_center": 0.13754914700984955,
+      "growth_width": 0.017418546602129936,
+      "viable_control": true,
+      "pre_mass": 74.73503112792969,
+      "control_final_mass": 74.84829711914062,
+      "pre_motion_50_steps": 35.48300515915258,
+      "control_motion_50_steps": 35.4729538827357,
+      "mean_recovery_score": 0.6659519275029501,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.2008914947509766,
+      "per_damage": [
+        {
+          "candidate": 198,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.03999991714954376,
+          "wound_radius": 0.916181106087202,
+          "mass_ratio_to_control": 0.9986807107925415,
+          "motion_ratio_to_control": 1.0008473163945304,
+          "aligned_similarity_to_control": 0.9740327643511736,
+          "functionally_recovered": true,
+          "recovery_score": 0.9986807107925415
+        },
+        {
+          "candidate": 198,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.059999980032444,
+          "wound_radius": 1.3604488775249846,
+          "mass_ratio_to_control": 0.9991750717163086,
+          "motion_ratio_to_control": 1.0014399427444127,
+          "aligned_similarity_to_control": 0.9860516927575745,
+          "functionally_recovered": true,
+          "recovery_score": 0.9991750717163086
+        },
+        {
+          "candidate": 198,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000004291534424,
+          "wound_radius": 1.4442904663029208,
+          "mass_ratio_to_control": 40.9448356628418,
+          "motion_ratio_to_control": 0.2578477260614722,
+          "aligned_similarity_to_control": 0.09037561547607155,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 26,
+      "mean_seed_recovery_rate": 0.7222222222222222,
+      "mean_seed_recovery_score": 0.7194932657608831,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6650626576422376
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7715638251063761
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7765136599473208
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6648329203475982
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 2,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 358,
+      "growth_center": 0.12816676497459412,
+      "growth_width": 0.013387923128902912,
+      "viable_control": true,
+      "pre_mass": 65.78955078125,
+      "control_final_mass": 65.78264617919922,
+      "pre_motion_50_steps": 32.02988612105687,
+      "control_motion_50_steps": 32.08124098007481,
+      "mean_recovery_score": 0.6640396916389661,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.863538146018982,
+      "per_damage": [
+        {
+          "candidate": 358,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000009223818779,
+          "wound_radius": 1.0465129347885171,
+          "mass_ratio_to_control": 1.0026524066925049,
+          "motion_ratio_to_control": 1.0009151782663903,
+          "aligned_similarity_to_control": 0.986516531263405,
+          "functionally_recovered": true,
+          "recovery_score": 0.9973546099577475
+        },
+        {
+          "candidate": 358,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000004708766937,
+          "wound_radius": 1.1397935590403097,
+          "mass_ratio_to_control": 1.005263090133667,
+          "motion_ratio_to_control": 1.0006982569863756,
+          "aligned_similarity_to_control": 0.9394334922190898,
+          "functionally_recovered": true,
+          "recovery_score": 0.9947644649591509
+        },
+        {
+          "candidate": 358,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000006526708603,
+          "wound_radius": 1.1948522262107504,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 26,
+      "mean_seed_recovery_rate": 0.7222222222222222,
+      "mean_seed_recovery_score": 0.7173876364900429,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7723106857739275
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6613216240453604
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7717764542201704
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6641417819207134
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 2,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 388,
+      "growth_center": 0.13353317975997925,
+      "growth_width": 0.01472508441656828,
+      "viable_control": true,
+      "pre_mass": 70.29078674316406,
+      "control_final_mass": 69.29249572753906,
+      "pre_motion_50_steps": 32.61185248710293,
+      "control_motion_50_steps": 32.5385075767346,
+      "mean_recovery_score": 0.6628042260941126,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.3739556074142456,
+      "per_damage": [
+        {
+          "candidate": 388,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.039999984204769135,
+          "wound_radius": 0.7836794709989638,
+          "mass_ratio_to_control": 1.0072458982467651,
+          "motion_ratio_to_control": 0.9980231827752718,
+          "aligned_similarity_to_control": 0.9630843156959327,
+          "functionally_recovered": true,
+          "recovery_score": 0.9908436306491328
+        },
+        {
+          "candidate": 388,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.0599999725818634,
+          "wound_radius": 1.3644606673809598,
+          "mass_ratio_to_control": 1.002436876296997,
+          "motion_ratio_to_control": 1.0031213151213603,
+          "aligned_similarity_to_control": 0.938728867262708,
+          "functionally_recovered": true,
+          "recovery_score": 0.9975690476332048
+        },
+        {
+          "candidate": 388,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999996840953827,
+          "wound_radius": 1.4099921018239348,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 26,
+      "mean_seed_recovery_rate": 0.7222222222222222,
+      "mean_seed_recovery_score": 0.7164437821164449,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6603140845326677
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6629392567770309
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7750996176065862
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7674221695494947
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 2,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 265,
+      "growth_center": 0.13905268907546997,
+      "growth_width": 0.017690712586045265,
+      "viable_control": true,
+      "pre_mass": 75.42367553710938,
+      "control_final_mass": 75.3866195678711,
+      "pre_motion_50_steps": 35.45379772398126,
+      "control_motion_50_steps": 35.457244797767906,
+      "mean_recovery_score": 0.666102140431969,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.1334655284881592,
+      "per_damage": [
+        {
+          "candidate": 265,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.0400000736117363,
+          "wound_radius": 1.0407628974953762,
+          "mass_ratio_to_control": 0.9995464086532593,
+          "motion_ratio_to_control": 1.0002817126364252,
+          "aligned_similarity_to_control": 0.9758844374051319,
+          "functionally_recovered": true,
+          "recovery_score": 0.9995464086532593
+        },
+        {
+          "candidate": 265,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000000983476639,
+          "wound_radius": 1.122196579245918,
+          "mass_ratio_to_control": 1.001193642616272,
+          "motion_ratio_to_control": 0.9999521751571663,
+          "aligned_similarity_to_control": 0.957626089794116,
+          "functionally_recovered": true,
+          "recovery_score": 0.9987600126426477
+        },
+        {
+          "candidate": 265,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.08000004291534424,
+          "wound_radius": 1.356392986138823,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 25,
+      "mean_seed_recovery_rate": 0.6944444444444444,
+      "mean_seed_recovery_score": 0.6941847249111279,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6643329477872933
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.663866334336165
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7831998595828937
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6653397579381599
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 1,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 691,
+      "growth_center": 0.13319900631904602,
+      "growth_width": 0.015970200300216675,
+      "viable_control": true,
+      "pre_mass": 71.60745239257812,
+      "control_final_mass": 71.67817687988281,
+      "pre_motion_50_steps": 34.63413068212665,
+      "control_motion_50_steps": 34.60364603644859,
+      "mean_recovery_score": 0.6636984119962704,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.4209376573562622,
+      "per_damage": [
+        {
+          "candidate": 691,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.03999996930360794,
+          "wound_radius": 0.8498510872850744,
+          "mass_ratio_to_control": 0.9940274357795715,
+          "motion_ratio_to_control": 0.9996639801432844,
+          "aligned_similarity_to_control": 0.9788556690307113,
+          "functionally_recovered": true,
+          "recovery_score": 0.9936934228230295
+        },
+        {
+          "candidate": 691,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.06000000983476639,
+          "wound_radius": 1.2649447938811493,
+          "mass_ratio_to_control": 0.9982805848121643,
+          "motion_ratio_to_control": 0.9991197147778368,
+          "aligned_similarity_to_control": 0.9897252025739353,
+          "functionally_recovered": true,
+          "recovery_score": 0.9974018131657817
+        },
+        {
+          "candidate": 691,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999993860721588,
+          "wound_radius": 1.3540628487806587,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 25,
+      "mean_seed_recovery_rate": 0.6944444444444444,
+      "mean_seed_recovery_score": 0.6922355754610001,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7754460437636885
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6641936657823528
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6633357556936819
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6659668366042774
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 1,
+          "trials": 12
+        }
+      ]
+    },
+    {
+      "candidate": 406,
+      "growth_center": 0.13978847861289978,
+      "growth_width": 0.017763135954737663,
+      "viable_control": true,
+      "pre_mass": 75.45539855957031,
+      "control_final_mass": 75.31684875488281,
+      "pre_motion_50_steps": 35.347745825367085,
+      "control_motion_50_steps": 35.3655178390628,
+      "mean_recovery_score": 0.663960213973544,
+      "recovered_magnitudes": 2,
+      "training_magnitudes": 3,
+      "passed_all_training_magnitudes": false,
+      "parameter_distance": 1.0960458517074585,
+      "per_damage": [
+        {
+          "candidate": 406,
+          "target_removed_fraction": 0.04,
+          "actual_removed_fraction": 0.04000004008412361,
+          "wound_radius": 1.0244868551661126,
+          "mass_ratio_to_control": 1.0043504238128662,
+          "motion_ratio_to_control": 1.0011432718901883,
+          "aligned_similarity_to_control": 0.9630029213925575,
+          "functionally_recovered": true,
+          "recovery_score": 0.9956684203941982
+        },
+        {
+          "candidate": 406,
+          "target_removed_fraction": 0.06,
+          "actual_removed_fraction": 0.05999996140599251,
+          "wound_radius": 1.1763459057897412,
+          "mass_ratio_to_control": 1.0038021802902222,
+          "motion_ratio_to_control": 1.0002026797621142,
+          "aligned_similarity_to_control": 0.9949020790000705,
+          "functionally_recovered": true,
+          "recovery_score": 0.9962122215264337
+        },
+        {
+          "candidate": 406,
+          "target_removed_fraction": 0.08,
+          "actual_removed_fraction": 0.07999998331069946,
+          "wound_radius": 1.3026716718357336,
+          "mass_ratio_to_control": 0.0,
+          "motion_ratio_to_control": 0.0,
+          "aligned_similarity_to_control": 0.0,
+          "functionally_recovered": false,
+          "recovery_score": 0.0
+        }
+      ],
+      "independent_initial_conditions": 4,
+      "trials": 36,
+      "valid_trials": 36,
+      "recovered": 25,
+      "mean_seed_recovery_rate": 0.6944444444444444,
+      "mean_seed_recovery_score": 0.6918416979143196,
+      "seed_breakdown": [
+        {
+          "initial_condition_seed": 101,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6634462220222528
+        },
+        {
+          "initial_condition_seed": 211,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6647984161071856
+        },
+        {
+          "initial_condition_seed": 307,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 6,
+          "recovery_rate": 0.6666666666666666,
+          "mean_recovery_score": 0.6650344185077732
+        },
+        {
+          "initial_condition_seed": 401,
+          "valid_trials": 9,
+          "trials": 9,
+          "recovered": 7,
+          "recovery_rate": 0.7777777777777778,
+          "mean_recovery_score": 0.7740877350200666
+        }
+      ],
+      "damage_breakdown": [
+        {
+          "target_removed_fraction": 0.04,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.06,
+          "recovered": 12,
+          "trials": 12
+        },
+        {
+          "target_removed_fraction": 0.08,
+          "recovered": 1,
+          "trials": 12
+        }
+      ]
+    }
+  ],
+  "selected_condition_results": [
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 180,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.03999987989664078,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.000317096710205,
+      "motion_ratio_to_control": 1.0000023952736683,
+      "aligned_similarity_to_control": 0.9785338939141774,
+      "functionally_recovered": true,
+      "recovery_score": 0.9996830038082445
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 180,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.059999994933605194,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0013716220855713,
+      "motion_ratio_to_control": 0.9981716883997479,
+      "aligned_similarity_to_control": 0.9680212503389428,
+      "functionally_recovered": true,
+      "recovery_score": 0.9968044494019525
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 180,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.07999993115663528,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9948956966400146,
+      "motion_ratio_to_control": 1.0013349251527135,
+      "aligned_similarity_to_control": 0.9591458480679727,
+      "functionally_recovered": true,
+      "recovery_score": 0.9948956966400146
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 300,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.03999999165534973,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9993010759353638,
+      "motion_ratio_to_control": 1.001709835212891,
+      "aligned_similarity_to_control": 0.9661870958801366,
+      "functionally_recovered": true,
+      "recovery_score": 0.9993010759353638
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 300,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.0599999874830246,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9984990954399109,
+      "motion_ratio_to_control": 0.9999734531030363,
+      "aligned_similarity_to_control": 0.98513964687834,
+      "functionally_recovered": true,
+      "recovery_score": 0.9984725883873059
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 300,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.07999998331069946,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9945725202560425,
+      "motion_ratio_to_control": 0.9992299372927349,
+      "aligned_similarity_to_control": 0.6954809374947023,
+      "functionally_recovered": true,
+      "recovery_score": 0.9938066370485227
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 420,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.04000001773238182,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.002873420715332,
+      "motion_ratio_to_control": 0.9993207058732022,
+      "aligned_similarity_to_control": 0.9864422721667263,
+      "functionally_recovered": true,
+      "recovery_score": 0.9964574643531825
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 420,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.059999968856573105,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0044859647750854,
+      "motion_ratio_to_control": 1.000091178807899,
+      "aligned_similarity_to_control": 0.9627508291629947,
+      "functionally_recovered": true,
+      "recovery_score": 0.9955340692330232
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 101,
+      "phase": 420,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.07999997586011887,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9995720982551575,
+      "motion_ratio_to_control": 0.9997947986467688,
+      "aligned_similarity_to_control": 0.9164655346456325,
+      "functionally_recovered": true,
+      "recovery_score": 0.9993669847079434
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 180,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.040000054985284805,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0098057985305786,
+      "motion_ratio_to_control": 0.9974773485121596,
+      "aligned_similarity_to_control": 0.9583297410518539,
+      "functionally_recovered": true,
+      "recovery_score": 0.9877912663639299
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 180,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.06000008061528206,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.007266640663147,
+      "motion_ratio_to_control": 0.9986910789142863,
+      "aligned_similarity_to_control": 0.9670516341118449,
+      "functionally_recovered": true,
+      "recovery_score": 0.9914863042190946
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 180,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.08000005036592484,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0092997550964355,
+      "motion_ratio_to_control": 0.99516637899079,
+      "aligned_similarity_to_control": 0.9203135715510217,
+      "functionally_recovered": true,
+      "recovery_score": 0.9859968497621451
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 300,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.040000032633543015,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0102413892745972,
+      "motion_ratio_to_control": 0.9973099199334188,
+      "aligned_similarity_to_control": 0.9912370177043458,
+      "functionally_recovered": true,
+      "recovery_score": 0.9871996242893356
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 300,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.059999991208314896,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.006676197052002,
+      "motion_ratio_to_control": 0.9995455708136594,
+      "aligned_similarity_to_control": 0.978959510749687,
+      "functionally_recovered": true,
+      "recovery_score": 0.992916663511838
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 300,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.08000000566244125,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0036804676055908,
+      "motion_ratio_to_control": 0.9988611165663759,
+      "aligned_similarity_to_control": 0.9540704609275652,
+      "functionally_recovered": true,
+      "recovery_score": 0.995198321383386
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 420,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.03999999538064003,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0001399517059326,
+      "motion_ratio_to_control": 1.00244150914838,
+      "aligned_similarity_to_control": 0.9656737132588714,
+      "functionally_recovered": true,
+      "recovery_score": 0.9998600678778066
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 420,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.059999994933605194,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0127999782562256,
+      "motion_ratio_to_control": 0.9992149182843709,
+      "aligned_similarity_to_control": 0.9678044473323318,
+      "functionally_recovered": true,
+      "recovery_score": 0.9865866308614614
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 211,
+      "phase": 420,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.07999999076128006,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0089306831359863,
+      "motion_ratio_to_control": 1.0002423814746073,
+      "aligned_similarity_to_control": 0.9432479900775964,
+      "functionally_recovered": true,
+      "recovery_score": 0.991148367984778
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 180,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.04000001400709152,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0049024820327759,
+      "motion_ratio_to_control": 0.9985227955549101,
+      "aligned_similarity_to_control": 0.9800402343846435,
+      "functionally_recovered": true,
+      "recovery_score": 0.9936514372370137
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 180,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.06000002101063728,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0077240467071533,
+      "motion_ratio_to_control": 0.9972831794178906,
+      "aligned_similarity_to_control": 0.9663242215664415,
+      "functionally_recovered": true,
+      "recovery_score": 0.9896391603203483
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 180,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.08000002801418304,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0053153038024902,
+      "motion_ratio_to_control": 0.998333882406371,
+      "aligned_similarity_to_control": 0.8552760632049293,
+      "functionally_recovered": true,
+      "recovery_score": 0.9930554907801435
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 300,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.039999961853027344,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0030759572982788,
+      "motion_ratio_to_control": 0.9973643676746546,
+      "aligned_similarity_to_control": 0.9956422380060385,
+      "functionally_recovered": true,
+      "recovery_score": 0.9943059251075981
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 300,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.06000000238418579,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0000110864639282,
+      "motion_ratio_to_control": 0.9977700435877801,
+      "aligned_similarity_to_control": 0.978579154548379,
+      "functionally_recovered": true,
+      "recovery_score": 0.9977589819688175
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 300,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.08000004291534424,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.001509428024292,
+      "motion_ratio_to_control": 0.9974468760633711,
+      "aligned_similarity_to_control": 0.9688507789498947,
+      "functionally_recovered": true,
+      "recovery_score": 0.9959435709268007
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 420,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.04000001773238182,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0121378898620605,
+      "motion_ratio_to_control": 0.995776182059766,
+      "aligned_similarity_to_control": 0.9835369359979518,
+      "functionally_recovered": true,
+      "recovery_score": 0.9838345071692511
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 420,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.059999968856573105,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9978785514831543,
+      "motion_ratio_to_control": 0.9992861303229537,
+      "aligned_similarity_to_control": 0.9692882435180206,
+      "functionally_recovered": true,
+      "recovery_score": 0.9971661962438756
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 307,
+      "phase": 420,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.07999998331069946,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9956101179122925,
+      "motion_ratio_to_control": 1.001934447851857,
+      "aligned_similarity_to_control": 0.9243562142925622,
+      "functionally_recovered": true,
+      "recovery_score": 0.9956101179122925
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 180,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.03999985381960869,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9872245788574219,
+      "motion_ratio_to_control": 1.0019419888917405,
+      "aligned_similarity_to_control": 0.9675538462559309,
+      "functionally_recovered": true,
+      "recovery_score": 0.9872245788574219
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 180,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.059999894350767136,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9884931445121765,
+      "motion_ratio_to_control": 1.0021153376339895,
+      "aligned_similarity_to_control": 0.9580458506359728,
+      "functionally_recovered": true,
+      "recovery_score": 0.9884931445121765
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 180,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.0799998790025711,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9935578107833862,
+      "motion_ratio_to_control": 1.000809427553513,
+      "aligned_similarity_to_control": 0.9726422780233887,
+      "functionally_recovered": true,
+      "recovery_score": 0.9935578107833862
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 300,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.039999980479478836,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.998447835445404,
+      "motion_ratio_to_control": 1.0001170592459345,
+      "aligned_similarity_to_control": 0.9644178304559639,
+      "functionally_recovered": true,
+      "recovery_score": 0.998447835445404
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 300,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.0599999725818634,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9965372085571289,
+      "motion_ratio_to_control": 0.9980502929795909,
+      "aligned_similarity_to_control": 0.9974587711362835,
+      "functionally_recovered": true,
+      "recovery_score": 0.9945942529655062
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 300,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.07999996095895767,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0029085874557495,
+      "motion_ratio_to_control": 0.9984723930393382,
+      "aligned_similarity_to_control": 0.9052467389528824,
+      "functionally_recovered": true,
+      "recovery_score": 0.9955766712221844
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 420,
+      "target_removed_fraction": 0.04,
+      "actual_removed_fraction": 0.04000002145767212,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0036824941635132,
+      "motion_ratio_to_control": 1.0004923542281294,
+      "aligned_similarity_to_control": 0.9666752235721991,
+      "functionally_recovered": true,
+      "recovery_score": 0.9963310168455392
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 420,
+      "target_removed_fraction": 0.06,
+      "actual_removed_fraction": 0.0599999763071537,
+      "control_valid": true,
+      "mass_ratio_to_control": 1.0131845474243164,
+      "motion_ratio_to_control": 0.9957958282108129,
+      "aligned_similarity_to_control": 0.958547970313928,
+      "functionally_recovered": true,
+      "recovery_score": 0.9828375597933185
+    },
+    {
+      "candidate": 806,
+      "initial_condition_seed": 401,
+      "phase": 420,
+      "target_removed_fraction": 0.08,
+      "actual_removed_fraction": 0.07999999076128006,
+      "control_valid": true,
+      "mass_ratio_to_control": 0.9817124009132385,
+      "motion_ratio_to_control": 1.0023565598700959,
+      "aligned_similarity_to_control": 0.8660996953803607,
+      "functionally_recovered": true,
+      "recovery_score": 0.9817124009132385
     }
   ]
 }
